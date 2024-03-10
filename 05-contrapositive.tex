@@ -277,4 +277,106 @@
         $7b-4$ do not have the same parity.
 \end{prooflist}
 
+\begin{prooflist} { 15. Suppose $x \in \mathbb{Z}$. If $x^3 - 1$ is even, then $x$ is odd.}
+    \item Let $E(x)$ mean that $x$ is even, and $O(x)$ mean that $x$ is odd.
+    \item The original problem is the following.
+        $$
+        E(x^3-1) \implies O(x)
+        $$
+    \item The contrapositive is the following.
+        $$
+        \neg(O(x))
+        \implies
+        \neg(E(x^3-1))
+        $$
+        $$
+        E(x)
+        \implies
+        O(x^3-1)
+        $$
+    \item Suppose $E(x)$. Therefore $x=2n$, for some $n \in \mathbb{N}$.
+    \item Then $x^3-1=(2n)^3 -1 = 8n^3 -1 = 2 (4n^3) -1$, and therefore
+        $O(x^3-1)$.
+    \item We have proven the contrapositive, and thus the original statement as
+        well.
+\end{prooflist}
+
+\begin{prooflist} { 16. Suppose $x, y \in Z$. If $x+y$ is even, then $x$ and $y$ have the same parity.}
+    \item Let $E(x)$ mean that $x$ is even, and $O(x)$ mean that $x$ is odd.
+    \item The original problem is the following.
+        $$
+        E(x+y)
+        \implies
+        \big(E(x) \land E(y)\big) \lor \big(O(x) \land O(y)\big)
+        $$
+    \item The contrapositive is the following.
+        $$
+        \neg\Big(\big(E(x) \land E(y)\big) \lor \big(O(x) \land O(y)\big)\Big)
+        \implies
+        \neg(E(x+y))
+        $$
+        $$
+        \neg(\big(E(x) \land E(y)\big)) \land \neg(\big(O(x) \land O(y)\big)
+        \implies
+        \neg(E(x+y))
+        $$
+        $$
+        \big(O(x) \lor O(y)\big) \land \big(E(x) \lor E(y)\big)
+        \implies
+        O(x+y)
+        $$
+    \item Suppose
+        $\big(O(x) \lor O(y)\big) \land \big(E(x) \lor E(y)\big)$. The only way
+        for it to be true is $E(x) \land O(Y)$ or $O(x) \land E(Y)$.
+    \item Therefore $x$ and $y$ must have different parity.
+    \item Let $x=2n$ and $y=2m+1$, for some $m, n \in \mathbb{N}$.
+    \item Then $x+y = 2(n+m) +1$, which is odd.
+    \item It would have been the same result to let $x$ be odd and $y$ be even.
+    \item Therefore $x+y$ is odd and we have proven the contrapositive of the
+        original statement.
+\end{prooflist}
+
+\begin{prooflist} {17. If $n$ is odd, then $8 \mid (n^2-1)$.}
+    \item Let $E(x)$ mean that $x$ is even, and $O(x)$ mean that $x$ is odd.
+    \item The original problem is the following.
+        $$
+        O(n)
+        \implies
+        8 \mid (n^2-1)
+        $$
+    \item The contrapositive of the original forumation is as follows.
+        $$
+        \neg(8 \mid (n^2-1))
+        \implies
+        \neg(O(n))
+        $$
+        $$
+        8 \nmid (n^2-1)
+        \implies
+        E(n)
+        $$
+    \item Suppose that $O(n)$, and $n=2a+1$ for some $a \in \mathbb{N}$.
+    \item Therefore $n^2=(2a+1)^2= 4a^2+4a+1$.
+    \item Therefore $n^2-1= 4a^2+4a = 4a(a+1)$.
+    \item Either $a$ is even, or $a+1$ is even.
+    \item If $a$ is even, then $a=2c$, for some $c \in \mathbb{N}$.
+    \item Therefore $n^2-1 = 8c(a+1)$, and $8 \mid (n^2-1)$.
+    \item If $a$ is odd, then $a+1=2c+2$, for some $c \in \mathbb{N}$.
+    \item Therefore $n^2-1 = 8a(c+1)$, and $8 \mid (n^2-1)$.
+\end{prooflist}
+
+\begin{prooflist} {18. If $a,b \in \mathbb{Z}$, then $(a+b)^3 \equiv a^3 + b^3 \pmod 3$.}
+    \item The original problem is the following.
+        $$
+            a,b \in \mathbb{Z}
+            \implies
+            (a+b)^3 \equiv a^3 + b^3 \pmod 3
+        $$
+    \item Suppose $a,b \in \mathbb{Z}$
+    \item $a^3 + b^3 = (a + b)(a^2 - ab + b^2)$
+    \item $3 \mid (a+b)^3 - (a^3 + b^3)$
+    \item $3x = (a+b)^3 - a^3 - b^3$ , for some $x \in \mathbb{N}$
+    \item $3x = (a+b)^3 - (a^3 - b^3)$
+
+\end{prooflist}
 \end{document}

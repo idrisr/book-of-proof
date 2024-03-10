@@ -1,0 +1,127 @@
+\documentclass{idrisMemo}
+
+\usepackage{amsthm}
+\usepackage{amsfonts}
+\usepackage{hyperref}
+\usepackage{enumitem}
+\usepackage{amssymb}
+\usepackage{tocloft} % Include the package
+
+\memoto{Idris}
+\memosubject{Book of Proof}
+\memodate{2024.03.10}
+\status{Section 3.2}
+
+\newcounter{exercise} % This defines a new counter named 'exercise'
+
+\newcommand{\exercise}[1]{\refstepcounter{exercise} \noindent Exercise: #1
+    \addcontentsline{toc}{subsection}{#1}} % Use 'section' level for TOC
+
+\newenvironment{prooflist}[1]
+    {
+    \pagebreak
+    \exercise{#1}
+    \begin{itemize}[label={}, leftmargin=1mm, itemsep=0.5mm]}
+   {\end{itemize} {\hfill $\square$} }
+
+\begin{document}
+
+\tableofcontents
+\pagebreak
+
+\begin{prooflist} {1.  Consider lists made from the letters T, H, E, O, R, Y, with repetition allowed.}
+    \item (a) How many length-4 lists are there?
+    \item $ 6^4$
+    \item (b) How many length-4 lists are there that begin with T ?
+    \item $ 1 \cdot 6^3$
+    \item (c) How many length-4 lists are there that do not begin with T ?
+    \item $ 5 \cdot 6^3$
+\end{prooflist}
+
+\begin{prooflist} {2. Airports are identified with 3-letter codes. For example, Richmond, Virginia has the code RIC, and Memphis, Tennessee has MEM. How many different 3-letter codes are possible?}
+    \item $ 26^3$
+\end{prooflist}
+
+\begin{prooflist} {3. How many lists of length 3 can be made from the symbols A, B, C, D, E, F if...}
+    \item (a) repetition is allowed.
+    \item $ 6^3$
+    \item (b) repetition is not allowed.
+    \item $ 6\cdot 5 \cdot 4$
+    \item (c) repetition is not allowed and the list must contain the letter A.
+    \item $ 6\cdot 5 \cdot 3$
+    \item (d) repetition is allowed and the list must contain the letter A.
+    \item Let $A=$ list of all length-three strings.
+    \item Let $B=$ list of all length-three strings without A.
+    \item Then $|A| - |B| = 6^3 - 5^3$
+\end{prooflist}
+
+\begin{prooflist}{ 4. In ordering coffee you have a choice of regular or decaf; small, medium or large; here or to go. How many different ways are there to order a coffee? }
+\item Let $A = \{\text{regular}, \text{decaf}\}$.
+\item Let $B = \{\text{small}, \text{medium}, \text{large}\}$.
+\item Let $C = \{\text{here}, \text{to-go}\}$.
+\item Different ways to order is the product $|A|\cdot|B|\cdot|C| = 2 \cdot 3
+    \cdot 2$.
+\end{prooflist}
+
+\begin{prooflist}{
+5. This problem involves 8-digit binary strings such as 10011011 or 00001010
+(i.e., 8-digit numbers composed of 0’s and 1’s).}
+    \item (a) How many such strings are there?
+    \item There are $2^8$ different 8-digit binary strings.
+    \item (b) How many such strings end in 0?
+    \item There are $2^7$ different 8-digit binary strings that end in $0$.
+    \item (c) How many such strings have 1’s for their second and fourth digits?
+    \item There are $2^6$ different 8-digit binary strings that have two of
+        their bits constant.
+    \item (d) How many such strings have 1’s for their second or fourth digits?
+    \item Here we must be careful not to double count.
+    \item Let $A =$ 8-digit strings with 1 as the fourth digit.
+    \item Let $B =$ 8-digit strings with 1 as the second digit.
+    \item Let $C =$ 8-digit strings with 1 as the second digit and 1 as the
+        fourth digit.
+    \item The total number of 8-digit strings with 1 as the second or fourth
+    digit is $|A| + |B| - |C| = 2^7+2^7-2^6$.
+\end{prooflist}
+
+\begin{prooflist}{ 6. You toss a coin, then roll a dice, and then draw a card from a 52-card deck.}
+    \item Let $A = \{\text{H}, \text{T}\}$
+    \item Let $B = \{1, 2, 3, 4, 5, 6\}$
+    \item Let $C = \{1\ldots 52 \}$
+    \item How many different outcomes are there?
+    \item $|A| \cdot |B| \cdot |C| = 2 \cdot 6 \cdot 52$.
+    \item How many outcomes are there in which the dice lands on $3$?
+    \item $|A| \cdot |C| = 2 \cdot 52$.
+    \item How many outcomes are there in which the dice lands on an odd number?
+    \item $|A| \cdot |\text{odd}| \cdot |C| = 2 \cdot 3 \cdot 52$.
+    \item How many outcomes are there in which the dice lands on an odd number
+        and the card is a King?
+    \item $|A| \cdot |\text{odd}| \cdot |\text{King}| = 2 \cdot 3 \cdot 4$.
+\end{prooflist}
+
+\begin{prooflist}{ 7. This problem concerns 4-letter codes made from the letters A, B, C, D, ... , Z. }
+\item (a) How many such codes can be made?
+\item $26^4$, assuming repetitions.
+\item (b) How many such codes have no two consecutive letters the same?
+\item We can pick any letter to be the first one. To assure a non-consecutive
+    2nd letter, we can pick from 25 letters.  To pick a 3rd letter which is
+    non-consecutive with the 2nd letter, there are 25 choices, as it is now ok
+    to re-use the first letter. And so it goes, so that for every non-first
+    letter, there are $n-1$ choices.
+\item Therefore the answer is $26\cdot 25^3$.
+\end{prooflist}
+
+\begin{prooflist}{8. A coin is tossed 10 times in a row. How many possible sequences of heads and
+tails are there?
+}
+\item $2^{10}$
+\end{prooflist}
+
+\begin{prooflist} {9. A new car comes in a choice of five colors, three engine sizes and two transmissions. How many different combinations are there?}
+\item $5 \cdot 3 \cdot 2$.
+\end{prooflist}
+
+\begin{prooflist}{ 10. A dice is tossed four times in a row. There are many possible outcomes. How many different outcomes are possible?}
+\item $ 6^4$
+\end{prooflist}
+
+\end{document}
