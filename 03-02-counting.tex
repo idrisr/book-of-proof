@@ -5,25 +5,13 @@
 \usepackage{hyperref}
 \usepackage{enumitem}
 \usepackage{amssymb}
-\usepackage{tocloft} % Include the package
+\usepackage{tocloft}
+\usepackage{bookOfProof}
 
 \memoto{Idris}
 \memosubject{Book of Proof}
 \memodate{2024.03.10}
 \status{Section 3.2}
-
-\newcounter{exercise} % This defines a new counter named 'exercise'
-
-\newcommand{\exercise}[1]{\refstepcounter{exercise} \noindent Exercise: #1
-    \addcontentsline{toc}{subsection}{#1}} % Use 'section' level for TOC
-
-\newenvironment{prooflist}[1]
-    {
-    \pagebreak
-    \exercise{#1}
-    \begin{itemize}[label={}, leftmargin=1mm, itemsep=0.5mm]}
-   {\end{itemize} {\hfill $\square$} }
-
 \begin{document}
 
 \tableofcontents

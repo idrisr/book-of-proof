@@ -1,0 +1,13 @@
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{bookOfProof}[2014/08/21 Example package]
+
+\newcounter{exercise}
+\newcommand{\exercise}[1]{\refstepcounter{exercise} \noindent Exercise: #1
+    \addcontentsline{toc}{subsection}{#1}} % Use 'section' level for TOC
+
+\newenvironment{prooflist}[1]
+    {
+    \pagebreak
+    \exercise{#1}
+    \begin{itemize}[label={}, leftmargin=1mm, itemsep=0.5mm]}
+   {\end{itemize} {\hfill $\square$} }

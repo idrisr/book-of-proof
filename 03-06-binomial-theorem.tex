@@ -6,24 +6,13 @@
 \usepackage{enumitem}
 \usepackage{amssymb}
 \usepackage{graphicx}
-
-\usepackage{tocloft} % Include the package
+\usepackage{tocloft}
+\usepackage{bookOfProof}
 
 \memoto{Idris}
 \memosubject{Book of Proof}
 \memodate{2024.03.11}
 \status{\S 3.5 Binomial Theorem}
-
-\newcounter{exercise} % This defines a new counter named 'exercise'
-\newcommand{\exercise}[1]{\refstepcounter{exercise} \noindent Exercise: #1
-    \addcontentsline{toc}{subsection}{#1}} % Use 'section' level for TOC
-
-\newenvironment{prooflist}[1]
-    {
-    \pagebreak
-    \exercise{#1}
-    \begin{itemize}[label={}, leftmargin=1mm, itemsep=0.5mm]}
-   {\end{itemize} {\hfill $\square$} }
 
 \begin{document}
 
@@ -47,8 +36,6 @@
         $\dbinom{11}{4}=\dfrac{11!}{7!\cdot4!}=330$.
     \item The $6^{th}$ term of row 11 is
         $\dbinom{11}{5}=\dfrac{11!}{5!\cdot6!}=462$.
-
-
 \end{prooflist}
 
 \begin{prooflist}{2. Use the binomial theorem to find the coefficient of $x^8 y^5$
