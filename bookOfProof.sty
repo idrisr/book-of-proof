@@ -1,9 +1,18 @@
 \NeedsTeXFormat{LaTeX2e}
 \ProvidesPackage{bookOfProof}[2014/08/21 Example package]
 
+\usepackage{amsfonts}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{enumitem}
+\usepackage{hyperref}
+\usepackage{tocloft}
+
 \newcounter{exercise}
 \newcommand{\exercise}[1]{\refstepcounter{exercise} \noindent Exercise: #1
-    \addcontentsline{toc}{subsection}{#1}} % Use 'section' level for TOC
+    \addcontentsline{toc}{subsection}{#1}
+} % Use 'section' level for TOC
 
 \newenvironment{prooflist}[1]
     {
