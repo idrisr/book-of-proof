@@ -7,6 +7,7 @@
 \usepackage{hyperref}
 \usepackage{lastpage}
 \usepackage{pdfpages}
+\usepackage{mathrsfs}
 \usepackage{bookOfProof}
 
 \pagestyle{fancy}

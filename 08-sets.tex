@@ -1,0 +1,176 @@
+\documentclass{idrisMemo}
+\usepackage{bookOfProof}
+
+\memoto{Idris}
+\memosubject{Book of Proof}
+\memodate{2024.03.17}
+\status{\S 8 Proofs about Sets}
+\newcommand{\set}[1]{\{#1\}}
+
+\begin{document}
+\tableofcontents
+\thispagestyle{styleTOC}
+\pagebreak
+\pagestyle{styleE}
+
+\begin{prooflist}{1. Prove that $\{12 n: n \in \mathbb{Z}\} \subseteq\{2 n: n \in \mathbb{Z}\} \cap\{3 n: n \in \mathbb{Z}\}$.}
+\item
+
+\[
+x \in \{12 n: n \in \mathbb{Z}\}
+\implies
+x \in \{2 n: n \in \mathbb{Z}\} \cap\{3 n: n \in \mathbb{Z}\}
+\]
+\item Suppose $x \in \{12 n: n \in \mathbb{Z}\}$.
+\item Then $12 \mid x$ and $12c=x$
+    for some integer $c$.
+\item Consequently, $2\cdot2\cdot3\cdot c =x$.
+\item Therefore $2\mid x$ and $3\mid x$, so $x =2d$ and $x=3e$ for some integers
+    $d$ and $e$.
+\item
+This means that $x \in \{2 n: n \in \mathbb{Z}\}$ and $x \in \{3 n: n \in
+    \mathbb{Z}\}$.
+\item
+We have shown that
+$x \in \{12 n: n \in \mathbb{Z}\}$
+implies
+$x \in\{2n: n \in \mathbb{Z}\}$
+and
+$x \in\{3n: n \in \mathbb{Z}\}$,
+so it follows that
+$\set{12 n: n \in \mathbb{Z}} \subseteq\set{2 n: n \in \mathbb{Z}} \cap\{3 n: n \in
+\mathbb{Z}\}$.
+\end{prooflist}
+
+\begin{prooflist}{2. Prove that $\set{6 n: n \in \mathbb{Z}}=\set{2 n: n \in
+    \mathbb{Z}} \cap\set{3 n: n \in \mathbb{Z}}$.}
+\item To show that two sets are equal, we can prove the following two
+    implications.
+\begin{align}
+x \in \set{6 n: n \in \mathbb{Z}}
+&\implies
+x \in \set{2 n: n \in \mathbb{Z}} \cap\set{3 n: n \in \mathbb{Z}} \\
+x \in \set{2 n: n \in \mathbb{Z}} \cap\set{3 n: n \in \mathbb{Z}}
+&\implies
+x \in \set{6 n: n \in \mathbb{Z}}
+\end{align}
+
+\end{prooflist}
+
+% \begin{prooflist}{3. If $k \in \mathbb{Z}$, then $\{n \in \mathbb{Z}: n \mid k\} \subseteq\left\{n \in \mathbb{Z}: n \mid k^2\right\}$.}
+% \item
+% \end{prooflist}
+
+% \begin{prooflist}{4. If $m, n \in \mathbb{Z}$, then $\{x \in \mathbb{Z}: m n \mid x\} \subseteq\{x \in \mathbb{Z}: m \mid x\} \cap\{x \in \mathbb{Z}: n \mid x\}$.}
+% \item
+% \end{prooflist}
+
+% \begin{prooflist}{5. If $p$ and $q$ are positive integers, then $\{p n: n \in \mathbb{N}\} \cap\{q n: n \in \mathbb{N}\} \neq \varnothing$.}
+% \item
+% \end{prooflist}
+
+% \begin{prooflist}{6. Suppose $A, B$ and $C$ are sets. Prove that if $A \subseteq B$, then $A-C \subseteq B-C$.}
+% \item
+% \end{prooflist}
+
+% \begin{prooflist}{7. Suppose $A, B$ and $C$ are sets. If $B \subseteq C$, then $A \times B \subseteq A \times C$.}
+% \item
+% \end{prooflist}
+
+% \begin{prooflist}{8. If $A, B$ and $C$ are sets, then $A \cup(B \cap C)=(A \cup B) \cap(A \cup C)$.}
+% \item
+% \end{prooflist}
+
+% \begin{prooflist}{9. If $A, B$ and $C$ are sets, then $A \cap(B \cup C)=(A \cap B) \cup(A \cap C)$.}
+% \item
+% \end{prooflist}
+
+% \begin{prooflist}{10. If $A$ and $B$ are sets in a universal set $U$, then $\overline{A \cap B}=\bar{A} \cup \bar{B}$.}
+% \item
+% \end{prooflist}
+
+% \begin{prooflist}{11. If $A$ and $B$ are sets in a universal set $U$, then $\overline{A \cup B}=\bar{A} \cap \bar{B}$.}
+% \item
+% \end{prooflist}
+
+% \begin{prooflist}{12. If $A, B$ and $C$ are sets, then $A-(B \cap C)=(A-B) \cup(A-C)$.}
+% \item
+% \end{prooflist}
+
+% \begin{prooflist}{13. If $A, B$ and $C$ are sets, then $A-(B \cup C)=(A-B) \cap(A-C)$.}
+% \item
+% \end{prooflist}
+
+% \begin{prooflist}{14. If $A, B$ and $C$ are sets, then $(A \cup B)-C=(A-C) \cup(B-C)$.}
+% \item
+% \end{prooflist}
+
+% \begin{prooflist}{15. If $A, B$ and $C$ are sets, then $(A \cap B)-C=(A-C) \cap(B-C)$.}
+% \item
+% \end{prooflist}
+
+% \begin{prooflist}{16. If $A, B$ and $C$ are sets, then $A \times(B \cup C)=(A \times B) \cup(A \times C)$.}
+% \item
+% \end{prooflist}
+
+% \begin{prooflist}{17. If $A, B$ and $C$ are sets, then $A \times(B \cap C)=(A \times B) \cap(A \times C)$.}
+% \item
+% \end{prooflist}
+
+% \begin{prooflist}{18. If $A, B$ and $C$ are sets, then $A \times(B-C)=(A \times B)-(A \times C)$.}
+% \item
+% \end{prooflist}
+
+% \begin{prooflist}{19. Prove that $\left\{9^n: n \in \mathbb{Z}\right\} \subseteq\left\{3^n: n \in \mathbb{Z}\right\}$, but $\left\{9^n: n \in \mathbb{Z}\right\} \neq\left\{3^n: n \in \mathbb{Z}\right\}$.}
+% \item
+% \end{prooflist}
+
+% \begin{prooflist}{20. Prove that $\left\{9^n: n \in \mathbb{Q}\right\}=\left\{3^n: n \in \mathbb{Q}\right\}$.}
+% \item
+% \end{prooflist}
+
+% \begin{prooflist}{21. Suppose $A$ and $B$ are sets. Prove $A \subseteq B$ if and only if $A-B=\varnothing$.}
+% \item
+% \end{prooflist}
+
+% \begin{prooflist}{22. Let $A$ and $B$ be sets. Prove that $A \subseteq B$ if and only if $A \cap B=A$.}
+% \item
+% \end{prooflist}
+
+% \begin{prooflist}{23. For each $a \in \mathbb{R}$, let $A_a=\left\{\left(x, a\left(x^2-1\right)\right) \in \mathbb{R}^2: x \in \mathbb{R}\right\}$. Prove that $\bigcap_{a \in \mathbb{R}} A_a=\{(-1,0),(1,0)\}$.}
+% \item
+% \end{prooflist}
+
+% \begin{prooflist}{24. Prove that $\bigcap_{x \in \mathbb{R}}\left[3-x^2, 5+x^2\right]=[3,5]$.}
+% \item
+% \end{prooflist}
+
+% \begin{prooflist}{25. Suppose $A, B, C$ and $D$ are sets. Prove that $(A \times B) \cup(C \times D) \subseteq(A \cup C) \times(B \cup D)$.}
+% \item
+% \end{prooflist}
+
+% \begin{prooflist}{26. Prove that $\{4 k+5: k \in \mathbb{Z}\}=\{4 k+1: k \in \mathbb{Z}\}$.}
+% \item
+% \end{prooflist}
+
+% \begin{prooflist}{27. Prove that $\{12 a+4 b: a, b \in \mathbb{Z}\}=\{4 c: c \in \mathbb{Z}\}$.}
+% \item
+% \end{prooflist}
+
+% \begin{prooflist}{28. Prove that $\{12 a+25 b: a, b \in \mathbb{Z}\}=\mathbb{Z}$.}
+% \item
+% \end{prooflist}
+
+% \begin{prooflist}{29. Suppose $A \neq \varnothing$. Prove that $A \times B \subseteq A \times C$ if and only if $B \subseteq C$.}
+% \item
+% \end{prooflist}
+
+% \begin{prooflist}{30. Prove that $(\mathbb{Z} \times \mathbb{N}) \cap(\mathbb{N} \times \mathbb{Z})=\mathbb{N} \times \mathbb{N}$.}
+% \item
+% \end{prooflist}
+
+% \begin{prooflist}{31. Suppose $B \neq \varnothing$ and $A \times B \subseteq B \times C$. Prove that $A \subseteq C$.}
+% \item
+% \end{prooflist}
+
+\end{document}

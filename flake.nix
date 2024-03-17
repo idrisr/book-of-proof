@@ -8,9 +8,14 @@
       system = flake-utils.lib.system.x86_64-linux;
       pkgs = import nixpkgs { inherit system; };
       cleaner = pkgs.writeShellApplication {
-        name = "cleaner";
+        name = "clean";
+        text = "latexmk -C -auxdir=aux -outdir=pdf";
+      };
+      makepdf = pkgs.writeShellApplication {
+        name = "makepdf";
         text = ''
-          rm -rf -- *.aux *.fdb_latexmk *.fls *.log *.out *.pdf *.synctex.gz *.toc
+          mkdir -p aux pdf
+          latexmk -pdf -auxdir=aux -outdir=pdf ./*tex
         '';
       };
     in {
@@ -23,9 +28,13 @@
         };
       };
       apps.${system} = {
-        cleaner = {
+        clean = {
           type = "app";
-          program = "${cleaner}/bin/cleaner";
+          program = "${cleaner}/bin/clean";
+        };
+        makepdf = {
+          type = "app";
+          program = "${makepdf}/bin/makepdf";
         };
       };
     };
