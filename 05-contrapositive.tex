@@ -4,12 +4,13 @@
 \memoto{Idris}
 \memosubject{Book of Proof}
 \memodate{2024.03.09}
-\status{}
+\status{\S 5 Contrapositive Proof}
 
 \begin{document}
-
 \tableofcontents
+\thispagestyle{styleTOC}
 \pagebreak
+\pagestyle{styleE}
 
 \begin{prooflist} {1. Suppose $n \in \mathbb{Z}$. If $n^2$ is even, then $n$ is even.}
     \item We proceed with the contrapositive, which says: if $n$ is odd, then $n^2$ is
@@ -347,18 +348,159 @@
     \item Therefore $n^2-1 = 8a(c+1)$, and $8 \mid (n^2-1)$.
 \end{prooflist}
 
-\begin{prooflist} {18. If $a,b \in \mathbb{Z}$, then $(a+b)^3 \equiv a^3 + b^3 \pmod 3$.}
+\begin{prooflist} {18. If $a,b \in \mathbb{Z}$, then $(a+b)^3 \equiv a^3 + b^3
+    \pmod 3$.}
     \item The original problem is the following.
         $$
             a,b \in \mathbb{Z}
             \implies
             (a+b)^3 \equiv a^3 + b^3 \pmod 3
         $$
-    \item Suppose $a,b \in \mathbb{Z}$
-    \item $a^3 + b^3 = (a + b)(a^2 - ab + b^2)$
-    \item $3 \mid (a+b)^3 - (a^3 + b^3)$
-    \item $3x = (a+b)^3 - a^3 - b^3$ , for some $x \in \mathbb{N}$
-    \item $3x = (a+b)^3 - (a^3 - b^3)$
+    \item Let us state the contrapositive as
+        $$
+            \neg\left((a+b)^3 \equiv a^3 + b^3 \pmod 3\right)
+            \implies
+            \neg(a,b \in \mathbb{Z})
+        $$
+        $$
+            3 \nmid (a+b)^3 - (a^3 + b^3)
+            \implies
+            a,b \notin \mathbb{Z}
+        $$
+    \item Suppose that $3 \nmid (a+b)^3 - (a^3 + b^3)$.
+    \item $3x = (a+b)^3 - a^3 - b^3$ , for some $x \notin \mathbb{Z}$
+    \item $3x = a^3 + 3a^2b + 3ab^2 + b^3 - a^3 - b^3$
+    \item $3x = 3a^2b + 3ab^2$
+    \item $x = a^2b + ab^2$
+    \item Since $x \notin \mathbb{Z}$, then $a, b \notin \mathbb{Z}$, because
+        it's impossible for integers to multiply and add to a number that is not
+        an integer.
+    \item Therefore we have shown the following by using the contrapositive.
+        $$
+            a,b \in \mathbb{Z}
+            \implies
+            (a+b)^3 \equiv a^3 + b^3 \pmod 3
+        $$
+\end{prooflist}
+
+\begin{prooflist}{19. Let $a,b, c \in \mathbb{Z}, n \in \mathbb{N}$. If a $\equiv b (\pmod  n)$ and a $\equiv c (\pmod  n)$, then $c \equiv b (\pmod  n)$.}
+\item
+$$
+(a \equiv b \mod n) \land (a \equiv c \mod n)
+\implies
+(c \equiv b \mod n)
+$$
+\item
+$$
+(n \mid a - b) \land (n \mid a - c)
+\implies
+(n \mid c - b)
+$$
+\item Suppose $(n \mid a - b) \land (n \mid a - c)$.
+\item Then there exists an $n$ such that $nx = a - b \land ny = a - c, x, y \in \mathbb{N}$.
+\item $nx - ny = (a - b) - (a -c)$.
+\item $nx - ny = c - b$.
+\item $n(x - y) = c - b$.
+\item Therefore we have proven the original statement because there exists some
+    natural number $(x-y)\in\mathbb{N}$ which satisfies $n \mid c -b$.
+\end{prooflist}
+
+\begin{prooflist}{20. If $a \in \mathbb{Z}$ and $(a \equiv 1 \mod 5)$, then $(a^2 \equiv 1 \mod 5)$.}
+\item
+$$a \in \mathbb{Z} \land (a \equiv 1 \mod 5)
+\implies
+(a^2 \equiv 1 \mod 5)
+$$
+$$
+5 \mid a-1
+\implies
+5 \mid a^2-1
+$$
+\item Suppose $5\mid a-1$, then there exists some $x\in\mathbb{N}$ such that
+    $5x=a-1.$
+\item If we multiply both sides by $a+1$, then $5x(a+1) = a^2 -1$.
+\item Because $x\in\mathbb{N}$, and $a+1\in\mathbb{Z}$ and the product
+    $x(a+1)\in\mathbb{Z}$, then $5|a^2-1$, which means $(a^2 \equiv 1 \mod 5)$.
+\end{prooflist}
+
+\begin{prooflist}{21. Let $a,b \in \mathbb{Z}$ and $n \in \mathbb{N}$. If $a
+    \equiv b \mod n$, then $a^3 \equiv b^3 \mod n$.}
+\item
+$$a \equiv b \mod n
+\implies
+a^3 \equiv b^3 \mod n
+$$
+$$n\mid a - b
+\implies
+n \mid a^3 - b^3
+$$
+\item Suppose $n\mid a - b$, which means that $\exists x\in\mathbb{N} \mid nx = a-b$.
+\item Now let's multiply both sides by $(a^2 + ab + b^2)$.
+$$ nx = a-b$$
+$$ nx(a^2 + ab + b^2) = (a - b)(a^2 + ab + b^2) = a^3 - b^3$$
+\item
+Because of the closure property for addition and multiplication of integers,
+$x(a^2 + ab + b^2)$ is also an integer. Therefore,
+$n \mid a^3 - b^3$ and
+$a^3 \equiv b^3 \mod n$.
+\end{prooflist}
+
+\begin{prooflist}{22. Let $a \in \mathbb{Z}$, $n \in \mathbb{N}$. If $a$ has remainder $r$ when divided by $n$, then $a \equiv r \mod n$.}
+\item
+$$
+a \text{ has remainder } r \text{ when divided by } n
+\implies
+a \equiv r \mod n
+$$
+$$
+\exists x \in \mathbb{N} \mid a= x \cdot n + r
+\implies
+n \mid a -r
+$$
+\item Suppose $a$ has remainder $r$ when divided by $n$. Therefore
+    $$a= x \cdot n + r$$
+\item By rearrangement, we get
+    $$a-r= x \cdot n$$
+    Which is the equivalent to $a \equiv r \mod n$.
+\end{prooflist}
+
+\begin{prooflist}{23. Let $a,b \in \mathbb{Z}$ and $n \in \mathbb{N}$. If $a
+    \equiv b \mod n$, then $a^2 \equiv ab \mod n$.}
+\item
+$$ a \equiv b \mod n \implies a^2 \equiv ab \mod n $$
+$$ n \mid a - b \implies n \mid a^2 - ab $$
+\item Suppose that $ n \mid a - b $. Therefore $\exists x\in\mathbb{N}\mid nx =
+    a-b$.
+\item We can multiply both sides by $a$ to yield $n(ax) = a^2-ab$. By the
+    closure property of multiplication with integers, it follows that $ax$ is an
+    integer.
+\item Therefore because $\exists(ax)\in\mathbb{Z}$, it follows that $n \mid a^2 - ab$.
+\end{prooflist}
+
+\begin{prooflist}{24. If $a \equiv b \mod n$ and $c \equiv d \mod n$, then $ac \equiv bd \mod n$.}
+\item Suppose $a=bk + n \land c = dl + n, k, l \in \mathbb{N}$.
+\item Then $ac=(bk + n)(dl + n)$.
+$$nk = a -b$$
+$$a = nk + b$$
+$$nl = c -d$$
+$$c = nl + d$$
+$$ac=(nk + b)(nl + d)$$
+$$ac=n^2kl + bnl + nkd + bd$$
+$$ac-bd=n(nkl + nl + kd)$$
+\item Therefore $ac\equiv bd \mod n$.
+\end{prooflist}
+
+\begin{prooflist}{25. Let $n \in \mathbb{N}$. If $2^n-1$ is prime, then $n$ is prime.}
+\item Let $P(x)$ mean that $x$ is prime.
+$$
+P(2^n-1) \implies P(n)
+$$
+$$
+\neg(P(n))
+\implies
+\neg\left(P(2^n-1)\right)
+$$
 
 \end{prooflist}
+
 \end{document}
