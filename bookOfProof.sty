@@ -6,13 +6,13 @@
 \usepackage{amssymb}
 \usepackage{amsthm}
 \usepackage{enumitem}
+\usepackage{graphicx}
 \usepackage{hyperref}
 \usepackage{tocloft}
+\newcommand{\set}[1]{\{#1\}}
 
-\newcounter{exercise}
-\newcommand{\exercise}[1]{\refstepcounter{exercise} \noindent Exercise: #1
-    \addcontentsline{toc}{subsection}{#1}
-} % Use 'section' level for TOC
+\newcommand{\exercise}[1]{\noindent Exercise: {#1}
+}
 
 \newenvironment{prooflist}[1]
     {
