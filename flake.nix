@@ -15,7 +15,7 @@
         name = "makepdf";
         text = ''
           mkdir -p aux pdf
-          latexmk -pdf -auxdir=aux -outdir=pdf ./*tex
+          latexmk -interaction=nonstopmode -lualatex -pdf -auxdir=aux -outdir=pdf ./*tex
         '';
       };
     in {
