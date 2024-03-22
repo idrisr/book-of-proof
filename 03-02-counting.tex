@@ -5,24 +5,10 @@
 \memodate{2024.03.10}
 \status{\S 3.2 The Multiplication Principle}
 \begin{document}
+\toc
 
-\begin{titlepage}
-    % \includegraphics[width=0.9\textwidth]{./images/giant-doing-proof.pdf} % Adjust width as needed
-    \centering
-    \vspace{2cm} % Add spacing if needed
-    \begin{center}
-        \Large \textbf{Book Of Proof} \\
-        \normalsize Idris Raja
-    \end{center}
-\end{titlepage}
-\pagebreak
-
-\tableofcontents
-\thispagestyle{styleTOC}
-\pagebreak
-\pagestyle{styleE}
-
-\begin{prooflist} {1.  Consider lists made from the letters T, H, E, O, R, Y, with repetition allowed.}
+\begin{prooflist} {1.  Consider lists made from the letters T, H, E, O, R, Y,
+    with repetition allowed.}
     \item (a) How many length-4 lists are there?
     \item $ 6^4$
     \item (b) How many length-4 lists are there that begin with T ?
@@ -31,11 +17,14 @@
     \item $ 5 \cdot 6^3$
 \end{prooflist}
 
-\begin{prooflist} {2. Airports are identified with 3-letter codes. For example, Richmond, Virginia has the code RIC, and Memphis, Tennessee has MEM. How many different 3-letter codes are possible?}
+\begin{prooflist} {2. Airports are identified with 3-letter codes. For example,
+    Richmond, Virginia has the code RIC, and Memphis, Tennessee has MEM. How
+many different 3-letter codes are possible?}
     \item $ 26^3$
 \end{prooflist}
 
-\begin{prooflist} {3. How many lists of length 3 can be made from the symbols A, B, C, D, E, F if...}
+\begin{prooflist} {3. How many lists of length 3 can be made from the symbols A,
+    B, C, D, E, F if...}
     \item (a) repetition is allowed.
     \item $ 6^3$
     \item (b) repetition is not allowed.
@@ -48,7 +37,9 @@
     \item Then $|A| - |B| = 6^3 - 5^3$
 \end{prooflist}
 
-\begin{prooflist}{ 4. In ordering coffee you have a choice of regular or decaf; small, medium or large; here or to go. How many different ways are there to order a coffee? }
+\begin{prooflist}{ 4. In ordering coffee you have a choice of regular or decaf;
+    small, medium or large; here or to go. How many different ways are there to
+order a coffee? }
 \item Let $A = \{\text{regular}, \text{decaf}\}$.
 \item Let $B = \{\text{small}, \text{medium}, \text{large}\}$.
 \item Let $C = \{\text{here}, \text{to-go}\}$.
@@ -76,7 +67,8 @@
     digit is $|A| + |B| - |C| = 2^7+2^7-2^6$.
 \end{prooflist}
 
-\begin{prooflist}{ 6. You toss a coin, then roll a dice, and then draw a card from a 52-card deck.}
+\begin{prooflist}{ 6. You toss a coin, then roll a dice, and then draw a card
+    from a 52-card deck.}
     \item Let $A = \{\text{H}, \text{T}\}$
     \item Let $B = \{1, 2, 3, 4, 5, 6\}$
     \item Let $C = \{1\ldots 52 \}$
@@ -91,7 +83,8 @@
     \item $|A| \cdot |\text{odd}| \cdot |\text{King}| = 2 \cdot 3 \cdot 4$.
 \end{prooflist}
 
-\begin{prooflist}{ 7. This problem concerns 4-letter codes made from the letters A, B, C, D, ... , Z. }
+\begin{prooflist}{ 7. This problem concerns 4-letter codes made from the letters
+    A, B, C, D, ... , Z. }
 \item (a) How many such codes can be made?
 \item $26^4$, assuming repetitions.
 \item (b) How many such codes have no two consecutive letters the same?
@@ -103,17 +96,18 @@
 \item Therefore the answer is $26\cdot 25^3$.
 \end{prooflist}
 
-\begin{prooflist}{8. A coin is tossed 10 times in a row. How many possible sequences of heads and
-tails are there?
-}
+\begin{prooflist}{8. A coin is tossed 10 times in a row. How many possible
+    sequences of heads and tails are there? }
 \item $2^{10}$
 \end{prooflist}
 
-\begin{prooflist} {9. A new car comes in a choice of five colors, three engine sizes and two transmissions. How many different combinations are there?}
+\begin{prooflist} {9. A new car comes in a choice of five colors, three engine
+    sizes and two transmissions. How many different combinations are there?}
 \item $5 \cdot 3 \cdot 2$.
 \end{prooflist}
 
-\begin{prooflist}{ 10. A dice is tossed four times in a row. There are many possible outcomes. How many different outcomes are possible?}
+\begin{prooflist}{ 10. A dice is tossed four times in a row. There are many
+    possible outcomes. How many different outcomes are possible?}
 \item $ 6^4$
 \end{prooflist}
 
