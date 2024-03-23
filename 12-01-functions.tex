@@ -1,0 +1,118 @@
+\documentclass{idrisMemo}
+\usepackage{bookOfProof}
+
+\memoto{Idris}
+\memosubject{Book of Proof}
+\memodate{2024.03.22}
+\status{\S 12.1 Functions}
+
+\begin{document}
+\toc
+\thispagestyle{styleTOC}
+\pagebreak
+\pagestyle{styleE}
+
+\begin{prooflist}{1. Suppose $A=\{0,1,2,3,4\}, B=\{2,3,4,5\}$ and\\
+    $f=\{(0,3),(1,3),(2,4),(3,2),(4,2)\}$. State the domain and range of $f$.
+Find $f(2)$ and $f(1)$.}
+\item Domain is $A$.
+\item Rance is $\set{3, 4, 2}$.
+\item $f(2) = 4$.
+\item $f(1) = 3$.
+\end{prooflist}
+
+\begin{prooflist}{2. Suppose $A=\{a, b, c, d\}, B=\{2,3,4,5,6\}$ and\\
+$f=\{(a, 2),(b, 3),(c, 4),(d, 5)\}$. State the domain and range of $f$. Find
+$f(b)$ and $f(d)$.}
+\item Domain is $A$.
+\item Range is $\set{2, 3, 4, 5}$.
+\item $f(b) = 3$.
+\item $f(d) = 5$.
+\end{prooflist}
+
+\begin{prooflist}{3. There are four different functions $f:\set{a, b}
+    \rightarrow\set{0,1}$. List them. Diagrams suffice.}
+\item $f_1 = \set{(a, 0), (b, 0)}$
+\item $f_2 = \set{(a, 0), (b, 1)}$
+\item $f_3 = \set{(a, 1), (b, 0)}$
+\item $f_4 = \set{(a, 1), (b, 1)}$
+\end{prooflist}
+
+\begin{prooflist}{4. There are eight different functions $f:\{a, b, c\}
+    \rightarrow\{0,1\}$. List them. Diagrams suffice.}
+\item $f_1 = \set{(a, 0), (b, 0), (c, 0)}$
+\item $f_2 = \set{(a, 0), (b, 0), (c, 1)}$
+\item $f_3 = \set{(a, 0), (b, 1), (c, 0)}$
+\item $f_4 = \set{(a, 0), (b, 1), (c, 1)}$
+\item $f_5 = \set{(a, 1), (b, 0), (c, 0)}$
+\item $f_6 = \set{(a, 1), (b, 0), (c, 1)}$
+\item $f_7 = \set{(a, 1), (b, 1), (c, 0)}$
+\item $f_8 = \set{(a, 1), (b, 1), (c, 1)}$
+\end{prooflist}
+
+\begin{prooflist}{5. Give an example of a relation from $\set{a, b, c, d}$ to
+    $\{d, e\}$ that is not a function.}
+\item The relation $\set{(a, d), (a, e)}$ is not a function because it does not
+    adhere to the property that for every $a \in A$, the relation $f$ contains
+    exactly one pair of the form $(a, b)$.
+\end{prooflist}
+
+\begin{prooflist}{6. Suppose $f: \mathbb{Z} \rightarrow \mathbb{Z}$ is defined
+as $f=\{(x, 4 x+5): x \in \mathbb{Z}\}$. State the domain, codomain and
+range of $f$. Find $f(10)$.}
+\item The domain of $f$ is $\mathbb{Z}$.
+\item The codomain of $f$ is $\mathbb{Z}$.
+\item The range of $f$ is $\mathbb{Z}$.
+\item $f(10)=45$.
+\end{prooflist}
+
+\begin{prooflist}{7. Consider the set $f=\{(x, y) \in \mathbb{Z} \times
+    \mathbb{Z}: 3 x+y=4\}$. Is this a function from $\mathbb{Z}$ to $\mathbb{Z}$
+? Explain.}
+\item No this is not a function from $\mathbb{Z}\rightarrow\mathbb{Z}$, because
+    it is a function $\mathbb{Z}\times\mathbb{Z}\rightarrow\mathbb{Z}$.
+\end{prooflist}
+
+\begin{prooflist}{8. Consider the set $f=\{(x, y) \in \mathbb{Z} \times
+    \mathbb{Z}: x+3 y=4\}$. Is this a function from $\mathbb{Z}$ to $\mathbb{Z}$
+? Explain.}
+\item No this is not a function from $\mathbb{Z}\rightarrow\mathbb{Z}$, because
+    it is a function $\mathbb{Z}\times\mathbb{Z}\rightarrow\mathbb{Z}$.
+\end{prooflist}
+
+\begin{prooflist}{9. Consider the set $f=\set{(x^2, x: x \in
+    \mathbb{R}}$. Is this a function from $\mathbb{R}$ to $\mathbb{R}$?}
+\item This is a function from $\mathbb{R}$ to $\mathbb{R}$. If $x\in \mathbb{R}$, then
+    $x^2 \in \mathbb{R}$. Therefore both the domain and codomain of the function
+    is $\mathbb{R}$.
+\end{prooflist}
+
+\begin{prooflist}{10. Consider the set $f=\set{(x^3, x): x \in
+    \mathbb{R}}$. Is this a function from $\mathbb{R}$ to $\mathbb{R}$ ?
+Explain.}
+\item This is a function from $\mathbb{R}$ to $\mathbb{R}$. If $x\in \mathbb{R}$, then
+    $x^3 \in \mathbb{R}$. Therefore both the domain and codomain of the function
+    is $\mathbb{R}$.
+\end{prooflist}
+
+\begin{prooflist}{11. Is the set $\theta=\left\{(X,|X|): X \subseteq
+    \mathbb{Z}_5\right\}$ a function? If so, what is its domain and range?}
+\item
+    The set $\theta=\left\{(X,|X|): X \subseteq \mathbb{Z}_5\right\}$ is a
+    function, because there is only one relation of the form $(a, f(b))$ for
+    each $a\in X$.
+\item The domain is the set $X$, and the range is the set $\set{a\in X\mid a\geq
+    0}$.
+
+\end{prooflist}
+
+\begin{prooflist}{12. Is the set $\theta=\{((x, y),(3 y, 2 x, x+y)): x, y \in
+    \mathbb{R}\}$ a function? If so, what is its domain and range? What can be
+said about the codomain?}
+\item Yes it is a function, because each input $(x, y)\mid x, y\in\mathbb{R}$
+    maps to just one value $f(x, y)$.
+\item The domain is $\mathbb{R}\times\mathbb{R}$, and the range and codomain are
+    $\mathbb{R}\times\mathbb{R}\times\mathbb{R}$.
+\end{prooflist}
+
+\end{document}
