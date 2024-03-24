@@ -1,0 +1,210 @@
+\documentclass{idrisMemo}
+\usepackage{bookOfProof}
+
+\memoto{Idris}
+\memosubject{Book of Proof}
+\memodate{2024.03.24}
+\status{\S 12.5 Inverse}
+
+\begin{document}
+\toc
+\thispagestyle{styleTOC}
+\pagebreak
+\pagestyle{styleE}
+
+\begin{prooflist}{1. Check that $f: \mathbb{Z} \rightarrow \mathbb{Z}$ defined
+    by $f(n)=6-n$ is bijective. Then compute $f^{-1}$.}
+\inj{}
+\item Suppose some $a, b \in \mathbb{Z}$ and that $f(a) = f(b)$.
+\begin{align*}
+    f(a)&=f(b)\\
+    6-a&=6-b\\
+    a&=b
+\end{align*}
+Therefore we have proved the contrapositive of the injective implication and $f$
+is injective.
+\surj{}
+\item Suppose some $b\in \mathbb{Z}$.
+\begin{align*}
+    b&=f(a)\\
+    b&=6-a\\
+    b-6&=-a\\
+    6-b&=a
+\end{align*}
+Therefore we have shown that there exists an $a\in\mathbb{Z}$ such that $f(a)=b$
+for all $b$, therefore $f$ is surjective. Since $f$ is surjective and injective
+it is also bijective. Because $f$ is bijective, it's inverse $f^{-1}$ does exist
+such that $a=f\circ f^{-1}(a)$.
+\begin{align*}
+    f(x)=y=&6-x\\
+    x=&6-y&&\text{swap x and y to get to }f^{-1}\\
+    x-6=&-y\\
+    6-x=&y\\
+    f^{-1}(x)=&6-x
+\end{align*}
+\end{prooflist}
+
+\begin{prooflist}{2. In Exercise 9 of Section 12.2 you proved that $f:
+    \mathbb{R}-\{2\} \rightarrow \mathbb{R}-\{5\}$ defined by $f(x)=\frac{5
+x+1}{x-2}$ is bijective. Now find its inverse.}
+\item
+\begin{align*}
+    f(x)=y=&\frac{5 x+1}{x-2}\\
+    x=&\frac{5y+1}{y-2}&&\text{swap x and y to get to }f^{-1}\\
+    (y-2)x=&5y+1\\
+    yx-2x=&5y+1\\
+    -2x-1=&5y-yx\\
+    -2x-1=&y(5-x)\\
+    \frac{-2x-1}{5-x}=&y\\
+    f^{-1}(x) =& \frac{-2x-1}{5-x}
+\end{align*}
+\end{prooflist}
+
+\begin{prooflist}{3. Let $B=\left\{2^n: n \in \mathbb{Z}\right\}=\left\{\ldots,
+    \frac{1}{4}, \frac{1}{2}, 1,2,4,8, \ldots\right\}$. Show that the function
+$f: \mathbb{Z} \rightarrow B$ defined as $f(n)=2^n$ is bijective. Then find
+$f^{-1}$.}
+\inj{}
+\begin{align*}
+    f(a)&=f(b)\\
+    2^a&=2^b\\
+    \log 2^a&=\log 2^b\\
+    a \log 2&=b \log 2\\
+    a&=b
+\end{align*}
+\surj{}
+\begin{align*}
+    b&=f(a)\\
+    b&=2^a\\
+    \log b&=a \log 2\\
+    \frac{\log b}{\log 2} &= a\\
+    \frac{b}{2} &= a\\
+    \frac{b}{2} &= a\\
+\end{align*}
+Therefore $f$ is surjective and injective.
+\begin{align*}
+    f(x)=y=&2^x\\
+    x=&2^y&&\text{swap x and y to get to }f^{-1}\\
+    \log_2 x=&\log_2 2^y\\
+    \log_2 x=&y\\
+    f^{-1}(x) =& \log_2 x
+\end{align*}
+\end{prooflist}
+
+\begin{prooflist}{4. The function $f: \mathbb{R} \rightarrow(0, \infty)$ defined
+    as $f(x)=e^{x^3+1}$ is bijective. Find its inverse.}
+    \item
+\begin{align*}
+    f(x)=y=&e^{x^3+1}\\
+    x=&e^{y^3+1}&&\text{swap x and y to get to }f^{-1}\\
+    \ln x=&\ln e^{y^3+1}\\
+    \ln x=&y^3+1\\
+    \ln x-1=&y^3\\
+    \sqrt[3]{\ln x-1}=&y\\
+    f^{-1}(x) =& \sqrt[3]{\ln x-1}
+\end{align*}
+\end{prooflist}
+
+\begin{prooflist}{5. The function $f: \mathbb{R} \rightarrow \mathbb{R}$ defined
+    as $f(x)=\pi x-e$ is bijective. Find its inverse.}
+\item
+\begin{align*}
+    f(x)=y=&\pi x-e\\
+    x=&\pi y-e&&\text{swap x and y to get to }f^{-1}\\
+    x+e=&\pi y\\
+    \frac{x+e}{\pi}=&y\\
+    f^{-1}(x) =& \frac{x+e}{\pi}
+\end{align*}
+\end{prooflist}
+
+\begin{prooflist}{6. The function $f: \mathbb{Z} \times \mathbb{Z} \rightarrow
+    \mathbb{Z} \times \mathbb{Z}$ defined by the formula $f(m, n)=(5 m+4 n, 4
+m+3 n)$ is bijective. Find its inverse.}
+\item
+\begin{align*}
+    f(m, n)=(j, k)=&(5 m+4 n, 4 m+3 n)\\
+    (m, n)=&(5 j+4 k, 4 j+3 k)&&\text{swap m,n and j,k to get to }f^{-1}\\
+    m=&5 j+4 k\\
+    n=&4 j+3 k\\
+    3m=&15 j+12 k\\
+    4n=&16 j+12 k\\
+    3m-4n=&-j\\
+    4n-3m=&j\\
+    4n=&16 (4n-3m)+12 k\\
+    4n=&64n-48m+12 k\\
+    48m-60n=&12 k\\
+    4m-5n=&k\\
+    f^{-1}(m, n) =& (4n-3m, 4m-5n)
+\end{align*}
+\end{prooflist}
+
+\begin{prooflist}{7. Show that the function $f: \mathbb{R}^2 \rightarrow
+    \mathbb{R}^2$ defined by the formula $f(x, y)=\left(\left(x^2+1\right) y,
+x^3\right)$ is bijective. Then find its inverse.}
+\inj{}
+\begin{align*}
+    f(a, b)&=f(c, d)\\
+    \left(\left(a^2+1\right)b, a^3\right)&= \left(\left(c^2+1\right)d, c^3\right)\\
+    a^3&=c^3\\
+    a&=c\\
+    (a^2+1)b &= (c^2+1)d\\
+    (a^2+1)b &= (a^2+1)d\\
+    b &= d
+\end{align*}
+Therefore we have shown that $f$ is injective by proving the injective
+implication contrapositive.
+\surj{}
+\begin{align*}
+    (c, d) &= f(a, b)\\
+    (c, d) &= \left(\left(a^2+1\right)b, a^3\right)\\
+    a^3&=d\\
+    a&=\sqrt[3]{d}\\
+    (a^2+1)b&=c\\
+    b&=\dfrac{c}{a^2+1}\\
+    b&=\dfrac{c}{d^{\frac{2}{3}}+1}
+\end{align*}
+Therefore we have shown that $f$ is surjective by showing that for any arbitrary
+$(c, d)$ in the codomain, we can find an $(a, b)$ in the domain such that $f(a,
+b)=(c, d)$.
+\item We can re-use the calculations from the surjetive proof to determine the inverse
+$f^{-1}(a, b)$.
+\[f^{-1}(x, y) = \left(\dfrac{x}{y^{\frac{2}{3}}+1}, \sqrt[3]{x}\right)
+\]
+\end{prooflist}
+
+\begin{prooflist}{8. Is the function $\theta: \mathscr{P}(\mathbb{Z})
+    \rightarrow \mathscr{P}(\mathbb{Z})$ defined as $\theta(X)=\bar{X}$
+bijective? If so, find $\theta^{-1}$.}
+\item
+\inj{}
+\begin{align*}
+    \theta(X)&=\theta(Y)\\
+    \overline{X}&=\overline{Y}\\
+\end{align*}
+If two sets are equal, they're the same set. Therefore $\theta$ is injective.
+\surj{}
+\begin{align*}
+    \theta(X)&=Y\\
+    \overline{X}&=Y\\
+    X&=\overline{Y}\\
+\end{align*}
+For any value in the $Y$ codomain, we can find a value $X$ in the domain such
+that $\theta{X}=Y$, therefore $\theta$ is injective, surjective, and bijective.
+To find the inverse, note that $\theta$ takes a set $X$, and subtracts it from
+the universe of $U=\mathbb{Z}$, such that $\theta(X)=U-X$. To do the inverse, we
+must subtract that from the universe such that $\theta^{-1}=U-(U-X)=X$.
+\end{prooflist}
+
+\begin{prooflist}{9. Consider the function $f: \mathbb{R} \times \mathbb{N}
+    \rightarrow \mathbb{N} \times \mathbb{R}$ defined as $f(x, y)=(y, 3 x y)$.
+Check that this is bijective; find its inverse.}
+\item nah, i get it.
+\end{prooflist}
+
+\begin{prooflist}{10. Consider $f: \mathbb{N} \rightarrow \mathbb{Z}$ defined as
+    $f(n)=\frac{(-1)^n(2 n-1)+1}{4}$. This function is bijective by Exercise 18
+in Section 12.2. Find its inverse.}
+\item nah, i get it.
+\end{prooflist}
+
+\end{document}
