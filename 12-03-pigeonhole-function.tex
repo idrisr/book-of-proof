@@ -177,5 +177,54 @@ $a \mid b$ or $b \mid a$.}
 \item to linger upon ...
 \end{prooflist}
 
+\begin{prooflist}{7-2. Prove or disprove: Any subset $X \subseteq\set{1,2,3, \ldots,
+    2 n}$ with $|X|>n$ contains two (unequal) elements $a, b \in X$ for which
+$a \mid b$ or $b \mid a$.}
+\item Let $A=\set{1,2,3, \ldots, 2 n}$.
+\item Let $B=$ set of prime factors for a natural number $n$.
+\item Let $X\subseteq A$ such that $|X|>n$.
+\item Let $f=\mathbb{N} \rightarrow B $ be a function that takes a natural
+    number and returns a set which contains sets as elements. The elemental-sets
+    are organized such that
+\item Example $f(9) = \set{3}$, $f(12) = \set{2, 2, 3}$.
+\begin{align*}
+    f(1) =& \set{1}\\
+    f(2) =& \set{2}\\
+    f(3) =& \set{3}\\
+    f(4) =& \set{2}\\
+    f(5) =& \set{5}\\
+    f(6) =& \set{2, 3}\\
+    f(7) =& \set{7}\\
+    f(8) =& \set{2}\\
+    f(9) =& \set{3}\\
+    f(10) =& \set{2, 5}
+\end{align*}
+\end{prooflist}
+
+\begin{prooflist}{7-3. Prove or disprove: Any subset $X \subseteq\set{1,2,3, \ldots,
+    2 n}$ with $|X|>n$ contains two (unequal) elements $a, b \in X$ for which
+$a \mid b$ or $b \mid a$.}
+\item Let $A=\set{1,2,3, \ldots, 2 n}$.
+\item Let $B=$ set of prime factors for a natural number $n$.
+\item Let $X\subseteq A$ such that $|X|>n$.
+\item Let $f=\mathbb{N} \rightarrow B $ be a function that takes a natural
+    number and returns a set which contains sets as elements. The elemental-sets
+    are organized such that
+\item $f$ puts the element into a set with its highest factor if not prime.
+\item $B=\set{\set{2, 4, 8, 16,\dots}, \set{3, 6, 9, \dots}, \set{5, 25, 625,
+    \dots}}$.
+\begin{align*}
+    f(1) =& \set{1}\\
+    f(2) =& \set{2}\\
+    f(3) =& \set{3}\\
+    f(4) =& \set{2}\\
+    f(5) =& \set{5}\\
+    f(6) =& \set{2, 3}\\
+    f(7) =& \set{7}\\
+    f(8) =& \set{2}\\
+    f(9) =& \set{3}\\
+    f(10) =& \set{2, 5}
+\end{align*}
+\end{prooflist}
 
 \end{document}
