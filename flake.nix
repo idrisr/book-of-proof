@@ -12,8 +12,8 @@
         runtimeInputs = [ tex ];
         name = "clean";
         text = ''
-          latexmk -C -auxdir=aux -outdir=pdf
-          latexmk -C -auxdir=. -outdir=.
+          ${tex}/bin/latexmk -C -auxdir=aux -outdir=pdf
+          ${tex}/bin/latexmk -C -auxdir=. -outdir=.
         '';
       };
       makepdf = pkgs.writeShellApplication {
@@ -21,7 +21,7 @@
         name = "makepdf";
         text = ''
           mkdir -p aux pdf
-          latexmk -interaction=nonstopmode -lualatex -pdf -auxdir=aux -outdir=pdf ./*tex
+          ${tex}/bin/latexmk -interaction=nonstopmode -lualatex -pdf -auxdir=aux -outdir=pdf ./*tex
         '';
       };
       tex = pkgs.texlive.combine {
