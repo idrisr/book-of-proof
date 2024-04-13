@@ -2,7 +2,7 @@
   description = "template for math proofs";
   inputs.nixpkgs.url = "github:nixos/nixpkgs/23.11";
   inputs.flake-utils.url = "github:numtide/flake-utils";
-  inputs.hippoid-tex.url = "github:idrisr/hippoid-tex";
+  inputs.hippoid-tex.url = "github:idrisr/hippoid-tex/v0";
 
   outputs = { nixpkgs, flake-utils, hippoid-tex, ... }:
     let
@@ -12,8 +12,8 @@
         runtimeInputs = [ tex ];
         name = "clean";
         text = ''
-          ${tex}/bin/latexmk -C -auxdir=aux -outdir=pdf
-          ${tex}/bin/latexmk -C -auxdir=. -outdir=.
+          latexmk -C -auxdir=aux -outdir=pdf
+          latexmk -C -auxdir=. -outdir=.
         '';
       };
       makepdf = pkgs.writeShellApplication {
@@ -21,7 +21,7 @@
         name = "makepdf";
         text = ''
           mkdir -p aux pdf
-          ${tex}/bin/latexmk -interaction=nonstopmode -lualatex -pdf -auxdir=aux -outdir=pdf ./*tex
+          latexmk -interaction=nonstopmode -lualatex -pdf -auxdir=aux -outdir=pdf ./*tex
         '';
       };
       tex = pkgs.texlive.combine {

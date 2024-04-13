@@ -51,6 +51,7 @@
       },
       "original": {
         "owner": "idrisr",
+        "ref": "v0",
         "repo": "hippoid-tex",
         "type": "github"
       }
