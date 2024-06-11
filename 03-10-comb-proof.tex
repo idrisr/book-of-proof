@@ -11,62 +11,62 @@
 \pagebreak
 
 \begin{prooflist}{1. Show that
-$$1(n-0)+2(n-1)+3(n-2)+4(n-3)+\dots+(n-1)2+(n-0)1 = \binom{n+2}{3}$$ .}
-\item The expression $\binom{n+2}{3}$ is equivalent to the ways we can select
-    size-3 subsets from a set of size $(n+2)$.
-$$
-n+2n-2+3n-6+4n-12+\dots+2n-2+n = \binom{n+2}{3}
-$$
+		$$1(n-0)+2(n-1)+3(n-2)+4(n-3)+\dots+(n-1)2+(n-0)1 = \binom{n+2}{3}$$ .}
+	\item The expression $\binom{n+2}{3}$ is equivalent to the ways we can select
+	size-3 subsets from a set of size $(n+2)$.
+	$$
+		n+2n-2+3n-6+4n-12+\dots+2n-2+n = \binom{n+2}{3}
+	$$
 
-$$
-\binom{n+2}{3}=
-\dfrac{(n+2)!}{3!(n-1)!}=
-\dfrac{(n+2)(n+1)(n)(n-1)!}{3!(n-1)!}=
-\dfrac{(n+2)(n+1)(n)}{6}=
-$$
+	$$
+		\binom{n+2}{3}=
+		\dfrac{(n+2)!}{3!(n-1)!}=
+		\dfrac{(n+2)(n+1)(n)(n-1)!}{3!(n-1)!}=
+		\dfrac{(n+2)(n+1)(n)}{6}=
+	$$
 
-$$
-\binom{n+2}{3} = \binom{n+1}{3} + \binom{n+1}{2}
-$$
-yeah, no idea. see solution
+	$$
+		\binom{n+2}{3} = \binom{n+1}{3} + \binom{n+1}{2}
+	$$
+	yeah, no idea. see solution
 \end{prooflist}
 
 \begin{prooflist}{2. Show that $1 + 2 + 3 + \dots + n = \binom{n+1}{2}$.}
-\item Let $A=\{0, 1, ... n\}$, which has cardinality $n+1$.  From this set we'll
-    choose subsets of size 2.
-$$
-\binom{n+1}{2} =
-\dfrac{(n+1)!}{2!(n-1)!} =
-\dfrac{(n+1)n(n-1)!}{2!(n-1)!} =
-\dfrac{n^2+n}{2}
-$$
-\item We can pair together $n+0$, $(n-1) + 1$, $(n-2) + 2$, etc such that we
-    have $\dfrac{n}{2}\cdot n$, and one middle element which is $\dfrac{n}{2}$.
-\item Therefore we have shown that $1 + 2 + 3 + \dots + n = \binom{n+1}{2}$.
+	\item Let $A=\{0, 1, ... n\}$, which has cardinality $n+1$.  From this set we'll
+	choose subsets of size 2.
+	$$
+		\binom{n+1}{2} =
+		\dfrac{(n+1)!}{2!(n-1)!} =
+		\dfrac{(n+1)n(n-1)!}{2!(n-1)!} =
+		\dfrac{n^2+n}{2}
+	$$
+	\item We can pair together $n+0$, $(n-1) + 1$, $(n-2) + 2$, etc such that we
+	have $\dfrac{n}{2}\cdot n$, and one middle element which is $\dfrac{n}{2}$.
+	\item Therefore we have shown that $1 + 2 + 3 + \dots + n = \binom{n+1}{2}$.
 \end{prooflist}
 
 \begin{prooflist}{3. Show that
-    $$ \dbinom{n}{2} \dbinom{n-2}{k-2}= \dbinom{n}{k} \dbinom{k}{2} $$
-}
-\item
-    $$ \dfrac{n!}{2!(n-2)!} \dfrac{(n-2)!}{(k-2)!(n-2-k+2)!}=
-    \dfrac{n!}{k!(n-k)!} \dfrac{k!}{2!(k-2)!} $$
-\item
-    $$ \dfrac{n!}{2!} \dfrac{1}{(k-2)!(n-2-k+2)!}= \dfrac{n!}{(n-k)!} \dfrac{1}{2!(k-2)!} $$
-\item
-    $$ \dfrac{n!}{2(k-2)!(n-k)!}= \dfrac{n!}{(n-k)!2(k-2)!} $$
+		$$ \dbinom{n}{2} \dbinom{n-2}{k-2}= \dbinom{n}{k} \dbinom{k}{2} $$
+	}
+	\item
+	$$ \dfrac{n!}{2!(n-2)!} \dfrac{(n-2)!}{(k-2)!(n-2-k+2)!}=
+		\dfrac{n!}{k!(n-k)!} \dfrac{k!}{2!(k-2)!} $$
+	\item
+	$$ \dfrac{n!}{2!} \dfrac{1}{(k-2)!(n-2-k+2)!}= \dfrac{n!}{(n-k)!} \dfrac{1}{2!(k-2)!} $$
+	\item
+	$$ \dfrac{n!}{2(k-2)!(n-k)!}= \dfrac{n!}{(n-k)!2(k-2)!} $$
 \end{prooflist}
 
 \begin{prooflist}{4. Show that $P(n,k) = P(n-1,k)+ k \cdot P(n-1,k -1)$.}
-\item
-    $$ P(n,k) = \dfrac{n!}{(n-k)!}$$
-    $$ P(n-1,k) =  \dfrac{(n-1)!}{(n-1-k)!}\cdot\dfrac{n-k}{n-k} =\dfrac{(n-k)(n-1)!}{(n-k)!}
-    $$
-    $$ k\cdot P(n-1,k -1) = \dfrac{k(n-1)!}{(n-k)!}$$
-    $$ P(n-1,k)+ k \cdot P(n-1,k -1) = \dfrac{(n-k+k)(n-1)!}{(n-k)!} =
-    \dfrac{n!}{(n-k)!}
-    $$
-\item There is surely some fancy, less grunt-mole way of solving this.
+	\item
+	$$ P(n,k) = \dfrac{n!}{(n-k)!}$$
+	$$ P(n-1,k) =  \dfrac{(n-1)!}{(n-1-k)!}\cdot\dfrac{n-k}{n-k} =\dfrac{(n-k)(n-1)!}{(n-k)!}
+	$$
+	$$ k\cdot P(n-1,k -1) = \dfrac{k(n-1)!}{(n-k)!}$$
+	$$ P(n-1,k)+ k \cdot P(n-1,k -1) = \dfrac{(n-k+k)(n-1)!}{(n-k)!} =
+		\dfrac{n!}{(n-k)!}
+	$$
+	\item There is surely some fancy, less grunt-mole way of solving this.
 \end{prooflist}
 
 breaking my brain, pausing this here.

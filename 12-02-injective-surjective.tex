@@ -12,397 +12,397 @@
 \pagestyle{styleE}
 
 \begin{prooflist}{1. Let $A=\{1,2,3,4\}$ and $B=\{a, b, c\}$. Give an example of
-    a function $f: A \rightarrow B$ that is neither injective nor surjective.}
-\inj{}
-\item In other words, for $f$ to not be injective, two elements in $A$ must lead
-    to the same element $B$. Therefore we will construct the set $\set{(1, a),
-    (2, a)}$ to create a non-injective function.
-\surj{}
-\item In other words, for $f$ to not be surjective, there must be an element
-    $b\in B$ which has no counterpart $a \in A$ such that $f(a) = b$. Therefore the set
-    $\set{(1, a), (2, a)}$ defines a function which is neither surjective nor
-    injective.
+		a function $f: A \rightarrow B$ that is neither injective nor surjective.}
+	\inj{}
+	\item In other words, for $f$ to not be injective, two elements in $A$ must lead
+	to the same element $B$. Therefore we will construct the set $\set{(1, a),
+			(2, a)}$ to create a non-injective function.
+	\surj{}
+	\item In other words, for $f$ to not be surjective, there must be an element
+	$b\in B$ which has no counterpart $a \in A$ such that $f(a) = b$. Therefore the set
+	$\set{(1, a), (2, a)}$ defines a function which is neither surjective nor
+	injective.
 \end{prooflist}
 
 \begin{prooflist}{2. Consider the logarithm function $\ln :(0, \infty)
-    \rightarrow \mathbb{R}$. Decide whether this function is injective and
-    whether it is surjective.}
-\item For $f$ to be injective the following implication must hold
-\begin{align*}
-    \forall a, b \in A \land a\neq b\implies f(a) \neq f(b)
-\end{align*}
-\item Let $a, b\in (0, \infty)\mid a\neq b$. Then $\ln a \neq \ln b$, so $f$ is
-    injective.
-\item For $f$ to be surjective the following implication must hold
-\begin{align*}
-    \forall b \in B \implies a \in A \mid f(a) = b
-\end{align*}
-\item The codomain of $f$ is $\mathbb{R}$, and $\ln$ does indeed have a range
-    that is also $\mathbb{R}$, therefore $\ln$ is both injective and surjective.
+			\rightarrow \mathbb{R}$. Decide whether this function is injective and
+		whether it is surjective.}
+	\item For $f$ to be injective the following implication must hold
+	\begin{align*}
+		\forall a, b \in A \land a\neq b\implies f(a) \neq f(b)
+	\end{align*}
+	\item Let $a, b\in (0, \infty)\mid a\neq b$. Then $\ln a \neq \ln b$, so $f$ is
+	injective.
+	\item For $f$ to be surjective the following implication must hold
+	\begin{align*}
+		\forall b \in B \implies a \in A \mid f(a) = b
+	\end{align*}
+	\item The codomain of $f$ is $\mathbb{R}$, and $\ln$ does indeed have a range
+	that is also $\mathbb{R}$, therefore $\ln$ is both injective and surjective.
 \end{prooflist}
 
 \begin{prooflist}{3. Consider the cosine function $\cos : \mathbb{R} \rightarrow
-\mathbb{R}$. Decide whether this function is injective and whether it is
-surjective. What if it had been defined as $\cos : \mathbb{R} \rightarrow[-1,1]$
-?}
-\item Cosine is not injective. For every value $\cos 2n\pi, n\in \mathbb{Z}$,
-    the function will map to the same value in the codomain.
-\item Cosine is not surjective when the domain is $\mathbb{R}$, and it is
-    surjective when the domain is the range $[-1, 1]$.
+			\mathbb{R}$. Decide whether this function is injective and whether it is
+		surjective. What if it had been defined as $\cos : \mathbb{R} \rightarrow[-1,1]$
+		?}
+	\item Cosine is not injective. For every value $\cos 2n\pi, n\in \mathbb{Z}$,
+	the function will map to the same value in the codomain.
+	\item Cosine is not surjective when the domain is $\mathbb{R}$, and it is
+	surjective when the domain is the range $[-1, 1]$.
 \end{prooflist}
 
 \begin{prooflist}{4. A function $f: \mathbb{Z} \rightarrow \mathbb{Z} \times
-\mathbb{Z}$ is defined as $f(n)=(2 n, n+3)$. Verify whether this function is
-injective and whether it is surjective.}
-\inj{}
-\item Suppose $a, b\in A \land f(a)=f(b)$. Then $f(a)=f(b)=(2a, a+3)=(2b, b+3)$.
-    If $2a=2b$ then $a=b$ and if $a+3=b+3$ then $a=b$, therefore we have shown
-    that $a=b$. Thus we have used the contrapositive to show that $f$ is
-    injective.
-\surj{}
-Suppose that $(x, y) \in B$, then for some $(x,y)\in B$, $x=2a, y=a+3$. For any
-integer $a$, there is an integer $2a$, and for any
-integer $a$, there is an integer $a+3$. Therefore we have shown that $f$ is
-surjective.
+			\mathbb{Z}$ is defined as $f(n)=(2 n, n+3)$. Verify whether this function is
+		injective and whether it is surjective.}
+	\inj{}
+	\item Suppose $a, b\in A \land f(a)=f(b)$. Then $f(a)=f(b)=(2a, a+3)=(2b, b+3)$.
+	If $2a=2b$ then $a=b$ and if $a+3=b+3$ then $a=b$, therefore we have shown
+	that $a=b$. Thus we have used the contrapositive to show that $f$ is
+	injective.
+	\surj{}
+	Suppose that $(x, y) \in B$, then for some $(x,y)\in B$, $x=2a, y=a+3$. For any
+	integer $a$, there is an integer $2a$, and for any
+	integer $a$, there is an integer $a+3$. Therefore we have shown that $f$ is
+	surjective.
 \end{prooflist}
 
 \begin{prooflist}{5. A function $f: \mathbb{Z} \rightarrow \mathbb{Z}$ is
-    defined as $f(n)=2 n+1$. Verify whether this function is injective and
-whether it is surjective.}
-\inj{}
-\item Suppose $a, b \in \mathbb{Z}$ and $f(a) = f(b)$. Then $2a+1=2b+1$, which
-    proves that $a=b$. Thus by the contrapositive, we have shown that $f$ is
-    injective.
-\surj{}
-\item Suppose some integer $a$.  There also exists an integer $2a+ 1$, therefore
-    $f$ is surjective.
+		defined as $f(n)=2 n+1$. Verify whether this function is injective and
+		whether it is surjective.}
+	\inj{}
+	\item Suppose $a, b \in \mathbb{Z}$ and $f(a) = f(b)$. Then $2a+1=2b+1$, which
+	proves that $a=b$. Thus by the contrapositive, we have shown that $f$ is
+	injective.
+	\surj{}
+	\item Suppose some integer $a$.  There also exists an integer $2a+ 1$, therefore
+	$f$ is surjective.
 \end{prooflist}
 
 \begin{prooflist}{6. A function $f: \mathbb{Z} \times \mathbb{Z} \rightarrow
-    \mathbb{Z}$ is defined as $f(m, n)=3 n-4 m$. Verify whether this function is
-injective and whether it is surjective.}
-\inj{}
-\item Let $A=\mathbb{Z}\times\mathbb{Z}$ and $B=\mathbb{Z}$.
-\item Suppose $(a, b), (c, d) \in A$, and therefore
-    $3a-4b=3c-4d$. Suppose $a=4, b=3, c=-4, d=-3$, then the $0=0$ when $a\neq c$
-    and $b\neq d$. Therefore we have disproved the contrapositive of the
-    injection implication, and thus $f$ is not injective.
-\surj{}
-\item Suppose some integer $c$, and an integer pair $(a, b)$. Thus $f(a,
-    b)=c=3a-4b$. Additionally suppose that $a=b$. Then $c = -b$, and thus it will
-    always be possible to construct the integer $c$ from a pair of equal
-    integers. Thefore $f$ is surjective.
+			\mathbb{Z}$ is defined as $f(m, n)=3 n-4 m$. Verify whether this function is
+		injective and whether it is surjective.}
+	\inj{}
+	\item Let $A=\mathbb{Z}\times\mathbb{Z}$ and $B=\mathbb{Z}$.
+	\item Suppose $(a, b), (c, d) \in A$, and therefore
+	$3a-4b=3c-4d$. Suppose $a=4, b=3, c=-4, d=-3$, then the $0=0$ when $a\neq c$
+	and $b\neq d$. Therefore we have disproved the contrapositive of the
+	injection implication, and thus $f$ is not injective.
+	\surj{}
+	\item Suppose some integer $c$, and an integer pair $(a, b)$. Thus $f(a,
+		b)=c=3a-4b$. Additionally suppose that $a=b$. Then $c = -b$, and thus it will
+	always be possible to construct the integer $c$ from a pair of equal
+	integers. Thefore $f$ is surjective.
 \end{prooflist}
 
 \begin{prooflist}{7. A function $f: \mathbb{Z} \times \mathbb{Z} \rightarrow
-    \mathbb{Z}$ is defined as $f(m, n)=2 n-4 m$. Verify whether this function is
-injective and whether it is surjective.}
-\inj{}
-\item Let $A=\mathbb{Z}\times\mathbb{Z}$ and $B=\mathbb{Z}$.
-\item Suppose $(a, b), (c, d) \in A \land f(a, b)=f(c, d)$, and therefore
-    $2a-4b=2c-4d$. Suppose $a=2, b=0, c=0, d=-1$, then $0=0$ when $a\neq c$
-    and $b\neq d$. Therefore we have disproved the contrapositive of the
-    injection implication, and thus $f$ is not injective.
-\surj{}
-\item Suppose some integer $c$, and an integer pair $(a, b)$. Thus $f(a,
-    b)=c=2a-4b$. Because $2a$ and $4b$ are even integers, their difference will
-    be an even integer, therefore it's not possible for $f$ to result in an odd
-    integer, and thus $f$ is not surjective.
+			\mathbb{Z}$ is defined as $f(m, n)=2 n-4 m$. Verify whether this function is
+		injective and whether it is surjective.}
+	\inj{}
+	\item Let $A=\mathbb{Z}\times\mathbb{Z}$ and $B=\mathbb{Z}$.
+	\item Suppose $(a, b), (c, d) \in A \land f(a, b)=f(c, d)$, and therefore
+	$2a-4b=2c-4d$. Suppose $a=2, b=0, c=0, d=-1$, then $0=0$ when $a\neq c$
+	and $b\neq d$. Therefore we have disproved the contrapositive of the
+	injection implication, and thus $f$ is not injective.
+	\surj{}
+	\item Suppose some integer $c$, and an integer pair $(a, b)$. Thus $f(a,
+		b)=c=2a-4b$. Because $2a$ and $4b$ are even integers, their difference will
+	be an even integer, therefore it's not possible for $f$ to result in an odd
+	integer, and thus $f$ is not surjective.
 \end{prooflist}
 
 \begin{prooflist}{8. A function $f: \mathbb{Z} \times \mathbb{Z} \rightarrow
-        \mathbb{Z} \times \mathbb{Z}$ is defined as \mbox{$f(m, n)=(m+n, 2 m+n)$}. Verify
-whether this function is injective and whether it is surjective.}
-\inj{}
-\item Let $A=\mathbb{Z}\times\mathbb{Z}$ and $B=\mathbb{Z}\times\mathbb{Z}$.
-\item Suppose $(a, b), (c, d) \in A \land f(a, b)=f(c, d)$, and then
-    substituting those values into $f$ produces
-\begin{align*}
-    f(a, b)&=f(c, d)\\
-    (a+b, 2a+b)&=(c+d, 2c+d)\\
-    a+b&=c+d \\
-    2a+b&=2c+d \\
-    3a+2b &= 3c+2d
-\end{align*}
-Suppose $a=2, b=0, c=0, d=3$, then we get $f(a, b)=f(c, d)$ and $a\neq b \land
-c\neq d$. Therefore by counterexample we have disproven the contrapositive, and
-thus $f$ is not injective.
-\surj{}
-Suppose some integer pair $(c, d)\in B$, and an integer pair $(a, b)\in
-    A$. Thus $f(a, b)=(c, d)=(a+b, 2a+b)$.
-\begin{align*}
-    c&=a+b\\
-    d&=2a+b \\
-    c+d&=3a+2b \\
-\end{align*}
-\item To be continuted$\dots$
+			\mathbb{Z} \times \mathbb{Z}$ is defined as \mbox{$f(m, n)=(m+n, 2 m+n)$}. Verify
+		whether this function is injective and whether it is surjective.}
+	\inj{}
+	\item Let $A=\mathbb{Z}\times\mathbb{Z}$ and $B=\mathbb{Z}\times\mathbb{Z}$.
+	\item Suppose $(a, b), (c, d) \in A \land f(a, b)=f(c, d)$, and then
+	substituting those values into $f$ produces
+	\begin{align*}
+		f(a, b)     & =f(c, d)     \\
+		(a+b, 2a+b) & =(c+d, 2c+d) \\
+		a+b         & =c+d         \\
+		2a+b        & =2c+d        \\
+		3a+2b       & = 3c+2d
+	\end{align*}
+	Suppose $a=2, b=0, c=0, d=3$, then we get $f(a, b)=f(c, d)$ and $a\neq b \land
+		c\neq d$. Therefore by counterexample we have disproven the contrapositive, and
+	thus $f$ is not injective.
+	\surj{}
+	Suppose some integer pair $(c, d)\in B$, and an integer pair $(a, b)\in
+		A$. Thus $f(a, b)=(c, d)=(a+b, 2a+b)$.
+	\begin{align*}
+		c   & =a+b   \\
+		d   & =2a+b  \\
+		c+d & =3a+2b \\
+	\end{align*}
+	\item To be continuted$\dots$
 \end{prooflist}
 
 \begin{prooflist}{9. Prove that the function $f: \mathbb{R}-\{2\} \rightarrow
-    \mathbb{R}-\{5\}$ defined by $f(x)=\dfrac{5 x+1}{x-2}$ is bijective.}
-\inj{}
-\item Let $A=\mathbb{R}-\set{2}$, and let $B=\mathbb{R}-\set{5}$.
-\item Suppose that $a, b\in A$ and $f(a)=f(b)$. Then
-    \begin{align*}
-        \dfrac{5 a+1}{a-2}&=\dfrac{5 b+1}{b-2}\\
-    (5 a+1)(b-2)&=(5 b+1)(a-2)\\
-    5ab+b+10a-2&= 5ab+a+10b-2\\
-    b+10a&= a+10b\\
-    10a&= a+9b\\
-    9a&= 9b\\
-    a&=b
-    \end{align*}
-Therefore $a=b$, and we have proven the contrapositive, and thus $f$ is injective.
-\surj{}
-Suppose some integer $b\in B$. Then $b = f(a) = \dfrac{5a+1}{a-2}$.
-    \begin{align*}
-        f(a) = b &= \dfrac{5a+1}{a-2}\\
-        5a+1 &= b(a-2)\\
-        5a-ba &= -1-2b\\
-        a(5-b)=-1-2b\\
-        a=\dfrac{-1-2b}{5-b}&&\text{we can divide by }5-b\text{ because }
-        B=\mathbb{R}-\set{5}\\
-    \end{align*}
-Therefore $\forall b\in B, \exists a \in A \mid f(a)=b$.  Thus $f$ is surjective
-and injective, and thus is bijective.
+			\mathbb{R}-\{5\}$ defined by $f(x)=\dfrac{5 x+1}{x-2}$ is bijective.}
+	\inj{}
+	\item Let $A=\mathbb{R}-\set{2}$, and let $B=\mathbb{R}-\set{5}$.
+	\item Suppose that $a, b\in A$ and $f(a)=f(b)$. Then
+	\begin{align*}
+		\dfrac{5 a+1}{a-2} & =\dfrac{5 b+1}{b-2} \\
+		(5 a+1)(b-2)       & =(5 b+1)(a-2)       \\
+		5ab+b+10a-2        & = 5ab+a+10b-2       \\
+		b+10a              & = a+10b             \\
+		10a                & = a+9b              \\
+		9a                 & = 9b                \\
+		a                  & =b
+	\end{align*}
+	Therefore $a=b$, and we have proven the contrapositive, and thus $f$ is injective.
+	\surj{}
+	Suppose some integer $b\in B$. Then $b = f(a) = \dfrac{5a+1}{a-2}$.
+	\begin{align*}
+		f(a) = b             & = \dfrac{5a+1}{a-2}                                               \\
+		5a+1                 & = b(a-2)                                                          \\
+		5a-ba                & = -1-2b                                                           \\
+		a(5-b)=-1-2b                                                                             \\
+		a=\dfrac{-1-2b}{5-b} &                     & \text{we can divide by }5-b\text{ because }
+		B=\mathbb{R}-\set{5}                                                                     \\
+	\end{align*}
+	Therefore $\forall b\in B, \exists a \in A \mid f(a)=b$.  Thus $f$ is surjective
+	and injective, and thus is bijective.
 \end{prooflist}
 
 \begin{prooflist}{10. Prove the function $f: \mathbb{R}-\{1\} \rightarrow
-    \mathbb{R}-\{1\}$ defined by $f(x)=\left(\dfrac{x+1}{x-1}\right)^3$ is
-bijective.}
-\item Let $A=B=\mathbb{R}-\set{1}$.
-    \inj{}
-Suppose $a, b \in A$ and that $f(a)=f(b)$.
-\begin{align*}
-f(a)=f(b)= \left(\dfrac{a+1}{a-1}\right)^3=& \left(\dfrac{b+1}{b-1}\right)^3\\
-\sqrt[3]{\left(\dfrac{a+1}{a-1}\right)^3}=& \sqrt[3]{\left(\dfrac{b+1}{b-1}\right)^3}\\
-\dfrac{a+1}{a-1}=& \dfrac{b+1}{b-1}\\
-(a+1)(b-1)=& (b+1)(a-1)\\
-ab-a+b-1=& ab+a-b-1\\
--a+b=& a-b\\
-b=& 2a-b\\
-2b=& 2a\\
-b=& a
-\end{align*}
-Therefore we have proven the contrapositive, and thus $f$ is injective.
-    \surj{}
-Suppose $b\in B$, then $f(a)=b= \left(\dfrac{a+1}{a-1}\right)^3$.
-    \begin{align*}
-        f(a) = b &= \left(\dfrac{a+1}{a-1}\right)^3\\
-        \sqrt[3]{b} &= \dfrac{a+1}{a-1}\\
-        (a-1)\sqrt[3]{b} &= {a+1}\\
-        a\sqrt[3]{b} - \sqrt[3]{b}&= a+1\\
-        a\sqrt[3]{b} - a &= 1+ \sqrt[3]{b}\\
-        a(\sqrt[3]{b} - 1) &= 1+ \sqrt[3]{b}\\
-        a &= \dfrac{1+ \sqrt[3]{b}}{\sqrt[3]{b} - 1}
-    \end{align*}
-    Because the codomain $B$ excludes 1, the denominator will never be 0, and
-    thus $\exists a\forall b, f(a)=b$, and thus $f$ is surjective and
-    injective, and thus bijective.
+			\mathbb{R}-\{1\}$ defined by $f(x)=\left(\dfrac{x+1}{x-1}\right)^3$ is
+		bijective.}
+	\item Let $A=B=\mathbb{R}-\set{1}$.
+	\inj{}
+	Suppose $a, b \in A$ and that $f(a)=f(b)$.
+	\begin{align*}
+		f(a)=f(b)= \left(\dfrac{a+1}{a-1}\right)^3= & \left(\dfrac{b+1}{b-1}\right)^3           \\
+		\sqrt[3]{\left(\dfrac{a+1}{a-1}\right)^3}=  & \sqrt[3]{\left(\dfrac{b+1}{b-1}\right)^3} \\
+		\dfrac{a+1}{a-1}=                           & \dfrac{b+1}{b-1}                          \\
+		(a+1)(b-1)=                                 & (b+1)(a-1)                                \\
+		ab-a+b-1=                                   & ab+a-b-1                                  \\
+		-a+b=                                       & a-b                                       \\
+		b=                                          & 2a-b                                      \\
+		2b=                                         & 2a                                        \\
+		b=                                          & a
+	\end{align*}
+	Therefore we have proven the contrapositive, and thus $f$ is injective.
+	\surj{}
+	Suppose $b\in B$, then $f(a)=b= \left(\dfrac{a+1}{a-1}\right)^3$.
+	\begin{align*}
+		f(a) = b                   & = \left(\dfrac{a+1}{a-1}\right)^3         \\
+		\sqrt[3]{b}                & = \dfrac{a+1}{a-1}                        \\
+		(a-1)\sqrt[3]{b}           & = {a+1}                                   \\
+		a\sqrt[3]{b} - \sqrt[3]{b} & = a+1                                     \\
+		a\sqrt[3]{b} - a           & = 1+ \sqrt[3]{b}                          \\
+		a(\sqrt[3]{b} - 1)         & = 1+ \sqrt[3]{b}                          \\
+		a                          & = \dfrac{1+ \sqrt[3]{b}}{\sqrt[3]{b} - 1}
+	\end{align*}
+	Because the codomain $B$ excludes 1, the denominator will never be 0, and
+	thus $\exists a\forall b, f(a)=b$, and thus $f$ is surjective and
+	injective, and thus bijective.
 \end{prooflist}
 
 \begin{prooflist}{11. Consider the function $\theta:\{0,1\} \times \mathbb{N}
-        \rightarrow \mathbb{Z}$ defined as \mbox{$\theta(a, b)=(-1)^a b$}. Is $\theta$
-injective? Is it surjective? Bijective? Explain.}
-\item Let $A=\set{0,1}$.
-\item Let $B=\mathbb{N}$.
-\item Let $C=A\times B$.
-\item Let $D=\mathbb{Z}$.
-\inj{}
-\item Suppose $(a, b), (c, d) \in A$ and that $\theta(a, b)=\theta(c, d)$.
-Because $A=\set{0, 1}$, $(-1)^a, a\in A$ will be positive when $a=0$, and
-negative when $a=1$. Thus multiplying $(-1)^a$ by a natural number $b\in B$ will
-map the natural numbers to the negative numbers, the positive numbers, and zero.
-Only one such natural number $n\in B$ will lead to either $n$ or $-n$, depending on
-$a\in A$, thus $\theta$ is injective.
-\surj{}
-\item Suppose $c\in D$, then we wish to prove that $\exists (a, b) \in C$ such
-    that $\theta(a, b)=c$.
-\begin{align*}
-    \theta(a, b) = c &= (-1)^a\cdot b\\
-    c &= (-1)^a\cdot b\\
-c &= b && \text{when }a=0\\
-c &= -b && \text{when }a=1\\
-\end{align*}
-Thus for any integer $c$, it can be constructed by $\theta$. Thus $\theta$
-is injective, surjective, and by definition bijective.
+			\rightarrow \mathbb{Z}$ defined as \mbox{$\theta(a, b)=(-1)^a b$}. Is $\theta$
+		injective? Is it surjective? Bijective? Explain.}
+	\item Let $A=\set{0,1}$.
+	\item Let $B=\mathbb{N}$.
+	\item Let $C=A\times B$.
+	\item Let $D=\mathbb{Z}$.
+	\inj{}
+	\item Suppose $(a, b), (c, d) \in A$ and that $\theta(a, b)=\theta(c, d)$.
+	Because $A=\set{0, 1}$, $(-1)^a, a\in A$ will be positive when $a=0$, and
+	negative when $a=1$. Thus multiplying $(-1)^a$ by a natural number $b\in B$ will
+	map the natural numbers to the negative numbers, the positive numbers, and zero.
+	Only one such natural number $n\in B$ will lead to either $n$ or $-n$, depending on
+	$a\in A$, thus $\theta$ is injective.
+	\surj{}
+	\item Suppose $c\in D$, then we wish to prove that $\exists (a, b) \in C$ such
+	that $\theta(a, b)=c$.
+	\begin{align*}
+		\theta(a, b) = c & = (-1)^a\cdot b                      \\
+		c                & = (-1)^a\cdot b                      \\
+		c                & = b             &  & \text{when }a=0 \\
+		c                & = -b            &  & \text{when }a=1 \\
+	\end{align*}
+	Thus for any integer $c$, it can be constructed by $\theta$. Thus $\theta$
+	is injective, surjective, and by definition bijective.
 \end{prooflist}
 
 \begin{prooflist}{12. Consider the function $\theta:\{0,1\} \times \mathbb{N}
-    \rightarrow \mathbb{Z}$ defined as $\theta(a, b)=a-2 a b+b$. Is $\theta$
-injective? Is it surjective? Bijective? Explain.}
-\inj{}
-\item Let $A=\set{0,1}$.
-\item Let $B=\mathbb{N}$.
-\item Let $C=A\times B$.
-\item Let $D=\mathbb{Z}$.
-\item Suppose $(a, b), (c, d) \in C$ and $\theta(a, b)=\theta(c, d)$.
-\begin{align*}
-    \theta(a, b)=\theta(c, d)=2a - 2ab+b =& 2c - 2cd+d&&a=0,c=0\\
-    b =& d&&a=0,c=0\\
-    \theta(a, b)=\theta(c, d)=2a - 2ab+b =& 2c - 2cd+d&&a=1,c=1\\
-    2 - 2b+b =& 2 - 2d+d&&a=1,c=1\\
-    -b =& -d&&a=1,c=1\\
-    b =& d&&a=1,c=1
-\end{align*}
-We consider two cases, one where $a=c=0$ and one where $a=c=1$. In both cases, we
-show that $b=d$, therefore $\theta$ is injective.
-\surj{}
-\item Suppose that $c\in D$. Therefore
-\begin{align*}
-    \theta(a, b)=c = & a - 2ab+b &  & a=0 \\
-    =           & b         &  & a=0 \\
-    \theta(a, b)=c = & 1 - 2b+b  &  & a=1 \\
-    =           & 1-b       &  & a=1
-\end{align*}
-All integers $c$ can be created by $c=b$, or $c=1-b$, for $b\in\mathbb{N}$.
-Therefore $\theta$ is surjective and injective, and by definition bijective.
+			\rightarrow \mathbb{Z}$ defined as $\theta(a, b)=a-2 a b+b$. Is $\theta$
+		injective? Is it surjective? Bijective? Explain.}
+	\inj{}
+	\item Let $A=\set{0,1}$.
+	\item Let $B=\mathbb{N}$.
+	\item Let $C=A\times B$.
+	\item Let $D=\mathbb{Z}$.
+	\item Suppose $(a, b), (c, d) \in C$ and $\theta(a, b)=\theta(c, d)$.
+	\begin{align*}
+		\theta(a, b)=\theta(c, d)=2a - 2ab+b = & 2c - 2cd+d &  & a=0,c=0 \\
+		b =                                    & d          &  & a=0,c=0 \\
+		\theta(a, b)=\theta(c, d)=2a - 2ab+b = & 2c - 2cd+d &  & a=1,c=1 \\
+		2 - 2b+b =                             & 2 - 2d+d   &  & a=1,c=1 \\
+		-b =                                   & -d         &  & a=1,c=1 \\
+		b =                                    & d          &  & a=1,c=1
+	\end{align*}
+	We consider two cases, one where $a=c=0$ and one where $a=c=1$. In both cases, we
+	show that $b=d$, therefore $\theta$ is injective.
+	\surj{}
+	\item Suppose that $c\in D$. Therefore
+	\begin{align*}
+		\theta(a, b)=c = & a - 2ab+b &  & a=0 \\
+		=                & b         &  & a=0 \\
+		\theta(a, b)=c = & 1 - 2b+b  &  & a=1 \\
+		=                & 1-b       &  & a=1
+	\end{align*}
+	All integers $c$ can be created by $c=b$, or $c=1-b$, for $b\in\mathbb{N}$.
+	Therefore $\theta$ is surjective and injective, and by definition bijective.
 \end{prooflist}
 
 \begin{prooflist}{13. Consider the function $f: \mathbb{R}^2 \rightarrow
-    \mathbb{R}^2$ defined by the formula $f(x, y)=\left(x y, x^3\right)$. Is $f$
-injective? Is it surjective? Bijective? Explain.}
-\inj{}
-\item Let $A=\mathbb{R}^2$.
-\item Suppose $(a, b), (c, d) \in A$ and $f(a, b)=f(c, d)$.
-\begin{align*}
-    f(a, b)=f(c, d)=(ab, a^3) =& (cd, d^3)\\
-    (ab, a^3) =& (cd, d^3)\\
-    a^3=& d^3\\
-    a=& d\\
-    db=& cd\\
-    b=& c
-\end{align*}
-\item Thus we have proven the contrapositive by showing that if $f(a, b)=f(c,
-    d)$ then $a=b \land c=d$ and therefore $f$ is injective.
-\surj{}
-\item Suppose $(a, b)\in A$. Therefore $f(a, b)=(c, d)$.
-\begin{align*}
-    f(a, b)=(c,d)=&(ab, a^3)\\
-    a^3=&d\\
-    a=&\sqrt[3]{d}\\
-    ab=&c\\
-    b=&\dfrac{c}{\sqrt[3]{a}}
-\end{align*}
-Because $\dfrac{c}{\sqrt[3]{a}}$ is undefined for $a=0$, it is not true that
-there exists an $(a, b)\in A$ such that $f(a, b)=(c, d), \forall (c, d) \in A$,
-therefore $f$ is not surjective and not bijective.
+			\mathbb{R}^2$ defined by the formula $f(x, y)=\left(x y, x^3\right)$. Is $f$
+		injective? Is it surjective? Bijective? Explain.}
+	\inj{}
+	\item Let $A=\mathbb{R}^2$.
+	\item Suppose $(a, b), (c, d) \in A$ and $f(a, b)=f(c, d)$.
+	\begin{align*}
+		f(a, b)=f(c, d)=(ab, a^3) = & (cd, d^3) \\
+		(ab, a^3) =                 & (cd, d^3) \\
+		a^3=                        & d^3       \\
+		a=                          & d         \\
+		db=                         & cd        \\
+		b=                          & c
+	\end{align*}
+	\item Thus we have proven the contrapositive by showing that if $f(a, b)=f(c,
+		d)$ then $a=b \land c=d$ and therefore $f$ is injective.
+	\surj{}
+	\item Suppose $(a, b)\in A$. Therefore $f(a, b)=(c, d)$.
+	\begin{align*}
+		f(a, b)=(c,d)= & (ab, a^3)              \\
+		a^3=           & d                      \\
+		a=             & \sqrt[3]{d}            \\
+		ab=            & c                      \\
+		b=             & \dfrac{c}{\sqrt[3]{a}}
+	\end{align*}
+	Because $\dfrac{c}{\sqrt[3]{a}}$ is undefined for $a=0$, it is not true that
+	there exists an $(a, b)\in A$ such that $f(a, b)=(c, d), \forall (c, d) \in A$,
+	therefore $f$ is not surjective and not bijective.
 \end{prooflist}
 
 \begin{prooflist}{14. Consider the function $\theta: \mathscr{P}(\mathbb{Z})
-    \rightarrow \mathscr{P}(\mathbb{Z})$ defined as $\theta(X)=\overline{X}$. Is
-$\theta$ injective? Is it surjective? Bijective? Explain.}
-\item Let $A=\mathscr{P}(\mathbb{Z})$.
-\inj{}
-\item Suppose $a, b \in A$ and $\theta(a)=\theta(b)$.
-\begin{align*}
-    \theta(a)=\theta(b)=\overline{a} =& \overline{b}\\
-    \mathbb{Z} - a =& \mathbb{Z} -b \\
-    a =& b
-\end{align*}
-Therefore $\theta$ is injective.
-\surj{}
-\item Suppose some $a\in A$. Therefore $\theta(a)=b\in A$.
-\begin{align*}
-    \theta(a)=b=&\bar{a}
-\end{align*}
-For any set $A$ of integers, there exists a set $\overline{A}$ of integers which excludes all
-elements of $A$. Therefore $\theta$ is injective and surjective, and thus
-bijective.
+			\rightarrow \mathscr{P}(\mathbb{Z})$ defined as $\theta(X)=\overline{X}$. Is
+		$\theta$ injective? Is it surjective? Bijective? Explain.}
+	\item Let $A=\mathscr{P}(\mathbb{Z})$.
+	\inj{}
+	\item Suppose $a, b \in A$ and $\theta(a)=\theta(b)$.
+	\begin{align*}
+		\theta(a)=\theta(b)=\overline{a} = & \overline{b}  \\
+		\mathbb{Z} - a =                   & \mathbb{Z} -b \\
+		a =                                & b
+	\end{align*}
+	Therefore $\theta$ is injective.
+	\surj{}
+	\item Suppose some $a\in A$. Therefore $\theta(a)=b\in A$.
+	\begin{align*}
+		\theta(a)=b= & \bar{a}
+	\end{align*}
+	For any set $A$ of integers, there exists a set $\overline{A}$ of integers which excludes all
+	elements of $A$. Therefore $\theta$ is injective and surjective, and thus
+	bijective.
 \end{prooflist}
 
 \begin{prooflist}{15. This question concerns functions $f:\{A, B, C, D, E, F,
-    G\} \rightarrow\{1,2,3,4,5,6,7\}$. How many such functions are there? How
-many of these functions are injective? How many are surjective? How many are
-bijective?}
-\item Let $A= \set{A, B, C, D, E, F, G}$.
-\item Let $B= \set{1,2,3,4,5,6,7}$.
-\item A function is a set, and therefore we can measure its cardinality. For any
-    function $f: A\rightarrow B$, its cardinality is measured by $|f|=|B|^{|A|}=7^7$.
-\inj{}
-\item For $f$ to be injective each element of $A$ must map to only one element
-    of $B$. We can consider this problem to be analagous to selecting elements
-    from set $B$ to match an element of $A$, without replacement. Therefore we
-    can use the multiplication principle, and first choose $|B|$ selections,
-    then $|B|-1$, and so on until all elements of $A$ have been matched.
-    Therefore, for any $f=A\rightarrow  B$, the number of injective functions is
-    \begin{align*}
-    |f_{\text{injective}}| =&\dfrac{|B|!}{(|B|-|A|)!}&&|B|\geq |A|\\
-    |f_{\text{injective}}| =&0 &&|B|<|A|
-    \end{align*}
-\surj{}
-For $f$ to be surjective, we can consider it the dual to being injective, as if
-we were turning around the direction of the arrow and then use the same
-analysis.
-    \begin{align*}
-        |f_{\text{surjective}}| =&\dfrac{|A|!}{(|A|-|B|)!}&&|A|\geq |B|\\
-        |f_{\text{surjective}}| =&0 &&|A|<|B|\\
-    \end{align*}
-For $f$ to be bijective, $|A|=|B|$ must be true. The number of bijective
-functions is $|A|!=|B|!$.
+			G\} \rightarrow\{1,2,3,4,5,6,7\}$. How many such functions are there? How
+		many of these functions are injective? How many are surjective? How many are
+		bijective?}
+	\item Let $A= \set{A, B, C, D, E, F, G}$.
+	\item Let $B= \set{1,2,3,4,5,6,7}$.
+	\item A function is a set, and therefore we can measure its cardinality. For any
+	function $f: A\rightarrow B$, its cardinality is measured by $|f|=|B|^{|A|}=7^7$.
+	\inj{}
+	\item For $f$ to be injective each element of $A$ must map to only one element
+	of $B$. We can consider this problem to be analagous to selecting elements
+	from set $B$ to match an element of $A$, without replacement. Therefore we
+	can use the multiplication principle, and first choose $|B|$ selections,
+	then $|B|-1$, and so on until all elements of $A$ have been matched.
+	Therefore, for any $f=A\rightarrow  B$, the number of injective functions is
+	\begin{align*}
+		|f_{\text{injective}}| = & \dfrac{|B|!}{(|B|-|A|)!} &  & |B|\geq |A| \\
+		|f_{\text{injective}}| = & 0                        &  & |B|<|A|
+	\end{align*}
+	\surj{}
+	For $f$ to be surjective, we can consider it the dual to being injective, as if
+	we were turning around the direction of the arrow and then use the same
+	analysis.
+	\begin{align*}
+		|f_{\text{surjective}}| = & \dfrac{|A|!}{(|A|-|B|)!} &  & |A|\geq |B| \\
+		|f_{\text{surjective}}| = & 0                        &  & |A|<|B|     \\
+	\end{align*}
+	For $f$ to be bijective, $|A|=|B|$ must be true. The number of bijective
+	functions is $|A|!=|B|!$.
 
 \end{prooflist}
 
 \begin{prooflist}{16. This question concerns functions $f:\{A, B, C, D, E\}
-    \rightarrow\{1,2,3,4,5,6,7\}$. How many such functions are there? How many
-of these functions are injective? How many are surjective? How many are
-bijective?}
-\item Let $A= \set{A, B, C, D, E}$, $|A|=5$.
-\item Let $B= \set{1,2,3,4,5,6,7}$, $|B|=7$.
-\item $|f|=|B|^{|A|}=7^5$.
-\item $|f_{\text{injective}}|= \dfrac{|B|!}{(|B|-|A|)!}= \dfrac{7!}{2!}$.
-\item $|f_{\text{surjective}}|= 0$.
-\item $|f_{\text{bijective}}|= 0$.
+			\rightarrow\{1,2,3,4,5,6,7\}$. How many such functions are there? How many
+		of these functions are injective? How many are surjective? How many are
+		bijective?}
+	\item Let $A= \set{A, B, C, D, E}$, $|A|=5$.
+	\item Let $B= \set{1,2,3,4,5,6,7}$, $|B|=7$.
+	\item $|f|=|B|^{|A|}=7^5$.
+	\item $|f_{\text{injective}}|= \dfrac{|B|!}{(|B|-|A|)!}= \dfrac{7!}{2!}$.
+	\item $|f_{\text{surjective}}|= 0$.
+	\item $|f_{\text{bijective}}|= 0$.
 \end{prooflist}
 
 \begin{prooflist}{17. This question concerns functions $f:\{A, B, C, D, E, F,
-    G\} \rightarrow\{1,2\}$. How many such functions are there? How many of
-these functions are injective? How many are surjective? How many are bijective?}
-\item Let $A= \set{A, B, C, D, E, F, G}$, $|A|=7$
-\item Let $B= \set{1,2}$, $|B|=2$.
-\item $|f|=|B|^{|A|}=2^7$.
-\item $|f_{\text{injective}}|= 0$
-\item $|f_{\text{surjective}}|= \dfrac{|A|!}{(|A|-|B|)!}= \dfrac{7!}{5!}$.
-\item $|f_{\text{bijective}}|= 0$.
+			G\} \rightarrow\{1,2\}$. How many such functions are there? How many of
+		these functions are injective? How many are surjective? How many are bijective?}
+	\item Let $A= \set{A, B, C, D, E, F, G}$, $|A|=7$
+	\item Let $B= \set{1,2}$, $|B|=2$.
+	\item $|f|=|B|^{|A|}=2^7$.
+	\item $|f_{\text{injective}}|= 0$
+	\item $|f_{\text{surjective}}|= \dfrac{|A|!}{(|A|-|B|)!}= \dfrac{7!}{5!}$.
+	\item $|f_{\text{bijective}}|= 0$.
 \end{prooflist}
 
 \begin{prooflist}{18. Prove that the function $f: \mathbb{N} \rightarrow
-    \mathbb{Z}$ defined as \mbox{$f(n)=\dfrac{(-1)^n(2 n-1)+1}{4}$} is bijective.}
-\item To show that $f$ is bijective, we must show it's injective and surjective.
-\item Let $O(x)$ mean x is odd and let $E(x)$ mean x is even.
-\inj{}
-\item Suppose $a, b \in \mathbb{N}$ and $f(a)=f(b)$.
-\begin{align*}
-    f(a)=f(b)=\dfrac{(-1)^a(2 a-1)+1}{4} =& \dfrac{(-1)^b(2 b-1)+1}{4}\\
-    \dfrac{(-1)^a(2 a-1)+1}{4} =& \dfrac{(-1)^b(2 b-1)+1}{4}&&O(a)\land O(b)\\
-    \dfrac{2 a}{4} =& \dfrac{2b}{4}&&O(a)\land O(b)\\
-    a =& b&&O(a)\land O(b)\\
-    \dfrac{(-1)^a(2 a-1)+1}{4} =& \dfrac{(-1)^b(2 b-1)+1}{4}&&E(a)\land E(b)\\
-    \dfrac{1 - 2a + 1}{4} =& \dfrac{1-2b+1}{4}&&E(a)\land E(b)\\
-    \dfrac{2 - 2a}{4} =& \dfrac{2-2b}{4}&&E(a)\land E(b)\\
-    \dots &&&E(a)\land E(b)\\
-    a =& b&&E(a)\land E(b)
-\end{align*}
-\surj{}
-\item Suppose some $b \in \mathbb{Z}$. Now we attempt to prove $\exists
-    a\in\mathbb{N}\mid f(a)=b$.
-\begin{align*}
-    f(a)=b&=\dfrac{(-1)^a(2 a-1)+1}{4} &&E(a)\\
-    b&=\dfrac{1-2a+1}{4} &&E(a)\\
-    b&=\dfrac{1-a}{2} &&E(a)\\
-    2b&=1-a &&E(a)\\
-    a&=1-2b &&E(a)\\
-    f(a)=b&=\dfrac{(-1)^a(2 a-1)+1}{4} &&O(a)\\
-    b&=\dfrac{2a}{4} &&O(a)\\
-    b&=\dfrac{a}{2} &&O(a)\\
-    a&=2b &&O(a)
-\end{align*}
-\item Therefore we have show that $a=2b-1$ when a is odd. Every odd natural number can
-be constructted by $2b-1$ for some $b\in\mathbb{Z}$.
-\item We have also shown that $a=2b$ when a is even. Every even natural number can
-be constructted by $2b$ for some $b\in\mathbb{Z}$.
-\item Therefore we have shown that $f$ is both injective and surjective, and
-    therefore is also bijective.
+			\mathbb{Z}$ defined as \mbox{$f(n)=\dfrac{(-1)^n(2 n-1)+1}{4}$} is bijective.}
+	\item To show that $f$ is bijective, we must show it's injective and surjective.
+	\item Let $O(x)$ mean x is odd and let $E(x)$ mean x is even.
+	\inj{}
+	\item Suppose $a, b \in \mathbb{N}$ and $f(a)=f(b)$.
+	\begin{align*}
+		f(a)=f(b)=\dfrac{(-1)^a(2 a-1)+1}{4} = & \dfrac{(-1)^b(2 b-1)+1}{4}                     \\
+		\dfrac{(-1)^a(2 a-1)+1}{4} =           & \dfrac{(-1)^b(2 b-1)+1}{4} &  & O(a)\land O(b) \\
+		\dfrac{2 a}{4} =                       & \dfrac{2b}{4}              &  & O(a)\land O(b) \\
+		a =                                    & b                          &  & O(a)\land O(b) \\
+		\dfrac{(-1)^a(2 a-1)+1}{4} =           & \dfrac{(-1)^b(2 b-1)+1}{4} &  & E(a)\land E(b) \\
+		\dfrac{1 - 2a + 1}{4} =                & \dfrac{1-2b+1}{4}          &  & E(a)\land E(b) \\
+		\dfrac{2 - 2a}{4} =                    & \dfrac{2-2b}{4}            &  & E(a)\land E(b) \\
+		\dots                                  &                            &  & E(a)\land E(b) \\
+		a =                                    & b                          &  & E(a)\land E(b)
+	\end{align*}
+	\surj{}
+	\item Suppose some $b \in \mathbb{Z}$. Now we attempt to prove $\exists
+		a\in\mathbb{N}\mid f(a)=b$.
+	\begin{align*}
+		f(a)=b & =\dfrac{(-1)^a(2 a-1)+1}{4} &  & E(a) \\
+		b      & =\dfrac{1-2a+1}{4}          &  & E(a) \\
+		b      & =\dfrac{1-a}{2}             &  & E(a) \\
+		2b     & =1-a                        &  & E(a) \\
+		a      & =1-2b                       &  & E(a) \\
+		f(a)=b & =\dfrac{(-1)^a(2 a-1)+1}{4} &  & O(a) \\
+		b      & =\dfrac{2a}{4}              &  & O(a) \\
+		b      & =\dfrac{a}{2}               &  & O(a) \\
+		a      & =2b                         &  & O(a)
+	\end{align*}
+	\item Therefore we have show that $a=2b-1$ when a is odd. Every odd natural number can
+	be constructted by $2b-1$ for some $b\in\mathbb{Z}$.
+	\item We have also shown that $a=2b$ when a is even. Every even natural number can
+	be constructted by $2b$ for some $b\in\mathbb{Z}$.
+	\item Therefore we have shown that $f$ is both injective and surjective, and
+	therefore is also bijective.
 \end{prooflist}
 
 \end{document}

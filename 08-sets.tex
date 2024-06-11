@@ -6,459 +6,461 @@
 \status{\S 8 Proofs about Sets}
 
 \begin{document}
-\toc
+\toc{}
 
 \begin{prooflist}{1. Prove that $\{12 n: n \in \mathbb{Z}\} \subseteq\{2 n: n \in \mathbb{Z}\} \cap\{3 n: n \in \mathbb{Z}\}$.}
-\item
+	\item
 
-\[
-x \in \{12 n: n \in \mathbb{Z}\}
-\implies
-x \in \{2 n: n \in \mathbb{Z}\} \cap\{3 n: n \in \mathbb{Z}\}
-\]
-\item Suppose $x \in \{12 n: n \in \mathbb{Z}\}$.
-\item Then $12 \mid x$ and $12c=x$
-    for some integer $c$.
-\item Consequently, $2\cdot2\cdot3\cdot c =x$.
-\item Therefore $2\mid x$ and $3\mid x$, so $x =2d$ and $x=3e$ for some integers
-    $d$ and $e$.
-\item
-This means that $x \in \{2 n: n \in \mathbb{Z}\}$ and $x \in \{3 n: n \in
-    \mathbb{Z}\}$.
-\item
-We have shown that
-$x \in \{12 n: n \in \mathbb{Z}\}$
-implies
-$x \in\{2n: n \in \mathbb{Z}\}$
-and
-$x \in\{3n: n \in \mathbb{Z}\}$,
-so it follows that
-$\set{12 n: n \in \mathbb{Z}} \subseteq\set{2 n: n \in \mathbb{Z}} \cap\{3 n: n \in
-\mathbb{Z}\}$.
+	\[
+		x \in \{12 n: n \in \mathbb{Z}\}
+		\implies
+		x \in \{2 n: n \in \mathbb{Z}\} \cap\{3 n: n \in \mathbb{Z}\}
+	\]
+
+	Suppose $x \in \{12 n: n \in \mathbb{Z}\}$.
+
+	Then $12 \mid x$ and $12c=x$ for some integer $c$.
+
+	Consequently, $2\cdot2\cdot3\cdot c =x$.
+
+	Therefore $2\mid x$ and $3\mid x$, so $x =2d$ and $x=3e$ for some integers
+	$d$ and $e$.
+	This means that $x \in \{2 n: n \in \mathbb{Z}\}$ and $x \in \{3 n: n \in
+		\mathbb{Z}\}$.
+
+	We have shown that
+	$x \in \{12 n: n \in \mathbb{Z}\}$
+	implies
+	$x \in\{2n: n \in \mathbb{Z}\}$
+	and
+	$x \in\{3n: n \in \mathbb{Z}\}$,
+	so it follows that
+	$\set{12 n: n \in \mathbb{Z}} \subseteq\set{2 n: n \in \mathbb{Z}} \cap\{3 n: n \in
+		\mathbb{Z}\}$.
 \end{prooflist}
 
 \begin{prooflist}{2. Prove that $\set{6 n: n \in \mathbb{Z}}=\set{2 n: n \in
-    \mathbb{Z}} \cap\set{3 n: n \in \mathbb{Z}}$.}
-\item To show that two sets are equal, we can equivalently prove that the following two subset
-    relationships hold.
-\begin{align}
-\{6n: n \in \mathbb{Z}\}
-\subseteq&
-\{2n: n \in \mathbb{Z}\} \cap \{3n: n \in \mathbb{Z}\} \label{eq:line1} \\
-\{2n: n \in \mathbb{Z}\} \cap \{3n: n \in \mathbb{Z}\}
-\subseteq&
-\{6n: n \in \mathbb{Z}\} \label{eq:line2}
-\end{align}
-\item Those two subset relationships are equivalent to the following two
-    implications.
-\begin{align}
-x \in \{6n: n \in \mathbb{Z}\}
-\implies&
-x \in \{2n: n \in \mathbb{Z}\} \cap \{3n: n \in \mathbb{Z}\} \label{eq:imp1} \\
-x \in \{2n: n \in \mathbb{Z}\} \cap \{3n: n \in \mathbb{Z}\}
-\implies&
-x \in \{6n: n \in \mathbb{Z}\} \label{eq:imp2}
-\end{align}
+				\mathbb{Z}} \cap\set{3 n: n \in \mathbb{Z}}$.}
+	\item To show that two sets are equal, we can equivalently prove that the following two subset
+	relationships hold.
+	\begin{align}
+		\{6n: n \in \mathbb{Z}\}
+		\subseteq &
+		\{2n: n \in \mathbb{Z}\} \cap \{3n: n \in \mathbb{Z}\} \label{eq:line1} \\
+		\{2n: n \in \mathbb{Z}\} \cap \{3n: n \in \mathbb{Z}\}
+		\subseteq &
+		\{6n: n \in \mathbb{Z}\} \label{eq:line2}
+	\end{align}
+	\item Those two subset relationships are equivalent to the following two
+	implications.
+	\begin{align}
+		x \in \{6n: n \in \mathbb{Z}\}
+		\implies &
+		x \in \{2n: n \in \mathbb{Z}\} \cap \{3n: n \in \mathbb{Z}\} \label{eq:imp1} \\
+		x \in \{2n: n \in \mathbb{Z}\} \cap \{3n: n \in \mathbb{Z}\}
+		\implies &
+		x \in \{6n: n \in \mathbb{Z}\} \label{eq:imp2}
+	\end{align}
 
-We start with Equation \ref{eq:imp1}.
-\item Supppose $x \in \{6n: n \in \mathbb{Z}\}$. Therefore $6c = x$, for some
-    $c\in\mathbb{N}$, which means $6\mid x.$ and also $2\cdot3\mid x$, so
-    therefore $2\mid x$ and $3\mid x$.
-\item Because $2d=x$ and $3e=x$, for some $d, e \in \mathbb{N}$,
-    it is also true that $\{2n: n \in \mathbb{Z}\} \cap \{3n: n \in \mathbb{Z}\}$.
+	We start with Equation \ref{eq:imp1}.
+	\item Supppose $x \in \{6n: n \in \mathbb{Z}\}$. Therefore $6c = x$, for some
+	$c\in\mathbb{N}$, which means $6\mid x.$ and also $2\cdot3\mid x$, so
+	therefore $2\mid x$ and $3\mid x$.
+	\item Because $2d=x$ and $3e=x$, for some $d, e \in \mathbb{N}$,
+	it is also true that $\{2n: n \in \mathbb{Z}\} \cap \{3n: n \in \mathbb{Z}\}$.
 
-Now we will show Equation \ref{eq:imp2}.
-\item Suppose $x \in \set{2n: n \in \mathbb{Z}} \cap \set{3n: n \in
-    \mathbb{Z}}$. Therefore $2f=x$ and $3g=x$, for some $f, g \in \mathbb{N}$.
-    Because $x$ has as prime factors $2$ and $3$, it also has as a factor any
-    product combination of those prime factors, therefore $6\mid x$. Because
-    $6\mid x$, we can conclude $x \in \{6n: n \in \mathbb{Z}\}$.
-\item Because we have shown \ref{eq:imp1} and \ref{eq:imp2}, it follows that
-$\set{6 n: n \in \mathbb{Z}}=\set{2 n: n \in \mathbb{Z}} \cap\set{3 n: n \in
-\mathbb{Z}}$..
+	Now we will show Equation \ref{eq:imp2}.
+	\item Suppose $x \in \set{2n: n \in \mathbb{Z}} \cap \set{3n: n \in
+			\mathbb{Z}}$. Therefore $2f=x$ and $3g=x$, for some $f, g \in \mathbb{N}$.
+	Because $x$ has as prime factors $2$ and $3$, it also has as a factor any
+	product combination of those prime factors, therefore $6\mid x$. Because
+	$6\mid x$, we can conclude $x \in \{6n: n \in \mathbb{Z}\}$.
+	\item Because we have shown \ref{eq:imp1} and \ref{eq:imp2}, it follows that
+	$\set{6 n: n \in \mathbb{Z}}=\set{2 n: n \in \mathbb{Z}} \cap\set{3 n: n \in
+			\mathbb{Z}}$..
 \end{prooflist}
 
 \begin{prooflist}{3. If $k \in \mathbb{Z}$,}
-    \item
+	\item
 
-\begin{align*}
-    \set{n \in \mathbb{Z}: n \mid k} &\subseteq \set{n \in \mathbb{Z}: n \mid k^2} \\
-    x \in \set{n \in \mathbb{Z}: n \mid k} &\implies x \in \set{n \in \mathbb{Z}: n \mid k^2}
-\end{align*}
-\item Suppose $x \in \set{n \in \mathbb{Z}: n \mid k}$. Then it follows $\exists
-    c\in\mathbb{N}: xc=k$.
-\item Now if we square both sides of
-$xc=k$ we get $x(xc^2) = k^2$.  This shows that $x\mid k^2$ and we have proven
-the implication.
+	\begin{align*}
+		\set{n \in \mathbb{Z}: n \mid k}       & \subseteq \set{n \in \mathbb{Z}: n \mid k^2}      \\
+		x \in \set{n \in \mathbb{Z}: n \mid k} & \implies x \in \set{n \in \mathbb{Z}: n \mid k^2}
+	\end{align*}
+	\item Suppose $x \in \set{n \in \mathbb{Z}: n \mid k}$. Then it follows $\exists
+		c\in\mathbb{N}: xc=k$.
+	\item Now if we square both sides of
+	$xc=k$ we get $x(xc^2) = k^2$.  This shows that $x\mid k^2$ and we have proven
+	the implication.
 \end{prooflist}
 
 \begin{prooflist}{4. If $m, n \in \mathbb{Z}$, then}
-\item
-\begin{align*}
-    \set{x \in \mathbb{Z}: mn \mid x} &\subseteq \set{x \in \mathbb{Z}: m \mid x} \cap \set{x \in \mathbb{Z}: n \mid x} \\
-    a \in \set{x \in \mathbb{Z}: mn \mid x} &\implies a \in \set{x \in \mathbb{Z}: m \mid x} \cap \set{x \in \mathbb{Z}: n \mid x}
-\end{align*}
-\item Suppose $a \in \set{x \in \mathbb{Z}: mn \mid x}$. Then, $mn \mid a$, implying the existence of $c \in \mathbb{N}$ such that $cmn = a$.
-\item Therefore, we have $m(cn) = a$ and $n(cm) = a$, demonstrating that $a \in \left(\set{x \in \mathbb{Z}: m \mid x} \cap \set{x \in \mathbb{Z}: n \mid x}\right)$.
-\item Thus, $\set{x \in \mathbb{Z}: mn \mid x} \subseteq \left(\set{x \in \mathbb{Z}: m \mid x} \cap \set{x \in \mathbb{Z}: n \mid x}\right)$.
+	\item
+	\begin{align*}
+		\set{x \in \mathbb{Z}: mn \mid x}       & \subseteq \set{x \in \mathbb{Z}: m \mid x} \cap \set{x \in \mathbb{Z}: n \mid x}      \\
+		a \in \set{x \in \mathbb{Z}: mn \mid x} & \implies a \in \set{x \in \mathbb{Z}: m \mid x} \cap \set{x \in \mathbb{Z}: n \mid x}
+	\end{align*}
+	\item Suppose $a \in \set{x \in \mathbb{Z}: mn \mid x}$. Then, $mn \mid a$, implying the existence of $c \in \mathbb{N}$ such that $cmn = a$.
+	\item Therefore, we have $m(cn) = a$ and $n(cm) = a$, demonstrating that $a \in \left(\set{x \in \mathbb{Z}: m \mid x} \cap \set{x \in \mathbb{Z}: n \mid x}\right)$.
+	\item Thus, $\set{x \in \mathbb{Z}: mn \mid x} \subseteq \left(\set{x \in \mathbb{Z}: m \mid x} \cap \set{x \in \mathbb{Z}: n \mid x}\right)$.
 \end{prooflist}
 
 \begin{prooflist}{5. If $p$ and $q$ are positive integers, then $\{p n: n \in
-\mathbb{N}\} \cap\{q n: n \in \mathbb{N}\} \neq \varnothing$.}
-\item Suppose $p, q \in \mathbb{N}$. Therefore $pn \in \mathbb{N}$ and
-    $qn \in \mathbb{N}$. Therefore $pq \in \mathbb{N}$ and $pq \in \set{pn} \cap
-    \set{qn}$.
-\item Therefore we have shown that
-$\{p n: n \in \mathbb{N}\} \cap\{q n: n \in \mathbb{N}\} \neq \varnothing$.
+			\mathbb{N}\} \cap\{q n: n \in \mathbb{N}\} \neq \varnothing$.}
+	\item Suppose $p, q \in \mathbb{N}$. Therefore $pn \in \mathbb{N}$ and
+	$qn \in \mathbb{N}$. Therefore $pq \in \mathbb{N}$ and $pq \in \set{pn} \cap
+		\set{qn}$.
+	\item Therefore we have shown that
+	$\{p n: n \in \mathbb{N}\} \cap\{q n: n \in \mathbb{N}\} \neq \varnothing$.
 \end{prooflist}
 
 \begin{prooflist}{5. If $p$ and $q$ are positive integers, then ${p n: n \in \mathbb{N}} \cap{q n: n \in \mathbb{N}} \neq \varnothing$.}
-\item Let $p$ and $q$ be positive integers.
-\item Let $A$ be the set such that $A=\set{pn:n\in\mathbb{N}}$.
-\item Let $B$ be the set such that $B=\set{qn:n\in\mathbb{N}}$.
-\item Let $k$ be an integer such that $k=\text{lcm}(p, q)$. Because $k$ is
-    divisible both by $p$ and $q$ by definition, we have shown that the set $A
-    \cap B$ is not empty.
-\item Therefore the union of the sets
-${p n: n \in \mathbb{N}} \cap{q n: n \in \mathbb{N}}$ is non-empty.
+	\item Let $p$ and $q$ be positive integers.
+	\item Let $A$ be the set such that $A=\set{pn:n\in\mathbb{N}}$.
+	\item Let $B$ be the set such that $B=\set{qn:n\in\mathbb{N}}$.
+	\item Let $k$ be an integer such that $k=\text{lcm}(p, q)$. Because $k$ is
+	divisible both by $p$ and $q$ by definition, we have shown that the set $A
+		\cap B$ is not empty.
+	\item Therefore the union of the sets
+	${p n: n \in \mathbb{N}} \cap{q n: n \in \mathbb{N}}$ is non-empty.
 \end{prooflist}
 
 \begin{prooflist}{6. Suppose $A, B$ and $C$ are sets. Prove that if $A \subseteq B$, then $A-C \subseteq B-C$.}
-\item
-Suppose that $x\in A\subseteq B$ and $x\in A-C$. Therefore $x\in A\land x\in B
-\land x \notin C$. Because $x\in B$ and $x\notin C$, it follows that $x\in B-C$
-which means that $A-C\subseteq B-C$.
+	\item
+	Suppose that $x\in A\subseteq B$ and $x\in A-C$. Therefore $x\in A\land x\in B
+		\land x \notin C$. Because $x\in B$ and $x\notin C$, it follows that $x\in B-C$
+	which means that $A-C\subseteq B-C$.
 \end{prooflist}
 
 \begin{prooflist}{7. Suppose $A, B$ and $C$ are sets. If $B \subseteq C$, then $A \times B \subseteq A \times C$.}
-\item Let $(x, y)$ be an arbitrary element in $A\times B$. Therefore $x\in A$
-    and $y\in B$.
-\item Because of $B\subseteq C$, all elemenets in $B$ are also in $C$, so $y\in C$.
-\item Because $x\in A$ and $y\in C$, then $(x, y) \in A \times C$.
-\item Consequently every element $(x, y) \in A\times B$ is also in $A\times C$,
-    hence $A \times B \subseteq A \times C$ whenever $B\subseteq C$.
+	\item Let $(x, y)$ be an arbitrary element in $A\times B$. Therefore $x\in A$
+	and $y\in B$.
+	\item Because of $B\subseteq C$, all elemenets in $B$ are also in $C$, so $y\in C$.
+	\item Because $x\in A$ and $y\in C$, then $(x, y) \in A \times C$.
+	\item Consequently every element $(x, y) \in A\times B$ is also in $A\times C$,
+	hence $A \times B \subseteq A \times C$ whenever $B\subseteq C$.
 \end{prooflist}
 
 \begin{prooflist}{8. If $A, B$ and $C$ are sets, then $A \cup(B \cap C)=(A \cup B) \cap(A \cup C)$.}
-\item To show an equality of sets, we must prove an implication and its
-    converse.
-\begin{align*}
-    A \cup(B \cap C)&\implies(A \cup B) \cap(A \cup C) \\
-(A \cup B) \cap(A \cup C) &\implies A \cup(B \cap C)
-\end{align*}
-\item Suppose $x \in B\cap C$. Therefore $x$ is in $B$ and $C$. Because $x$ is
-    in $B\cap C$, it is also in $A \cup (B \cap C)$.
-\item Because $x\in B$, it is also in $A\cup B$.
-\item Because $x\in C$, it is also in $A\cup C$.
-\item Because $x\in (A \cup B) \land x\in(A \cup C)$, it is also in $(A\cup B) \cap
-    (A\cup C)$. Therefore we have shown the first implication
-    $A \cup(B \cap C)\implies(A \cup B) \cap(A \cup C)$.
-\item
-    Now to prove the converse, suppose that $y \in A$. Therefore $y\in A \cup B$
-    and $y\in A\cup C$, which means also that $y$ is in $(A\cup B) \cap (A
-    \cup C)$. For the union of any set and $A$, $y$ will be an element of that
-    union, therefore $y \in A \cup (B\cap C)$.
-\item Thus we have shown the original implication and the converse, thus proving
-    the set equality.
+	\item To show an equality of sets, we must prove an implication and its
+	converse.
+	\begin{align*}
+		A \cup(B \cap C)          & \implies(A \cup B) \cap(A \cup C) \\
+		(A \cup B) \cap(A \cup C) & \implies A \cup(B \cap C)
+	\end{align*}
+	\item Suppose $x \in B\cap C$. Therefore $x$ is in $B$ and $C$. Because $x$ is
+	in $B\cap C$, it is also in $A \cup (B \cap C)$.
+	\item Because $x\in B$, it is also in $A\cup B$.
+	\item Because $x\in C$, it is also in $A\cup C$.
+	\item Because $x\in (A \cup B) \land x\in(A \cup C)$, it is also in $(A\cup B) \cap
+		(A\cup C)$. Therefore we have shown the first implication
+	$A \cup(B \cap C)\implies(A \cup B) \cap(A \cup C)$.
+	\item
+	Now to prove the converse, suppose that $y \in A$. Therefore $y\in A \cup B$
+	and $y\in A\cup C$, which means also that $y$ is in $(A\cup B) \cap (A
+		\cup C)$. For the union of any set and $A$, $y$ will be an element of that
+	union, therefore $y \in A \cup (B\cap C)$.
+	\item Thus we have shown the original implication and the converse, thus proving
+	the set equality.
 \end{prooflist}
 
 \begin{prooflist}{9. If $A, B$ and $C$ are sets, then $A \cap(B \cup C)=(A \cap B) \cup(A \cap C)$.}
-\item
-\begin{align*}
-    A \cap(B \cup C)&\implies(A \cap B) \cup(A \cap C) \\
-    (A \cap B) \cup(A \cap C) &\implies A \cap(B \cup C)
-\end{align*}
-Suppose there is some arbitrary $x\in A\cap(B\cup C)$. Then $x$ must be in $A$
-and $B\cup C$. Because $x\in A$ and $B\cup C$, then at least one of $A\cap B$ and $A\cap C$ will be true.
-Therefore $x$ will be in the union $(A\cap B) \cup (A\cap C)$ and we have
-proven the first implication.
-\item For the second implication, suppose $x\in A \land x \in B$. Then $x\in A
-    \cap B$ and also $x$ will also be in in $(A\cap B) \cup (A\cap C)$. Because
-    $x\in B$, then it will also be in $B\cup C$. And as $x\in A$, it will also
-    be in $A \cap (B\cup C)$. Therefore we have proven the first and second
-    implications, and also the set equivlance $A \cap(B \cup C)=(A \cap B)
-    \cup(A \cap C)$.
+	\item
+	\begin{align*}
+		A \cap(B \cup C)          & \implies(A \cap B) \cup(A \cap C) \\
+		(A \cap B) \cup(A \cap C) & \implies A \cap(B \cup C)
+	\end{align*}
+	Suppose there is some arbitrary $x\in A\cap(B\cup C)$. Then $x$ must be in $A$
+	and $B\cup C$. Because $x\in A$ and $B\cup C$, then at least one of $A\cap B$ and $A\cap C$ will be true.
+	Therefore $x$ will be in the union $(A\cap B) \cup (A\cap C)$ and we have
+	proven the first implication.
+	\item For the second implication, suppose $x\in A \land x \in B$. Then $x\in A
+		\cap B$ and also $x$ will also be in in $(A\cap B) \cup (A\cap C)$. Because
+	$x\in B$, then it will also be in $B\cup C$. And as $x\in A$, it will also
+	be in $A \cap (B\cup C)$. Therefore we have proven the first and second
+	implications, and also the set equivlance $A \cap(B \cup C)=(A \cap B)
+		\cup(A \cap C)$.
 \end{prooflist}
 
 \begin{prooflist}{10. If $A$ and $B$ are sets in a universal set $U$, then $\overline{A \cap B}=\bar{A} \cup \bar{B}$.}
-\item
-\begin{align*}
-\overline{A \cap B} &\implies \bar{A} \cup \bar{B}\\
-\bar{A} \cup \bar{B} &\implies \overline{A \cap B}
-\end{align*}
-\item Suppose $x\in \overline{A\cap B}$. Therefore $\neg(x\in{A\cap B})$. We can
-    distribute the not using De Morgan's law to get $x\notin A \lor \notin B$.
-\item Because A and B are sets in a universal set, then $x\in\bar{A} \lor
-    x\in\bar{B}$ implies $x\in(\bar{A} \cup \bar{B})$ and we have shown the first implication.
-\item Suppose $x\in \bar{A} \cup \bar{B}$. Therefore $x\in U -(A \cap B)$. The
-    universe minus $(A\cap B)$ can be written as $\overline{A\cap B}$,  which
-    proves the second implication.
-\item We have proven the implication and its converse, therefore we have proven
-    set equality.
+	\item
+	\begin{align*}
+		\overline{A \cap B}  & \implies \bar{A} \cup \bar{B} \\
+		\bar{A} \cup \bar{B} & \implies \overline{A \cap B}
+	\end{align*}
+	\item Suppose $x\in \overline{A\cap B}$. Therefore $\neg(x\in{A\cap B})$. We can
+	distribute the not using De Morgan's law to get $x\notin A \lor \notin B$.
+	\item Because A and B are sets in a universal set, then $x\in\bar{A} \lor
+		x\in\bar{B}$ implies $x\in(\bar{A} \cup \bar{B})$ and we have shown the first implication.
+	\item Suppose $x\in \bar{A} \cup \bar{B}$. Therefore $x\in U -(A \cap B)$. The
+	universe minus $(A\cap B)$ can be written as $\overline{A\cap B}$,  which
+	proves the second implication.
+	\item We have proven the implication and its converse, therefore we have proven
+	set equality.
 \end{prooflist}
 
 \begin{prooflist}{11. If $A$ and $B$ are sets in a universal set $U$, then
-    $\overline{A \cup B}=\bar{A} \cap \bar{B}$.}
-\item
-\begin{align*}
-\overline{A \cup B}
-&\subseteq
-\bar{A} \cap \bar{B}\\
-x\in \overline{A \cup B}
-&\implies
-x\in \bar{A} \cap \bar{B}
-\end{align*}
+		$\overline{A \cup B}=\bar{A} \cap \bar{B}$.}
+	\item
+	\begin{align*}
+		\overline{A \cup B}
+		 & \subseteq
+		\bar{A} \cap \bar{B} \\
+		x\in \overline{A \cup B}
+		 & \implies
+		x\in \bar{A} \cap \bar{B}
+	\end{align*}
 
-\item For the first implication suppose $x\in\overline{A\cup B}$. Therefore $x \notin A\cup B$. Therefore,
-    from DeMorgan's law, we know $x\in\bar{A} \cap \bar{B}$ and we have shown
-    the subset relationship of the first implication.
+	\item For the first implication suppose $x\in\overline{A\cup B}$. Therefore $x \notin A\cup B$. Therefore,
+	from DeMorgan's law, we know $x\in\bar{A} \cap \bar{B}$ and we have shown
+	the subset relationship of the first implication.
 
-\begin{align*}
-\bar{A} \cap \bar{B}
-&\subseteq
-\overline{A \cup B}\\
-x\in\bar{A} \cap \bar{B}
-&\implies
-x\in\overline{A \cup B}
-\end{align*}
-\item For the second implication suppose $x\in\bar{A}\cap\bar{B}$. Therefore
-\begin{align*}
-   x \in U - \neg\left(\bar{A}\cap\bar{B}\right) \\
-   x \in U - \left(A\cup B\right)
-\end{align*}
-\item Because $U-C$ for some set C is equal to $\bar{C}$, $U - \left(A\cup
-    B\right)$ is equivalent to $\overline{A\cup B}$. Therefore we have shown the
-    second implication and the second subset relationship and thus proven the
-    set equality of $x \notin A\cup B$.
+	\begin{align*}
+		\bar{A} \cap \bar{B}
+		 & \subseteq
+		\overline{A \cup B} \\
+		x\in\bar{A} \cap \bar{B}
+		 & \implies
+		x\in\overline{A \cup B}
+	\end{align*}
+	\item For the second implication suppose $x\in\bar{A}\cap\bar{B}$. Therefore
+	\begin{align*}
+		x \in U - \neg\left(\bar{A}\cap\bar{B}\right) \\
+		x \in U - \left(A\cup B\right)
+	\end{align*}
+	\item Because $U-C$ for some set C is equal to $\bar{C}$, $U - \left(A\cup
+		B\right)$ is equivalent to $\overline{A\cup B}$. Therefore we have shown the
+	second implication and the second subset relationship and thus proven the
+	set equality of $x \notin A\cup B$.
 \end{prooflist}
 
 \begin{prooflist}{12. If $A, B$ and $C$ are sets, then $A-(B \cap C)=(A-B) \cup(A-C)$.}
-\item
-\begin{align*}
-    A-(B \cap C)=& \set{x: x\in A \land x\notin(B \cap C)} & \text{def. of }-\\
-    =& \set{x: x\in A \land x\notin B \land x\notin C} & \text{def. of $\cap$}\\
-    =& \set{x: x\in A \land \neg{(x\in B \cap C})} & \\
-    =& \set{x: x\in A \land (x\in \bar{B} \cup \bar{C}}) & \text{Demorgan}\\
-    =& \set{x: x\in A \land x\in \bar{B} \lor x\in\bar{C}} & \text{def. of }\cup\\
-    =& \set{x: x\in A \land x\in A \land x\in \bar{B} \lor x\in\bar{C}} & (x\in A = x\in A \land x \in A) \\
-    =& \set{x: (x\in A \land x\in \bar{B}) \lor (x\in A \land x\in\bar{C})} & \text{rearrange}\\
-    =& \set{x: (x\in A  - B) \lor (x\in A - C)} & \text{def. of }-\\
-    =& (A - B) \cup (A-C) & \text{def. of }\cup\\
-\end{align*}
+	\item
+	\begin{align*}
+		A-(B \cap C)= & \set{x: x\in A \land x\notin(B \cap C)}                              & \text{def. of }-                \\
+		=             & \set{x: x\in A \land x\notin B \land x\notin C}                      & \text{def. of $\cap$}           \\
+		=             & \set{x: x\in A \land \neg{(x\in B \cap C})}                          &                                 \\
+		=             & \set{x: x\in A \land (x\in \bar{B} \cup \bar{C}})                    & \text{Demorgan}                 \\
+		=             & \set{x: x\in A \land x\in \bar{B} \lor x\in\bar{C}}                  & \text{def. of }\cup             \\
+		=             & \set{x: x\in A \land x\in A \land x\in \bar{B} \lor x\in\bar{C}}     & (x\in A = x\in A \land x \in A) \\
+		=             & \set{x: (x\in A \land x\in \bar{B}) \lor (x\in A \land x\in\bar{C})} & \text{rearrange}                \\
+		=             & \set{x: (x\in A  - B) \lor (x\in A - C)}                             & \text{def. of }-                \\
+		=             & (A - B) \cup (A-C)                                                   & \text{def. of }\cup             \\
+	\end{align*}
 \end{prooflist}
 
 
 \begin{prooflist}{13. If $A, B$ and $C$ are sets, then $A-(B \cup C)=(A-B) \cap(A-C)$.}
-\item
-\begin{align*}
-    A-(B \cup C)=& \set{x: x\in A \land x\notin(B \cup C)} & \text{def. of -}\\
-    =& \set{x: x\in A \land (x\notin B \lor x\notin C} & \text{def. of $\cup$}\\
-    =& \set{x: x\in A \land \neg{(x\in B \cup C})} & \\
-    =& \set{x: x\in A \land (x\in \bar{B} \cap \bar{C}}) & \text{Demorgan}\\
-    =& \set{x: x\in A \land x\in \bar{B} \land x\in\bar{C}} & \text{def. of }\cap\\
-    =& \set{x: x\in A \land x\in A \land x\in \bar{B} \land x\in\bar{C}} & (x\in A = x\in A \land x \in A) \\
-    =& \set{x: (x\in A \land x\in \bar{B}) \land (x\in A \land x\in\bar{C})} & \text{rearrange}\\
-    =& \set{x: (x\in A  - B) \land (x\in A - C)} & \text{def. of }-\\
-    =& (A - B) \cap (A-C) & \text{def. of }\cap
-\end{align*}
+	\item
+	\begin{align*}
+		A-(B \cup C)= & \set{x: x\in A \land x\notin(B \cup C)}                               & \text{def. of -}                \\
+		=             & \set{x: x\in A \land (x\notin B \lor x\notin C}                       & \text{def. of $\cup$}           \\
+		=             & \set{x: x\in A \land \neg{(x\in B \cup C})}                           &                                 \\
+		=             & \set{x: x\in A \land (x\in \bar{B} \cap \bar{C}})                     & \text{Demorgan}                 \\
+		=             & \set{x: x\in A \land x\in \bar{B} \land x\in\bar{C}}                  & \text{def. of }\cap             \\
+		=             & \set{x: x\in A \land x\in A \land x\in \bar{B} \land x\in\bar{C}}     & (x\in A = x\in A \land x \in A) \\
+		=             & \set{x: (x\in A \land x\in \bar{B}) \land (x\in A \land x\in\bar{C})} & \text{rearrange}                \\
+		=             & \set{x: (x\in A  - B) \land (x\in A - C)}                             & \text{def. of }-                \\
+		=             & (A - B) \cap (A-C)                                                    & \text{def. of }\cap
+	\end{align*}
 \end{prooflist}
 
 \begin{prooflist}{14. If $A, B$ and $C$ are sets, then $(A \cup B)-C=(A-C) \cup(B-C)$.}
-\item
-\begin{align*}
-    (A\cup B) - C =& \set{x: x\in (A\cup B) \land x\notin C} & \text{def. of -}\\
-    =& \set{x: x\in A \lor x \in B \lor x\notin C} & \text{def. of $\cup$}\\
-    =& \set{x: x\in A \land x\notin C \lor x\in B \land x\notin C} & (x\notin C = x\notin C \land x \notin C) \\
-    =& \set{x: (x\in A \land x\notin C) \lor (x\in B \land x\notin C)} & \text{rearrange}\\
-    =& \set{x: (x\in A  - C) \lor (x\in B - C)} & \text{def. of -}\\
-    =& (A - B) \cup (B-C) & \text{def. of }\cup
-\end{align*}
+	\item
+	\begin{align*}
+		(A\cup B) - C = & \set{x: x\in (A\cup B) \land x\notin C}                         & \text{def. of -}                         \\
+		=               & \set{x: x\in A \lor x \in B \lor x\notin C}                     & \text{def. of $\cup$}                    \\
+		=               & \set{x: x\in A \land x\notin C \lor x\in B \land x\notin C}     & (x\notin C = x\notin C \land x \notin C) \\
+		=               & \set{x: (x\in A \land x\notin C) \lor (x\in B \land x\notin C)} & \text{rearrange}                         \\
+		=               & \set{x: (x\in A  - C) \lor (x\in B - C)}                        & \text{def. of -}                         \\
+		=               & (A - B) \cup (B-C)                                              & \text{def. of }\cup
+	\end{align*}
 \end{prooflist}
 
 \begin{prooflist}{15. If $A, B$ and $C$ are sets, then $(A \cap B)-C=(A-C) \cap(B-C)$.}
-\item
-\begin{align*}
-    (A\cap B) - C =& \set{x: x\in (A\cap B) \land x\notin C} & \text{def. of -}\\
-    =& \set{x: x\in A \land x \in B \land x\notin C} & \text{def. of $\cup$}\\
-    =& \set{x: x\in A \land x\notin C \land x\in B \land x\notin C} & (x\notin C = x\notin C \land x \notin C) \\
-    =& \set{x: (x\in A \land x\notin C) \land (x\in B \land x\notin C)} & \text{rearrange}\\
-    =& \set{x: (x\in A  - C) \land (x\in B - C)} & \text{def. of -}\\
-    =& (A - B) \cap (B-C) & \text{def. of }\cap
-\end{align*}
+	\item
+	\begin{align*}
+		(A\cap B) - C = & \set{x: x\in (A\cap B) \land x\notin C}                          & \text{def. of -}                         \\
+		=               & \set{x: x\in A \land x \in B \land x\notin C}                    & \text{def. of $\cup$}                    \\
+		=               & \set{x: x\in A \land x\notin C \land x\in B \land x\notin C}     & (x\notin C = x\notin C \land x \notin C) \\
+		=               & \set{x: (x\in A \land x\notin C) \land (x\in B \land x\notin C)} & \text{rearrange}                         \\
+		=               & \set{x: (x\in A  - C) \land (x\in B - C)}                        & \text{def. of -}                         \\
+		=               & (A - B) \cap (B-C)                                               & \text{def. of }\cap
+	\end{align*}
 \end{prooflist}
 
 \begin{prooflist}{16. If $A, B$ and $C$ are sets, then $A \times(B \cup C)=(A \times B) \cup(A \times C)$.}
-\item
-\begin{align*}
-    A\times (B\cup C) =& \set{(x, y): x\in A \land y\in B\cup C} & \text{def. of }\times\\
-    =& \set{(x,y): x\in A \land (y \in B \lor y\in C)} & \text{def. of $\cup$}\\
-    =& \set{(x,y): (x\in A \land y \in B) \lor (x\in A \land y\in C)} &
-    \text{distributive law}\\
-    =& (A\times B) \cup (A\times C)
-\end{align*}
+	\item
+	\begin{align*}
+		A\times (B\cup C) = & \set{(x, y): x\in A \land y\in B\cup C}                        & \text{def. of }\times \\
+		=                   & \set{(x,y): x\in A \land (y \in B \lor y\in C)}                & \text{def. of $\cup$} \\
+		=                   & \set{(x,y): (x\in A \land y \in B) \lor (x\in A \land y\in C)} &
+		\text{distributive law}                                                                                      \\
+		=                   & (A\times B) \cup (A\times C)
+	\end{align*}
 \end{prooflist}
 
 \begin{prooflist}{17. If $A, B$ and $C$ are sets, then $A \times(B \cap C)=(A \times B) \cap(A \times C)$.}
-\item
-\begin{align*}
-    A\times (B\cap C) =& \set{(x, y): x\in A \land y\in B\cap C} & \text{def. of }\times\\
-    =& \set{(x,y): x\in A \land (y \in B \land y\in C)} & \text{def. of $\cap$}\\
-    =& \set{(x,y): (x\in A \land y \in B) \land (x\in A \land y\in C)} &
-    \text{distributive law}\\
-    =& (A\times B) \cap (A\times C)
-\end{align*}
+	\item
+	\begin{align*}
+		A\times (B\cap C) = & \set{(x, y): x\in A \land y\in B\cap C}                         & \text{def. of }\times \\
+		=                   & \set{(x,y): x\in A \land (y \in B \land y\in C)}                & \text{def. of $\cap$} \\
+		=                   & \set{(x,y): (x\in A \land y \in B) \land (x\in A \land y\in C)} &
+		\text{distributive law}                                                                                       \\
+		=                   & (A\times B) \cap (A\times C)
+	\end{align*}
 \end{prooflist}
 
 \begin{prooflist}{18. If $A, B$ and $C$ are sets, then $A \times(B-C)=(A \times B)-(A \times C)$.}
-\item
-\begin{align*}
-    A\times (B-C) =& \set{(x, y): x\in A \land y\in (B-C)} & \text{def. of }\times\\
-    =& \set{(x,y): x\in A \land y \in B \land y\notin C)} & \text{def. of }-\\
-    =& \set{(x,y): x\in A \land y \in B \land x\in A \land y\notin C)} & \text{identity law}\\
-    =& \set{(x,y): (x, y) \in A\times B \land (x, y) \notin A \times C)} &
-    \text{def. of }\times\\
-    =& (A\times B) - (A\times C)
-\end{align*}
+	\item
+	\begin{align*}
+		A\times (B-C) = & \set{(x, y): x\in A \land y\in (B-C)}                             & \text{def. of }\times \\
+		=               & \set{(x,y): x\in A \land y \in B \land y\notin C)}                & \text{def. of }-      \\
+		=               & \set{(x,y): x\in A \land y \in B \land x\in A \land y\notin C)}   & \text{identity law}   \\
+		=               & \set{(x,y): (x, y) \in A\times B \land (x, y) \notin A \times C)} &
+		\text{def. of }\times                                                                                       \\
+		=               & (A\times B) - (A\times C)
+	\end{align*}
 \end{prooflist}
 
 \begin{prooflist}{19. Prove that}
-\item
-\begin{align*}
-\set{9^n: n \in \mathbb{Z}} \subseteq\set{3^n: n \in \mathbb{Z}}\\
-x\in \set{9^n: n \in \mathbb{Z}} \implies x\in\set{3^n: n \in \mathbb{Z}}\\
-\set{9^n: n \in \mathbb{Z}} \neq\set{3^n: n \in \mathbb{Z}}\\
-x\in\set{3^n: n \in \mathbb{Z}}
-\not\implies
-x\in \set{9^n: n \in \mathbb{Z}}
-\end{align*}
-\item Suppose some $x\in \set{9^n: n\in\mathbb{Z}}$. Therefore $x\in\set{3^{2n}:
-    n\in\mathbb{Z}}$, and therefore $x\in\set{3^n: n\in\mathbb{Z}}$. Therefore
-    we have proven that $\set{9^n: n \in \mathbb{Z}} \subseteq\set{3^n: n \in \mathbb{Z}}$.
-\item To show that $\set{9^n: n \in \mathbb{Z}} \neq\set{3^n: n \in
-    \mathbb{Z}}$, we must show that the converse implication does not hold. We
-    can prove this with one counterexample. $3^1$ is in $\set{3^n}$ and not in
-    $\set{9^n:n\in\mathbb{Z}}$. Therefore we have shown
-$\set{9^n: n \in \mathbb{Z}} \neq\set{3^n: n \in \mathbb{Z}}$.
+	\item
+	\begin{align*}
+		\set{9^n: n \in \mathbb{Z}} \subseteq\set{3^n: n \in \mathbb{Z}}          \\
+		x\in \set{9^n: n \in \mathbb{Z}} \implies x\in\set{3^n: n \in \mathbb{Z}} \\
+		\set{9^n: n \in \mathbb{Z}} \neq\set{3^n: n \in \mathbb{Z}}               \\
+		x\in\set{3^n: n \in \mathbb{Z}}
+		\not\implies
+		x\in \set{9^n: n \in \mathbb{Z}}
+	\end{align*}
+	\item Suppose some $x\in \set{9^n: n\in\mathbb{Z}}$. Therefore $x\in\set{3^{2n}:
+			n\in\mathbb{Z}}$, and therefore $x\in\set{3^n: n\in\mathbb{Z}}$. Therefore
+	we have proven that $\set{9^n: n \in \mathbb{Z}} \subseteq\set{3^n: n \in \mathbb{Z}}$.
+	\item To show that $\set{9^n: n \in \mathbb{Z}} \neq\set{3^n: n \in
+			\mathbb{Z}}$, we must show that the converse implication does not hold. We
+	can prove this with one counterexample. $3^1$ is in $\set{3^n}$ and not in
+	$\set{9^n:n\in\mathbb{Z}}$. Therefore we have shown
+	$\set{9^n: n \in \mathbb{Z}} \neq\set{3^n: n \in \mathbb{Z}}$.
 \end{prooflist}
 
 \begin{prooflist}{20. Prove that $\set{9^n: n \in \mathbb{Q}}=\set{3^n: n \in
-    \mathbb{Q}}$.}
-\item
-\begin{align*}
-    \set{9^n: n \in \mathbb{Q}} &\subseteq\set{3^n: n \in \mathbb{Q}}\\
-    x\in \set{9^n: n \in \mathbb{Q}} &\implies x\in\set{3^n: n \in \mathbb{Q}}\\
-    \set{3^n: n \in \mathbb{Q}}
-    &\subseteq
-    \set{9^n: n \in \mathbb{Q}}\\
-    x\in\set{3^n: n \in \mathbb{Q}}
-    &\implies
-    x\in \set{9^n: n \in \mathbb{Q}}
-\end{align*}
-\item Let $x$ be some arbitrary element in $\set{9^n: n \in \mathbb{Q}}$.
-    Because $n\in\mathbb{Q}$, $n=\frac{p}{q}: p,q\in\mathbb{Z}$,
-    we can rewrite $9^n$ as $3^{2n}$, or $3^{\frac{2p}{q}}$. Because
-    $\frac{2p}{q} \in \mathbb{Q}$, we have proven the first subset
-    relationship $\set{9^n: n \in \mathbb{Q}} \subseteq\set{3^n: n \in
-    \mathbb{Q}}$.
-\item Let $x$ be some arbitrary element in $\set{3^n: n \in \mathbb{Q}}$.
-    Because $n\in\mathbb{Q}$, $n=\frac{p}{q}: p,q\in\mathbb{Z}$,
-    we can rewrite $3^n$ as $9^{\frac{n}{2}}$, or $9^{\frac{p}{2q}}$. Because
-    $\frac{p}{2q} \in \mathbb{Q}$, we have proven the second subset
-    relationship $\set{9^n: n \in \mathbb{Q}} \subseteq\set{3^n: n \in
-    \mathbb{Q}}$, and therefore we have proven the set equality.
+				\mathbb{Q}}$.}
+	\item
+	\begin{align*}
+		\set{9^n: n \in \mathbb{Q}}      & \subseteq\set{3^n: n \in \mathbb{Q}}     \\
+		x\in \set{9^n: n \in \mathbb{Q}} & \implies x\in\set{3^n: n \in \mathbb{Q}} \\
+		\set{3^n: n \in \mathbb{Q}}
+		                                 & \subseteq
+		\set{9^n: n \in \mathbb{Q}}                                                 \\
+		x\in\set{3^n: n \in \mathbb{Q}}
+		                                 & \implies
+		x\in \set{9^n: n \in \mathbb{Q}}
+	\end{align*}
+	\item Let $x$ be some arbitrary element in $\set{9^n: n \in \mathbb{Q}}$.
+	Because $n\in\mathbb{Q}$, $n=\frac{p}{q}: p,q\in\mathbb{Z}$,
+	we can rewrite $9^n$ as $3^{2n}$, or $3^{\frac{2p}{q}}$. Because
+	$\frac{2p}{q} \in \mathbb{Q}$, we have proven the first subset
+	relationship $\set{9^n: n \in \mathbb{Q}} \subseteq\set{3^n: n \in
+			\mathbb{Q}}$.
+	\item Let $x$ be some arbitrary element in $\set{3^n: n \in \mathbb{Q}}$.
+	Because $n\in\mathbb{Q}$, $n=\frac{p}{q}: p,q\in\mathbb{Z}$,
+	we can rewrite $3^n$ as $9^{\frac{n}{2}}$, or $9^{\frac{p}{2q}}$. Because
+	$\frac{p}{2q} \in \mathbb{Q}$, we have proven the second subset
+	relationship $\set{9^n: n \in \mathbb{Q}} \subseteq\set{3^n: n \in
+			\mathbb{Q}}$, and therefore we have proven the set equality.
 \end{prooflist}.
 
 \begin{prooflist}{21. Suppose $A$ and $B$ are sets. Prove $A \subseteq B$ if and only if $A-B=\varnothing$.}
-\item
-    \begin{align*}
-        P &= A \subseteq B\\
-        Q &= A - B = \varnothing
-\end{align*}
-To prove the if-and-only-if statement, we must prove the implication $P\implies
-Q$ and its converse $Q\implies P$.
-\item Suppose $x\in A\subseteq B$. Therefore $x\in A \land x \in B$. If $x\in
-    A\land x\in B$, then by definition $A-B=\varnothing$, and we have shown the
-    first implication.
-\item Suppose $x\in A-B\neq\varnothing$. Therefore there is some $x\in A\land
-    x\notin B$, therefore there is some element in A that is not in B, showing
-    $A\not\subseteq B$. Thus we have proven the second implication by the
-    contrapositive and have proven $A \subseteq B$ if and only if
-    $A-B=\varnothing$.
+	\item
+	\begin{align*}
+		P & = A \subseteq B       \\
+		Q & = A - B = \varnothing
+	\end{align*}
+	To prove the if-and-only-if statement, we must prove the implication $P\implies
+		Q$ and its converse $Q\implies P$.
+	\item Suppose $x\in A\subseteq B$. Therefore $x\in A \land x \in B$. If $x\in
+		A\land x\in B$, then by definition $A-B=\varnothing$, and we have shown the
+	first implication.
+	\item Suppose $x\in A-B\neq\varnothing$. Therefore there is some $x\in A\land
+		x\notin B$, therefore there is some element in A that is not in B, showing
+	$A\not\subseteq B$. Thus we have proven the second implication by the
+	contrapositive and have proven $A \subseteq B$ if and only if
+	$A-B=\varnothing$.
 \end{prooflist}
 
 \begin{prooflist}{22. Let $A$ and $B$ be sets. Prove that $A \subseteq B$ if and only if $A \cap B=A$.}
-\item
-    \begin{align*}
-        P &= A \subseteq B\\
-        Q &= A \cap B = A
-\end{align*}
-To prove the if-and-only-if statement, we must prove the implication $P\implies
-Q$ and its converse $Q\implies P$.
-\item Suppose $x\in A\subseteq B$. Therefore $x\in A \land x\in B$. Because all
-    elements of $A$ are in $B$, doing $A\cap B$ will result in only the
-    elements that are in $A$, therefore $A\cap B=A$.
-\item Suppose $x\in A\cap B$.  This means $x\in A \land x\in B$, and by
-    definition, this means $A\subseteq B$. Therefore we have proven the second
-    implication and the statement---$A \subseteq B$ if and only if $A \cap B=A$.
+	\item
+	\begin{align*}
+		P & = A \subseteq B \\
+		Q & = A \cap B = A
+	\end{align*}
+	To prove the if-and-only-if statement, we must prove the implication $P\implies
+		Q$ and its converse $Q\implies P$.
+	\item Suppose $x\in A\subseteq B$. Therefore $x\in A \land x\in B$. Because all
+	elements of $A$ are in $B$, doing $A\cap B$ will result in only the
+	elements that are in $A$, therefore $A\cap B=A$.
+	\item Suppose $x\in A\cap B$.  This means $x\in A \land x\in B$, and by
+	definition, this means $A\subseteq B$. Therefore we have proven the second
+	implication and the statement---$A \subseteq B$ if and only if $A \cap B=A$.
 \end{prooflist}
 
 \begin{prooflist}{23. For each $a \in \mathbb{R}$, let $A_a=\set{(x,
-a(x^2-1)) \in \mathbb{R}^2: x \in \mathbb{R}}$.
-Prove that $\bigcap_{a \in \mathbb{R}} A_a=\set{(-1,0),(1,0)}$.}
-\item
-Let $A_a=\set{(x, a(x^2-1)) \in \mathbb{R}^2: x \in \mathbb{R}}$.
-\item Prove that $\bigcap_{a \in \mathbb{R}} A_a=\set{(-1,0),(1,0)}$.
+				a(x^2-1)) \in \mathbb{R}^2: x \in \mathbb{R}}$.
+		Prove that $\bigcap_{a \in \mathbb{R}} A_a=\set{(-1,0),(1,0)}$.}
+	\item
+	Let $A_a=\set{(x, a(x^2-1)) \in \mathbb{R}^2: x \in \mathbb{R}}$.
+	\item Prove that $\bigcap_{a \in \mathbb{R}} A_a=\set{(-1,0),(1,0)}$.
 \end{prooflist}
 
 \begin{prooflist}{24. Prove that $\bigcap_{x \in \mathbb{R}}\left[3-x^2, 5+x^2\right]=[3,5]$.}
-\item
-\begin{align*}
-\bigcap_{x\in\mathbb{R}}\left[3-x^2, 5+x^2\right]&\subseteq [3,5]\\
-[3,5] &\subseteq \bigcap_{x \in \mathbb{R}}\left[3-x^2, 5+x^2\right] \\
-\end{align*}
-\item
-Suppose $a\in\mathbb{R}$. Because $a^2$ is a always a positive number $3-a^2\leq3$
-and $5+a^2\geq 5$, therefore $[3-a^2, 5+a^2]$ will always contain the range $[3,
-5]$. Thus we have shown
-$\bigcap_{x\in\mathbb{R}}\left[3-x^2, 5+x^2\right]\subseteq [3,5]$.
-\item Suppose $a \notin [3-x^2, 5+x^2]$ and $x\in \mathbb{R}$. Because $x^2$ is
-    always positive, then $3-x^2\leq3$ and $5+x^2\geq 5$, which means the range
-    is larger than $[3, 5]$. Therefore $a \notin [3, 5]$, and we have proven the
-    second implication via the contrapositive.
+	\item
+	\begin{align*}
+		\bigcap_{x\in\mathbb{R}}\left[3-x^2, 5+x^2\right] & \subseteq [3,5]                                               \\
+		[3,5]                                             & \subseteq \bigcap_{x \in \mathbb{R}}\left[3-x^2, 5+x^2\right] \\
+	\end{align*}
+	\item
+	Suppose $a\in\mathbb{R}$. Because $a^2$ is a always a positive number $3-a^2\leq3$
+	and $5+a^2\geq 5$, therefore $[3-a^2, 5+a^2]$ will always contain the range $[3,
+				5]$. Thus we have shown
+	$\bigcap_{x\in\mathbb{R}}\left[3-x^2, 5+x^2\right]\subseteq [3,5]$.
+	\item Suppose $a \notin [3-x^2, 5+x^2]$ and $x\in \mathbb{R}$. Because $x^2$ is
+	always positive, then $3-x^2\leq3$ and $5+x^2\geq 5$, which means the range
+	is larger than $[3, 5]$. Therefore $a \notin [3, 5]$, and we have proven the
+	second implication via the contrapositive.
 \end{prooflist}
 
 \begin{prooflist}{24a. Prove that $\bigcap_{x \in \mathbb{R}}\left[3-x^2, 5+x^2\right]=[3,5]$.}
-\item
-To prove that $\bigcap_{x \in \mathbb{R}}\left[3-x^2, 5+x^2\right]=[3,5]$, we need to show that $[3,5]$ is a subset of $\bigcap_{x \in \mathbb{R}}\left[3-x^2, 5+x^2\right]$.
+	\item
+	To prove that $\bigcap_{x \in \mathbb{R}}\left[3-x^2, 5+x^2\right]=[3,5]$, we need to show that $[3,5]$ is a subset of $\bigcap_{x \in \mathbb{R}}\left[3-x^2, 5+x^2\right]$.
 
-\item Suppose $y \in [3,5]$. This means $3 \leq y \leq 5$.
+	\item Suppose $y \in [3,5]$. This means $3 \leq y \leq 5$.
 
-\item For any $x \in \mathbb{R}$, we have $3 - x^2 \leq 3$ and $5 + x^2 \geq 5$.
+	\item For any $x \in \mathbb{R}$, we have $3 - x^2 \leq 3$ and $5 + x^2 \geq 5$.
 
-\item Therefore, $3 \leq 3 - x^2 \leq y \leq 5 \leq 5 + x^2$, which implies $y \in \left[3-x^2, 5+x^2\right]$ for all $x \in \mathbb{R}$.
+	\item Therefore, $3 \leq 3 - x^2 \leq y \leq 5 \leq 5 + x^2$, which implies $y \in \left[3-x^2, 5+x^2\right]$ for all $x \in \mathbb{R}$.
 
-\item Hence, $y$ belongs to the intersection of all such intervals, $\bigcap_{x \in \mathbb{R}}\left[3-x^2, 5+x^2\right]$.
+	\item Hence, $y$ belongs to the intersection of all such intervals, $\bigcap_{x \in \mathbb{R}}\left[3-x^2, 5+x^2\right]$.
 
-\item Therefore, $[3,5] \subseteq \bigcap_{x \in \mathbb{R}}\left[3-x^2, 5+x^2\right]$.
+	\item Therefore, $[3,5] \subseteq \bigcap_{x \in \mathbb{R}}\left[3-x^2, 5+x^2\right]$.
 
 \end{prooflist}
 
 This proof focuses on demonstrating that $[3,5]$ is a subset of $\bigcap_{x \in \mathbb{R}}\left[3-x^2, 5+x^2\right]$, which is sufficient to establish the desired set equality.
 
 \begin{prooflist}{25. Suppose $A, B, C$ and $D$ are sets. Prove that $(A \times
-    B) \cup(C \times D) \subseteq(A \cup C) \times(B \cup D)$.} \item
-\begin{align*}
-    (A\times B)\cup (C\times D)=& \set{x, y: (x\in A \land y\in B) \lor (x\in C
-    \land y\in D) } & \text{def. of }\times,\cup\\
-    =& \set{x,y: (x\in A \lor x\in C) \land (y\in B \lor y\in D) } & \text{dist.
-    property}\\
-    =& (A\cup C) \cap (B\cup D)
-\end{align*}
+			B) \cup(C \times D) \subseteq(A \cup C) \times(B \cup D)$.} \item
+	\begin{align*}
+		(A\times B)\cup (C\times D)= & \set{x, y: (x\in A \land y\in B) \lor (x\in C
+		\land y\in D) }              & \text{def. of }\times,\cup                                                \\
+		=                            & \set{x,y: (x\in A \lor x\in C) \land (y\in B \lor y\in D) } & \text{dist.
+		property}                                                                                                \\
+		=                            & (A\cup C) \cap (B\cup D)
+	\end{align*}
 \end{prooflist}
 
 \begin{prooflist}{26. Prove that $\{4 k+5: k \in \mathbb{Z}\}=\{4 k+1: k \in \mathbb{Z}\}$.}
-\item
-    Let's move on...
+	\item
+	Let's move on...
 \end{prooflist}
 
 % \begin{prooflist}{27. Prove that $\{12 a+4 b: a, b \in \mathbb{Z}\}=\{4 c: c \in \mathbb{Z}\}$.}

@@ -12,69 +12,69 @@
 \pagestyle{styleE}
 
 \begin{prooflist}{1. List all the partitions of the set $A=\{a, b\}$. Compare your answer to the answer to Exercise 5 of Section 11.3.}
-\item
-    \begin{align*}
-        \set{\set{a}, \set{b}}\\
-        \set{\set{a, b}}
-    \end{align*}
+	\item
+	\begin{align*}
+		\set{\set{a}, \set{b}} \\
+		\set{\set{a, b}}
+	\end{align*}
 \end{prooflist}
 
 \begin{prooflist}{2. List all the partitions of the set $A=\{a, b, c\}$. Compare
-    your answer to the answer to Exercise 6 of Section 11.3.}
-\item
-\begin{align*}
-    \set{\set{a}, \set{b}, \set{c}}\\
-    \set{\set{a, b}, \set{c}}\\
-    \set{\set{a, c}, \set{b}}\\
-    \set{\set{b, c}, \set{a}}\\
-    \set{\set{a, b, c}}
-\end{align*}
+		your answer to the answer to Exercise 6 of Section 11.3.}
+	\item
+	\begin{align*}
+		\set{\set{a}, \set{b}, \set{c}} \\
+		\set{\set{a, b}, \set{c}}       \\
+		\set{\set{a, c}, \set{b}}       \\
+		\set{\set{b, c}, \set{a}}       \\
+		\set{\set{a, b, c}}
+	\end{align*}
 \end{prooflist}
 
 \begin{prooflist}{3. Describe the partition of $\mathbb{Z}$ resulting from the equivalence relation $\equiv(\bmod 4)$.}
-\item Let $R$ be the relation $\equiv\bmod 4$.
-\item For any integer $a$, the value of $a\bmod 4$ is in the set $\set{0, 1, 2, 3}$.
-\item Therefore each element in $\set{0, 1, 2, 3}$ defines an equivalence class
-    on $\mathbb{Z}$ from the equivalence relation $\equiv(\bmod 4)$.
-\item Thus the 4 equivalence classes are
-\begin{align*}
-    \set{-15, -11, -7, -3, 1 \dots x\bmod4=3}\\
-    \set{-14, -10, -6, -2, 2 \dots x\bmod4=2}\\
-    \set{-13, -9, -4, -1, 3 \dots x\bmod4=1}\\
-    \set{-12, -8, -4, 0, 4 \dots x\bmod4=0}\\
-\end{align*}
+	\item Let $R$ be the relation $\equiv\bmod 4$.
+	\item For any integer $a$, the value of $a\bmod 4$ is in the set $\set{0, 1, 2, 3}$.
+	\item Therefore each element in $\set{0, 1, 2, 3}$ defines an equivalence class
+	on $\mathbb{Z}$ from the equivalence relation $\equiv(\bmod 4)$.
+	\item Thus the 4 equivalence classes are
+	\begin{align*}
+		\set{-15, -11, -7, -3, 1 \dots x\bmod4=3} \\
+		\set{-14, -10, -6, -2, 2 \dots x\bmod4=2} \\
+		\set{-13, -9, -4, -1, 3 \dots x\bmod4=1}  \\
+		\set{-12, -8, -4, 0, 4 \dots x\bmod4=0}   \\
+	\end{align*}
 
 \end{prooflist}
 
 \begin{prooflist}{4. Suppose $P$ is a partition of a set $A$. Define a relation $R$ on $A$ by declaring $x R y$ if and only if $x, y \in X$ for some $X \in P$. Prove $R$ is an equivalence relation on $A$. Then prove that $P$ is the set of equivalence classes of $R$.}
-\item Let $P$ be a partition of set $A$.
-\item Define relation $R$ on $A$ as follows: $x R y$ if and only if $x$ and $y$ belong to the same set $X \in P$.
-\item To prove $R$ is an equivalence relation:
-\begin{itemize}
-\item Reflexivity: For any $x \in A$, since $x$ belongs to some set $X \in P$, $x R x$ by definition. Hence, $R$ is reflexive.
-\item Symmetry: If $x R y$, then $x$ and $y$ belong to the same set $X \in P$. But this also means $y$ and $x$ belong to the same set $X$, so $y R x$. Thus, $R$ is symmetric.
-\item Transitivity: If $x R y$ and $y R z$, then both $x$ and $y$, and $y$ and $z$, belong to the same sets $X$ and $Y$ in $P$ respectively. Since $P$ is a partition, $X$ and $Y$ are either identical or disjoint. If they are identical, then $x R z$ trivially. If they are disjoint, then $x$ and $z$ cannot belong to the same set in $P$, so $x R z$ holds vacuously. In either case, $R$ is transitive.
-\end{itemize}
-\item Now, to prove that $P$ is the set of equivalence classes of $R$:
-\begin{itemize}
-\item Each set $X \in P$ is an equivalence class of $R$: By definition, elements in the same set $X$ under $P$ are related by $R$. So, $P$ consists of equivalence classes of $R$.
-\item Every equivalence class of $R$ is a set in $P$: Since $P$ is a partition, each element of $A$ belongs to exactly one set $X \in P$. Thus, each equivalence class of $R$ corresponds to a set in $P$.
-\end{itemize}
+	\item Let $P$ be a partition of set $A$.
+	\item Define relation $R$ on $A$ as follows: $x R y$ if and only if $x$ and $y$ belong to the same set $X \in P$.
+	\item To prove $R$ is an equivalence relation:
+	\begin{itemize}
+		\item Reflexivity: For any $x \in A$, since $x$ belongs to some set $X \in P$, $x R x$ by definition. Hence, $R$ is reflexive.
+		\item Symmetry: If $x R y$, then $x$ and $y$ belong to the same set $X \in P$. But this also means $y$ and $x$ belong to the same set $X$, so $y R x$. Thus, $R$ is symmetric.
+		\item Transitivity: If $x R y$ and $y R z$, then both $x$ and $y$, and $y$ and $z$, belong to the same sets $X$ and $Y$ in $P$ respectively. Since $P$ is a partition, $X$ and $Y$ are either identical or disjoint. If they are identical, then $x R z$ trivially. If they are disjoint, then $x$ and $z$ cannot belong to the same set in $P$, so $x R z$ holds vacuously. In either case, $R$ is transitive.
+	\end{itemize}
+	\item Now, to prove that $P$ is the set of equivalence classes of $R$:
+	\begin{itemize}
+		\item Each set $X \in P$ is an equivalence class of $R$: By definition, elements in the same set $X$ under $P$ are related by $R$. So, $P$ consists of equivalence classes of $R$.
+		\item Every equivalence class of $R$ is a set in $P$: Since $P$ is a partition, each element of $A$ belongs to exactly one set $X \in P$. Thus, each equivalence class of $R$ corresponds to a set in $P$.
+	\end{itemize}
 \end{prooflist}
 
 \begin{prooflist}{5. Consider the partition $P=\{\{\ldots,-4,-2,0,2,4,
-    \ldots\},\{\ldots,-5,-3,-1,1,3,5, \ldots\}\}$ of $\mathbb{Z}$. Let $R$ be
-the equivalence relation whose equivalence classes are the two elements of $P$.
-What familiar equivalence relation is $R$ ?}
-\item $xRy$ is true when $x$ and $y$ have the same parity.
+			\ldots\},\{\ldots,-5,-3,-1,1,3,5, \ldots\}\}$ of $\mathbb{Z}$. Let $R$ be
+		the equivalence relation whose equivalence classes are the two elements of $P$.
+		What familiar equivalence relation is $R$ ?}
+	\item $xRy$ is true when $x$ and $y$ have the same parity.
 
 \end{prooflist}
 
 \begin{prooflist}{6. Consider the partition
-$P=\{\{0\},\{-1,1\},\{-2,2\},\{-3,3\},\{-4,4\}, \ldots\}$ of $\mathbb{Z}$.
-Describe the equivalence relation whose equivalence classes are the elements of
-$P$.}
-\item $xRy$ is defined by $|x|=|y|$.
+		$P=\{\{0\},\{-1,1\},\{-2,2\},\{-3,3\},\{-4,4\}, \ldots\}$ of $\mathbb{Z}$.
+		Describe the equivalence relation whose equivalence classes are the elements of
+		$P$.}
+	\item $xRy$ is defined by $|x|=|y|$.
 \end{prooflist}
 
 \end{document}

@@ -14,70 +14,70 @@
 \pagebreak
 
 \begin{prooflist}{1. Show that if six integers are chosen at random, then at
-    least two of them will have the same remainder when divided by 5.}
-    \item Let $A=\{0, 1, 2, 3, 4\}$, and for any $i\in\mathbb{Z}, i\mod 5 \in
-        A$.
-    \item The division principle states that for $n, k\in \mathbb{N}$, if $n$
-        objects are placed in $k$ slots, then at least one box contains
-        $\up{\dfrac{n}{k}}$ or more objects. Here $|A|=k=5$, and $n=6$.
-    \item Therefore at least $\up{\dfrac{n}{k}}=\up{\dfrac{6}{5}}=2$
-        two of the randomly chosen integers mod 5 are the same value.
+		least two of them will have the same remainder when divided by 5.}
+	\item Let $A=\{0, 1, 2, 3, 4\}$, and for any $i\in\mathbb{Z}, i\mod 5 \in
+		A$.
+	\item The division principle states that for $n, k\in \mathbb{N}$, if $n$
+	objects are placed in $k$ slots, then at least one box contains
+	$\up{\dfrac{n}{k}}$ or more objects. Here $|A|=k=5$, and $n=6$.
+	\item Therefore at least $\up{\dfrac{n}{k}}=\up{\dfrac{6}{5}}=2$
+	two of the randomly chosen integers mod 5 are the same value.
 \end{prooflist}
 
 \begin{prooflist}{2. You deal a pile of cards, face down, from a standard
-    52-card deck. What is the least number of cards the pile must have before
-you can be assured that it contains at least five cards of the same suit?}
-    \item The division principle states that for $n, k\in \mathbb{N}$, if $n$
-        objects are placed in $k$ slots, then at least one box contains
-        $\up{\dfrac{n}{k}}$ or more objects
-    \item Each suit is a slot. We need to calculate the number of cards needed
-        $n$ such that $\up{\dfrac{n}{k}}>=5$.
-    \item Because $k=4$, then $n=17$.
+		52-card deck. What is the least number of cards the pile must have before
+		you can be assured that it contains at least five cards of the same suit?}
+	\item The division principle states that for $n, k\in \mathbb{N}$, if $n$
+	objects are placed in $k$ slots, then at least one box contains
+	$\up{\dfrac{n}{k}}$ or more objects
+	\item Each suit is a slot. We need to calculate the number of cards needed
+	$n$ such that $\up{\dfrac{n}{k}}>=5$.
+	\item Because $k=4$, then $n=17$.
 \end{prooflist}
 
 \begin{prooflist}{3. What is the fewest number of times you must roll a
-    six-sided dice before you can be assured that 10 or more of the rolls
-resulted in the same number?}
-    \item The division principle states that for $n, k\in \mathbb{N}$, if $n$
-        objects are placed in $k$ slots, then at least one box contains
-        $\up{\dfrac{n}{k}}$ or more objects
-    \item Each dice-face is a slot. We need to calculate the number of rolls needed
-        $n$ such that $\up{\dfrac{n}{k}}>=10$.
-    \item Because $k=6$, then $n=k\cdot(10 -1)+ 1 = 55$.
+		six-sided dice before you can be assured that 10 or more of the rolls
+		resulted in the same number?}
+	\item The division principle states that for $n, k\in \mathbb{N}$, if $n$
+	objects are placed in $k$ slots, then at least one box contains
+	$\up{\dfrac{n}{k}}$ or more objects
+	\item Each dice-face is a slot. We need to calculate the number of rolls needed
+	$n$ such that $\up{\dfrac{n}{k}}>=10$.
+	\item Because $k=6$, then $n=k\cdot(10 -1)+ 1 = 55$.
 \end{prooflist}
 
 \begin{prooflist}{4. Select any five points on a square whose side-length is one
-    unit. Show that at least two of these points are within $\frac{\sqrt{2}}{2}$
-units of each other.}
-\item Divide the square into four equal subsquares with side length
-    $\frac{1}{2}$, and notice that the diagonal of each subsquare has a length
-    of $\frac{\sqrt{2}}{2}$.
-\item Since we have 5 points and only 4 subsquares, at least two points must lie
-    in the same subsquare by the pigeonhole principle.
-\item By the nature of the subsquare, the maximum distance between any two
-    points within the same subsquare is the diagonal length, which is
-    $\frac{\sqrt{2}}{2}$.
-\item Therefore, at least two of the five points are within $\frac{\sqrt{2}}{2}$
-    units of each other.
+		unit. Show that at least two of these points are within $\frac{\sqrt{2}}{2}$
+		units of each other.}
+	\item Divide the square into four equal subsquares with side length
+	$\frac{1}{2}$, and notice that the diagonal of each subsquare has a length
+	of $\frac{\sqrt{2}}{2}$.
+	\item Since we have 5 points and only 4 subsquares, at least two points must lie
+	in the same subsquare by the pigeonhole principle.
+	\item By the nature of the subsquare, the maximum distance between any two
+	points within the same subsquare is the diagonal length, which is
+	$\frac{\sqrt{2}}{2}$.
+	\item Therefore, at least two of the five points are within $\frac{\sqrt{2}}{2}$
+	units of each other.
 \end{prooflist}
 
 \begin{prooflist}{5. Prove that any set of seven distinct natural numbers
-    contains a pair of numbers whose sum or difference is divisible by 10.}
-\item Consider the final digit $d$ of some $a \in \mathbb{N}$.
-\item $d$ will be in 0..9.
+		contains a pair of numbers whose sum or difference is divisible by 10.}
+	\item Consider the final digit $d$ of some $a \in \mathbb{N}$.
+	\item $d$ will be in 0..9.
 \end{prooflist}
 
 \begin{prooflist}{6. Given a sphere S, a great circle of S is the intersection
-    of S with a plane through its center. Every great circle divides S into two
-parts. A hemisphere is the union of the great circle and one of these two parts.
-Show that if five points are placed arbitrarily on S, then there is a hemisphere
-that contains four of them.}
-\item Use two points to define a great circle, which also creates two
-    hemispheres.
-\item Three points remain, which by the pigeonhole principle means, one
-    hemisphere has two points of those points, and the other has one.
-\item The points used to construct the great circle can be considered part of
-    the hemisphere with 2 points, therefore that hemisphere has 4 points.
+		of S with a plane through its center. Every great circle divides S into two
+		parts. A hemisphere is the union of the great circle and one of these two parts.
+		Show that if five points are placed arbitrarily on S, then there is a hemisphere
+		that contains four of them.}
+	\item Use two points to define a great circle, which also creates two
+	hemispheres.
+	\item Three points remain, which by the pigeonhole principle means, one
+	hemisphere has two points of those points, and the other has one.
+	\item The points used to construct the great circle can be considered part of
+	the hemisphere with 2 points, therefore that hemisphere has 4 points.
 \end{prooflist}
 
 \end{document}
