@@ -1,0 +1,533 @@
+\documentclass[openany, 11pt]{book}
+\input{preamble}
+\title{Boof Proof}
+\author{Idris}
+\date{March 2024}
+
+
+\begin{document}
+\maketitle{}
+\tableofcontents
+% \tcblistof[\section]{definition}{List of Definitions}
+% \listoffigures
+% \listoftables
+
+\part{Fundamentals}
+% \chapter{Sets}
+% \chapter{Logic}
+\setcounter{chapter}{2}
+\chapter{Counting}
+\setcounter{section}{1}
+\section{Multiplication Principle}
+\begin{exercise}{}{}
+	Consider lists made from the letters T, H, E, O, R, Y,
+	with repetition allowed.
+	\begin{enumerate}[label = {(\arabic*)}]
+		\item How many length-4 lists are there? \\
+		      $6^4$
+		\item How many length-4 lists are there that begin with T?\\
+		      $1 \cdot 6^3$
+		\item How many length-4 lists are there that do not begin with T?\\
+		      $5 \cdot 6^3$
+	\end{enumerate}
+\end{exercise}
+
+\begin{exercise}{}{}
+	Airports are identified with 3-letter codes. For example,
+	Richmond, Virginia has the code RIC, and Memphis, Tennessee has MEM. How
+	many different 3-letter codes are possible?
+	\begin{enumerate}[label = {(\arabic*)}]
+		\item $26^3$
+	\end{enumerate}
+\end{exercise}
+
+\begin{exercise}{}{}
+	How many lists of length 3 can be made from the symbols A,
+	B, C, D, E, F if\ldots
+	\begin{enumerate}[label = {(\arabic*)}]
+		\item repetition is allowed.
+		      $ 6^3$
+		\item repetition is not allowed.
+		      $ 6\cdot 5 \cdot 4$
+		\item repetition is not allowed and the list must contain the letter A.
+		      $ 6\cdot 5 \cdot 3$
+		\item repetition is allowed and the list must contain the letter A.
+		\item Let $A=$ list of all length-three strings.
+		      Let $B=$ list of all length-three strings without A.
+		      Then $|A| - |B| = 6^3 - 5^3$
+	\end{enumerate}
+\end{exercise}
+
+\begin{exercise}{}{}
+	In ordering coffee you have a choice of regular or decaf; small, medium or
+	large; here or to go. How many different ways are there to order a coffee?
+	\begin{enumerate}[label = {(\arabic*)}]
+		\item Let $A = \{\text{regular}, \text{decaf}\}$.
+		      Let $B = \{\text{small}, \text{medium}, \text{large}\}$.
+		      Let $C = \{\text{here}, \text{to-go}\}$.
+		      Different ways to order is the product $|A|\cdot|B|\cdot|C| = 2 \cdot 3 \cdot 2$.
+	\end{enumerate}
+\end{exercise}
+
+\begin{exercise}{}{}
+	This problem involves 8-digit binary strings such as 10011011 or 00001010
+	(i.e., 8-digit numbers composed of 0's and 1's).
+	\begin{enumerate}[label = {(\alph*)}]
+		\item How many such strings are there?
+		      There are $2^8$ different 8-digit binary strings.
+		\item How many such strings end in 0?
+		      There are $2^7$ different 8-digit binary strings that end in $0$.
+		\item How many such strings have 1's for their second and fourth digits?
+		      There are $2^6$ different 8-digit binary strings that have two of
+		      their bits constant.
+		\item How many such strings have 1's for their second or fourth digits?
+		      Here we must be careful not to double count.
+		      Let $A =$ 8-digit strings with 1 as the fourth digit.
+		      Let $B =$ 8-digit strings with 1 as the second digit.
+		      Let $C =$ 8-digit strings with 1 as the second digit and 1 as the
+		      fourth digit.
+		      The total number of 8-digit strings with 1 as the second or fourth
+		      digit is $|A| + |B| - |C| = 2^7+2^7-2^6$.
+	\end{enumerate}
+\end{exercise}
+
+\begin{exercise}{}{}
+	You toss a coin, then roll a dice, and then draw a card
+	from a 52-card deck.
+	\begin{enumerate}[label = {(\arabic*)}]
+		\item Let $A = \{\text{H}, \text{T}\}$
+		      Let $B = \{1, 2, 3, 4, 5, 6\}$
+		      Let $C = \{1\ldots 52 \}$
+		      How many different outcomes are there?
+		      $|A| \cdot |B| \cdot |C| = 2 \cdot 6 \cdot 52$.
+		\item How many outcomes are there in which the dice lands on $3$?
+		      $|A| \cdot |C| = 2 \cdot 52$.
+		      How many outcomes are there in which the dice lands on an odd number?
+		      $|A| \cdot |\text{odd}| \cdot |C| = 2 \cdot 3 \cdot 52$.
+		\item How many outcomes are there in which the dice lands on an odd number
+		      and the card is a King?
+		      $|A| \cdot |\text{odd}| \cdot |\text{King}| = 2 \cdot 3 \cdot 4$.
+	\end{enumerate}
+\end{exercise}
+
+\begin{exercise}{}{}
+	This problem concerns 4-letter codes made from the letters A, B, C, D,
+	$\ldots$ Z.
+	\begin{enumerate}[label = {(\arabic*)}]
+		\item How many such codes can be made?
+		      $26^4$, assuming repetitions.
+		\item How many such codes have no two consecutive letters the same?
+		      We can pick any letter to be the first one. To assure a non-consecutive
+		      2nd letter, we can pick from 25 letters.  To pick a 3rd letter which is
+		      non-consecutive with the 2nd letter, there are 25 choices, as it is now ok
+		      to re-use the first letter. And so it goes, so that for every non-first
+		      letter, there are $n-1$ choices.
+		      Therefore the answer is $26\cdot 25^3$.
+	\end{enumerate}
+\end{exercise}
+
+\begin{exercise}{}{}
+	A coin is tossed 10 times in a row. How many possible
+	sequences of heads and tails are there?
+	$2^{10}$
+\end{exercise}
+
+\begin{exercise}{}{} A new car comes in a choice of five colors, three engine
+	sizes and two transmissions. How many different combinations are there?
+	$5 \cdot 3 \cdot 2$.
+\end{exercise}
+
+\begin{exercise}{}{}
+	A dice is tossed four times in a row. There are many
+	possible outcomes. How many different outcomes are possible?
+	$6^4$
+\end{exercise}
+
+\section{Addition and Subtraction Principles}
+\begin{exercise}{}{}
+	Five cards are dealt off of a standard 52-card deck and
+	lined up in a row.
+	\begin{itemize}
+		\item How many such lineups are there that have at least one red card?
+		      Let $A=$ list of all lineups
+		      Let $B=$ list of all lineups without a red.
+		      Let $C=$ list of all lineups with at least one red.
+		      Therefore $|A| - |B| = |C| = \dfrac{52!}{47!} - \dfrac{26!}{21!}$
+		\item How many such lineups are there in which the cards are either all
+		      black or all hearts?
+		      Let $A=$ list of all blacks.
+		      Let $B=$ list of all hearts.
+		      Let $A \cap B= \emptyset$, because hearts are red.
+		      Therefore $|A|+ |B| =\dfrac{26!}{21!} + \dfrac{13!}{8!}$.
+	\end{itemize}
+\end{exercise}
+
+\begin{exercise}{}{}
+	Five cards are dealt off of a standard 52-card deck and lined up in a row.
+	How many such lineups are there in which all 5 cards are of the same suit?
+
+	$4 \cdot \dfrac{13!}{8!}$
+\end{exercise}
+
+\begin{exercise}{}{}
+	Five cards are dealt off of a standard 52-card deck and lined up in a row. How many such lineups are there in which all 5 cards are of the same color (i.e., all black or all red)?
+	$2 \cdot \dfrac{26!}{21!}$
+\end{exercise}
+
+\begin{exercise}{}{}
+	Five cards are dealt off of a standard 52-card deck and lined up in a row.
+	How many such lineups are there in which exactly one of the 5 cards is a
+	queen?
+
+	$4 \cdot \dfrac{48!}{44!}$
+\end{exercise}
+
+\begin{exercise}{}{}
+	Consider the integers between 1 and 9999.
+	\begin{enumerate}[label = {(\arabic*)}]
+		\item How many have no repeated digits?
+		      Let $A=1\ldots 9$
+		      Let $B=0\ldots 9$
+		      For the integers $1\ldots 9$, we can pick any element from $A$, therefore
+		      there are $9$ with non-consecutive digits.
+		      For the integers $10\ldots 99$, we can pick any element from $A$, and then
+		      and non-matching element from $B$, therefore are $9\cdot9=81$ integers in
+		      this range with non-consecutive digits.
+		      For the integers $C=100\ldots 999$, we can pick any element from $A$, then
+		      any non-matching element from $B$, and then lastly another non-matching
+		      element from $B$, therefore there are $9\cdot9\cdot9$ integers in this range
+		      with non-consecutive digits.
+		      For the integers $C=1000\ldots 9999$, follows the same pattern, therefore
+		      there are $9\cdot9\cdot9\cdot9$ integers in this range
+		      with non-consecutive digits.
+		      The answer is $9^1 + 9^2 + 9^3 + 9^4$.
+
+		\item How many have at least one repeated digit?
+		      The set of numbers with at least one repeated digit is the inverse of the
+		      above calculated set, namely the set of numbers with no repeated digits.
+		      Therefore the answer is $9999 - 9^1 - 9^2 - 9^3 - 9^4$.
+	\end{enumerate}
+\end{exercise}
+
+\begin{exercise}{}{}
+	Consider lists made from the symbols A, B, C, D, E, with repetition allowed.
+	\begin{enumerate}[label={}, leftmargin=*, itemsep=0pt, parsep=0pt]
+		\item Let $A=\{\text{length-5 lists}\},\quad |A| = 5^5$
+		\item Let $B=\{\text{length-5 lists}\mid\text{no repeats}\}, \quad |B| = 5!$
+		\item Let $C=\{\text{length-5 lists}\mid\text{at least one repeat}\}$
+	\end{enumerate}
+	\begin{enumerate}[label = {(\alph*)}]
+		\item How many such length-5 lists have at least one letter repeated?
+		      Herein it's easiest to use the subtraction princple, and calculate $|A|$
+		      and $|B|$ to get $|C|$.
+		      $C=A - B, \quad |C| = 5^5 - 5! $
+		\item How many such length-6 lists have at least one letter repeated?
+		      The same principle applies, therefore the answer is $6^6 - 6!$.
+	\end{enumerate}
+\end{exercise}
+
+\begin{exercise}{}{}
+	A password on a certain site must be five characters long,
+	made from letters of the alphabet, and have at least one upper case letter.
+	\begin{enumerate}[label={}, leftmargin=*, itemsep=0pt, parsep=0pt]
+		\item Let $A=\{\text{length-5 string}\},\quad |A| = 52^5$
+		\item Let $B=\{\text{length-5 lists}\mid\text{no upper-case}\}, \quad |B| = 26^5$
+		\item Let $C=\{\text{length-5 lists}\mid\text{at least one upper-case}\}$
+	\end{enumerate}
+	\begin{enumerate}[label = {(\arabic*)}]
+		\item How many different passwords are there?
+		      $|C| = |A| - |B| = 52^5 - 26^5.$
+		\item What if there must be a mix of upper and lower case?
+		      \begin{enumerate}[label={}, leftmargin=*, itemsep=0pt, parsep=0pt]
+			      \item Let $D=\{\text{length-5 lists}\mid\text{no lower-case}\}, \quad |D| = 26^5$
+			      \item Let $E=\{\text{length-5 lists}\mid\text{at least one lower-case, at least one lower-case}\}$
+			      \item $|E| = |A| - |B| - |D| = 52^5 - 2\cdot26^5.$
+		      \end{enumerate}
+	\end{enumerate}
+\end{exercise}
+
+\begin{exercise}{}{}
+	This problem concerns lists made from the letters A, B, C, D, E, F, G, H, I, J.
+	\begin{enumerate}[label = {(\arabic*)}]
+		\item How many length-5 lists can be made from these letters if
+		      repetition is not allowed and the list must begin with a vowel? $3
+			      \cdot 9 \cdot 8 \cdot 7 \cdot 6$.
+		\item How many length-5 lists can be made from these letters if
+		      repetition is not allowed and the list must begin and end with a
+		      vowel? $3 \cdot 8 \cdot 7 \cdot 6 \cdot 2$.
+		\item How many length-5 lists can be made from these letters if
+		      repetition is not allowed and the list must contain exactly one A?
+		      $5 \cdot 8 \cdot 7 \cdot 6 \cdot 5$.
+	\end{enumerate}
+\end{exercise}
+
+\begin{exercise}{}{}
+	Consider lists of length 6 made from the letters A, B, C,
+	D, E, F, G, H. How many such lists are possible if repetition is not allowed
+	and the list contains two consecutive vowels?
+	\begin{enumerate}[label={}, leftmargin=*, itemsep=0pt, parsep=0pt]
+		\item Let $X=\{\text{A, B, C, D, E, F, G, H}\}$
+		\item Let $Y=\{\text{B, C, D, F, G, H}\}$
+		\item All lists that fit the description will contain 2 vowels. First we can
+		      calculate the number of ways to arrange the non-vowels from $Y$, which is
+		      $6\cdot5\cdot4\cdot3$.
+		\item There are then $5$ locations to insert the consecutive vowels, and 2 ways
+		      to arrange the consecutive vowels, either AE or EA.
+		\item Therefore there are $6\cdot5\cdot4\cdot3 \cdot 5 \cdot 2$ ways to make the
+		      specified list.
+	\end{enumerate}
+\end{exercise}
+
+\begin{exercise}{}{}
+	Consider the lists of length six made with the symbols P, R, O, F, S,
+	where repetition is allowed. (For example, the following is such a list:
+	(P,R,O,O,F,S).) How many such lists can be made if the list must end in an S
+	and the symbol O is used more than once?
+	\begin{enumerate}[label={\textbullet}, leftmargin=*, itemsep=0pt, parsep=0pt]
+		\item Since the last letter must be an S, there are only 5 spots where there are
+		      different letters possible.
+		\item Therefore the question is transformed into the following: How many
+		      \mbox{length-five} lists can be made, with at least two Os.
+		\item Let $A=\{\text{length-5 lists}\}$
+		\item Let $B=\{\text{length-5 lists}\mid\text{0 O}\}$
+		\item Let $C=\{\text{length-5 lists}\mid\text{1 O}\}$
+		\item Let $D=\{\text{length-5 lists}\mid\text{at least 2 Os}\}$
+		\item $|D| = |A| - |B| - |C|$
+		\item $|A| = 5^5$, choose any of the 5 letters, 5 times
+		\item $|B| = 4^5$, choose any of the 5 letters other than O, 5 times
+		\item $|C| = 4^4 \cdot 5$, choose any length-4 list, and then insert an O in any
+		      of the 5 spots
+		\item Therefore, $|D| = |A| - |B| - |C| = 5^5 - 4^5 - 4^4 \cdot 5$
+	\end{enumerate}
+\end{exercise}
+
+\begin{exercise}{}{}
+	\begin{enumerate}[label = {(\arabic*)}]
+		\item How many integers between 1 and 1000 are divisible by 5?
+		      \begin{enumerate}[label={}, leftmargin=*, itemsep=0pt, parsep=0pt]
+			      \item There are 1000 numbers in that set, and that set is equally partitioned
+			            into 10 subsets by looking at the last digit.
+			      \item A number is divisble by 5 if it ends in 0 or 5, which is $\dfrac{1}{5}$ of
+			            the set.
+			      \item Therefore 200 numbers in the set of integers from 1 to 1000 are divisible
+			            \mbox{by 5}.
+		      \end{enumerate}
+		\item How many are not divisible by 5?
+		      The rest, 800.
+	\end{enumerate}
+\end{exercise}
+
+\begin{exercise}{}{}
+	Six math books, four physics books and three chemistry books are
+	arranged on a shelf. How many arrangements are possible if all books of the
+	same subject are grouped together?
+	\begin{enumerate}[label={\textbullet}, leftmargin=*, itemsep=0pt, parsep=0pt]
+		\item Within this problem there exists the subproblem of how many ways books of
+		      the same subject can be arranged, which is dependent of the size of the set
+		      $n$.
+		\item Therefore there are $n!$ ways to arrange books of the same category.
+		\item Next, we must determine how many ways there are to arrange sets of similar
+		      books, and again it is $m!$, where $m$ is the number of subjects.
+		\item Therefore there are $m! \cdot n_1! \cdot n_2! \cdot n_3!$ ways to arrange the
+		      books, with the constraint that books are grouped together by subject.
+		\item Therefore there are $3! \cdot 6! \cdot 4! \cdot 3!$ ways to arrange the
+		      books.
+	\end{enumerate}
+\end{exercise}
+
+\section{Factorials and Permutations}
+\begin{exercise}{}{}
+	What is the smallest n for which n! has more than 10 digits?
+	If a number is 10 digits, then it must be more than $10^{9}$. 13
+\end{exercise}
+
+\begin{exercise}{}{}
+	For which values of $n$ does $n!$ have n or fewer digits?
+	\begin{enumerate}[label={\textbullet}, leftmargin=*, itemsep=0pt, parsep=0pt]
+		\item Let $f$ be a function return the number of digits of a number
+		\item From the above question we know that $10 < f(13!) < 11$.
+		\item Now $14!$, will add least one more digit, and at some point around
+		      15 or 16 I think.
+		\item Just use a calculator, or stirling's approximation.
+	\end{enumerate}
+\end{exercise}
+
+\begin{exercise}{}{}
+	How many 5-digit positive integers are there in which there are no repeated
+	digits and all digits are odd?
+	\begin{enumerate}[label={\textbullet}, leftmargin=*, itemsep=0pt, parsep=0pt]
+		\item There are 5 digits to work with, namely the odd digits.
+		\item There are $5!$ such numbers, which are positive integers, in which
+		      no digit is repeated, the number is odd, and each digit is odd.
+	\end{enumerate}
+\end{exercise}
+
+\begin{exercise}{}{}
+	Using only pencil and paper, find the value of $\dfrac{100!}{95!}$.
+
+	Yeah, no.
+\end{exercise}
+
+\begin{exercise}{}{}
+	Using only pencil and paper, find the value of $\dfrac{120!}{118}$.
+
+	Yeah, no.
+\end{exercise}
+
+\begin{exercise}{}{}
+	There are two 0’s at the end of $10! = 3,628,800$. Using
+	only pencil and paper, determine how many 0’s are at the end of the number
+	100!.
+	\begin{enumerate}[label={\textbullet}, leftmargin=*, itemsep=0pt, parsep=0pt]
+		\item Each time the quantity $10!$ is multiplied by $10$, another $0$ will be
+		      appended to the end of the number.
+		\item We can factor out primes from the elements of the set 11-100, with the goal
+		      of factoring out 2s and 5s, so they can multiply together to get
+		      $2\cdot5=10$.
+		\item Between 11 and 100, 17 numbers are divisible by 5 (15, 20, ...100), and 3
+		      of them have 5 as a factor twice (25, 75, 100). Therefore we have 20 5's.
+		\item It's obvious there are at least 20 2's available in the range, so in total
+		      we can pair 5 and 2 together 20 times.
+		\item Each time we multiply by 2 and 5, we add another zero.
+		\item Therefore there will 20 be additional zeroes, for a total of 22 zeroes at the end
+		      of 100!.
+	\end{enumerate}
+\end{exercise}
+
+\begin{exercise}{}{}
+	Find how many 9-digit numbers can be made from the digits 1, 2, 3, 4, 5, 6, 7,
+	8, 9 if repetition is not allowed and all the odd digits occur first (on the left)
+	followed by all the even digits (i.e., as in 137598264, but not 123456789).
+
+	$5! \cdot 4!$ \square
+\end{exercise}
+
+\begin{exercise}{}{}
+	Compute how many 7-digit numbers can be made from the digits 1, 2, 3, 4, 5, 6, 7
+	if there is no repetition and the odd digits must appear in an unbroken sequence.
+	(Examples: 3571264 or 2413576 or 2467531, etc., but not 7234615.)
+	\begin{enumerate}[label={\textbullet}, leftmargin=*, itemsep=0pt, parsep=0pt]
+		\item First let's calculate the number of ways to create the odd sequence, which
+		      is $4!$.
+		\item There are 3 evens, therefore there are 4 spots the odd sequence can be
+		      interspersed within the evens.
+		\item Therefore there are $4\cdot 4!$ to make such a number.
+		      \square
+	\end{enumerate}
+\end{exercise}
+
+\begin{exercise}{}{}
+	How many permutations of the letters A, B, C, D, E, F, G
+	are there in which the three letters ABC appear consecutively, in
+	alphabetical order?
+	\begin{enumerate}[label={\textbullet}, leftmargin=*, itemsep=0pt, parsep=0pt]
+		\item There are 4 elements not part of the ABC sequence, therefore there are 5
+		      spots to insert the ABC sequence.
+		\item There the non ABC elements can be arranged in $4!$ permutations.
+		\item Therefore there are $4\cdot4!$ ways to make such a sequence.
+	\end{enumerate}
+\end{exercise}
+
+\begin{exercise}{}{}
+	How many permutations of the digits 0, 1, 2, 3, 4, 5, 6, 7, 8, 9 are there
+	in which the digits alternate even and odd? (For example, 2183470965.)
+	\begin{enumerate}[label={\textbullet}, leftmargin=*, itemsep=0pt, parsep=0pt]
+		\item The permutation can start 2 ways, either with an odd or an even.
+		\item There 5 possibilties for the 1st spot and 2nd spot, 4 for the 3rd and 4th
+		      spot, and so on.
+		\item Therefore there are $2\cdot 5!\cdot5!$. possibilities. \square
+	\end{enumerate}
+\end{exercise}
+
+\begin{exercise}{}{}
+	You deal 7 cards off of a 52-card deck and line them up in
+	a row. How many possible lineups are there in which not all cards are red?
+	\begin{enumerate}[label={\textbullet}, leftmargin=*, itemsep=0pt, parsep=0pt]
+		\item Let $A=$ set of all 7 card lineups
+		\item Let $B=$ set of all red-only 7 card lineups
+		\item Let $C=$ set of all lineups in which not all the cards are red
+		\item $|A| - |B| = |C|$
+		\item $|A|=\dfrac{52!}{45!}$
+		\item $|B|=\dfrac{13!}{6!}$
+		\item $|C|=\dfrac{52!}{45!} - \dfrac{13!}{6!}$ \square
+	\end{enumerate}
+\end{exercise}
+
+\begin{exercise}{}{}
+	You deal 7 cards off of a 52-card deck and line them up in
+	a row. How many possible lineups are there in which no card is a club?
+	\begin{enumerate}[label={\textbullet}, leftmargin=*, itemsep=0pt, parsep=0pt]
+		\item For there to be no clubs, we can imagine starting with a deck of 39
+		      cards without any clubs.
+		\item Therefore the answer is $\dfrac{39!}{32!}$. \square
+	\end{enumerate}
+\end{exercise}
+
+\begin{exercise}{}{}
+	How many lists of length six (with no repetition) can be
+	made from the 26 letters of the English alphabet?
+
+	$\dfrac{26!}{20!}$\square
+\end{exercise}
+
+\begin{exercise}{}{}
+	Five of ten books are arranged on a shelf. In how many ways can this be done?
+
+	Assuming that different orderings of books are considered different
+	arrangements, there are $\dfrac{10!}{5!}$ possible arrangements. \square
+\end{exercise}
+
+\begin{exercise}{}{}
+	In a club of 15 people, we need to choose a president,
+	vice-president, secretary, and treasurer. In how many ways can this be done?
+	\begin{enumerate}[label={\textbullet}, leftmargin=*, itemsep=0pt, parsep=0pt]
+		\item There are 4 different positions, and the order matters, as the positions
+		      are not equivalent.
+		\item Therefore there are $\dfrac{15!}{11!}$ distinct possible
+		      arrangements. \square
+	\end{enumerate}
+\end{exercise}
+
+\begin{exercise}{}{}
+	How many 4-permutations are there of the set A,B,C,D,E,F
+	if whenever A appears in the permutation, it is followed by E?
+	\begin{enumerate}[label={\textbullet}, leftmargin=*, itemsep=0pt, parsep=0pt]
+		\item Let $X=$ 4-permutations with A.
+		\item Let $Y=$ 4-permutations without A.
+		\item Let $Z=$ all 4-permutations matching the specification.
+		\item For the set X, AE will always appear together. Because there are 2
+		      remaining elements, there are 3 spots where AE can in interspersed.
+		\item Therefore $|X| = 2 \cdot 4\cdot3 = 4!.$
+		\item For the set Y, A will not appear by exercise, therefore $|Y| =
+			      \dfrac{5!}{1!} = 5!$.
+		\item Therefore $|Z| = |X| + |Y| = 4! + 5!$. \square
+	\end{enumerate}
+\end{exercise}
+
+\begin{exercise}{}{}
+	Three people in a group of ten line up at a ticket counter to buy tickets.
+	How many lineups are possible?
+
+	$\dfrac{10!}{7!}$
+\end{exercise}
+
+\begin{exercise}{}{}
+	The gamma function provides a way of extending factorials to numbers
+	other than integers. Extra credit: Compute $\pi$ !.
+
+	\begin{align*}
+		\Gamma                    & :[0, \infty) \rightarrow \mathbb{R} \\
+		\Gamma(x)                 & =\int_0^{\infty} t^{x-1} e^{-t} d t \\
+		x \in \mathbb{N}          & \implies \Gamma(x)=(x-1)!           \\
+		\forall n \in \mathbb{N}, & \quad n !=\Gamma(n+1)
+	\end{align*}
+
+	Check that this is true for $x=1,2,3,4$.
+\end{exercise}
+
+\part{How to Prove Conditional Statements}
+\part{More on Proof}
+\part{Relations, Functions, and Cardinality}
+% \printbibliography{}
+% \printindex{}
+\end{document}
