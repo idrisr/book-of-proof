@@ -53,6 +53,8 @@
 \newcommand\setboxcounter[2]{\setcounter{tcb@cnt@#1}{#2}}
 \setlength{\parindent}{10pt}
 \newcommand{\set}[1]{\{#1\}}
+\newcommand{\up}[1]{ \left\lceil#1\right\rceil }
+\newcommand{\down}[1]{ \left\lfloor#1\right\rfloor}
 
 \definecolor{CaribbeanBlue}{RGB}{0, 206, 209} % Define Caribbean Blue
 \NewTcbTheorem[list inside=definition]{definition}
@@ -87,17 +89,26 @@
 	colframe=gray!35!black,
 	fonttitle=\bfseries}{th}
 
+% \NewTcbTheorem[
+% list inside=exercise,
+% number within=chapter,
+% number within=section,
+% ]
+
 \NewTcbTheorem[
 	list inside=exercise,
-	number within=section
-]
-{exercise}{Exercise}{
+	number within=section,
+]{exercise}{Exercise}{
 	breakable,
 	colback=white,
 	colframe=black,
 	fonttitle=\bfseries}{th}
 
 \newcommand{\hask}[1]{\mintinline{haskell}{#1}}
+
+\newenvironment{alist}
+{\begin{enumerate}[label={*}, leftmargin=*, itemsep=0pt, parsep=0pt]}
+		{\end{enumerate}}
 
 \renewcommand{\thesection}{\arabic{section}}
 \tcbset{enhanced jigsaw}
