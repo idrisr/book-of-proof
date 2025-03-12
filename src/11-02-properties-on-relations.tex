@@ -1,0 +1,247 @@
+\documentclass{article}
+\input{preamble}
+
+\begin{document}
+\section{Properties on Relations}
+\begin{exercise}{}{}{Consider the relation $R=\set{(a, a),(b, b),(c, c),(d, d),(a,
+				b),(b, a)}$ on set $A=\{a, b, c, d\}$. Is $R$ reflexive? Symmetric?
+		Transitive? If a property does not hold, say why.}
+	\tcblower
+	\begin{alist}
+		\item $R$ is reflective because $(x, x) \in R, \forall x \in A$.
+		\item $R$ is symmetric because $(x, y) \in R \implies (y, x) \in R, \forall x,y \in A$.
+		\item $R$ is transitive because $\forall (x, y), (y,z) \in R
+			\implies (x, z) \in R, \forall x,y,z \in A$.
+	\end{alist}
+\end{exercise}
+
+\begin{exercise}{}{}{Consider the relation $R=\set{(a, b),(a, c),(c, c),(b, b),(c,
+				b),(b, c)}$ on the set $A=\set{a, b, c}$. Is $R$ reflexive? Symmetric?
+		Transitive? If a property does not hold, say why.}
+	\tcblower
+	\begin{alist}
+		\item $R$ is not reflective because $(a, a) \not\in R$.
+		\item $R$ is not symmetric because $(a, b) \in R \not\implies (b, a) \in R$.
+		\item $R$ is not transitive because $(b, c) \land (c, c) \in R \not \implies (b,
+			c) \in R$.
+	\end{alist}
+\end{exercise}
+
+\begin{exercise}{}{}{Consider the relation $R=\set{(a, b),(a, c),(c, b),(b, c)}$
+		on the set $A=\set{a, b, c}$. Is $R$ reflexive? Symmetric? Transitive? If a
+		property does not hold, say why.}
+	\tcblower
+	\begin{alist}
+		\item $R$ is not reflective because $(a, a) \not\in R$.
+		\item $R$ is not symmetric because $(a, b) \in R \not\implies (b, a) \in R$.
+		\item $R$ is not transitive because $(c, b) \land (b, c) \in R \not \implies (c, c) \in R$.
+	\end{alist}
+\end{exercise}{}{}
+
+\begin{exercise}{}{}{Let $A=\set{a, b, c, d}$. Suppose $R$ is the relation}
+	\begin{align*}
+		R= & (a, a),(b, b),(c, c),(d, d),(a, b),(b, a),(a, c),(c, a), \\
+		   & (a, d),(d, a),(b, c),(c, b),(b, d),(d, b),(c, d),(d, c)
+	\end{align*}
+	\tcblower
+	\begin{alist}
+		\item $R$ is reflective because $(x, x) \in R, \forall x \in A$.
+		\item $R$ is symmetric because $(x, y) \in R \implies (y, x) \in R, \forall x, y\in A$.
+		\item $R$ is transitive because $|R|=16$, implying that all possible
+		pairs of a $A$ are in $R$, including all the ones to satisfy the transitive
+		property.
+	\end{alist}
+\end{exercise}{}{}
+
+\begin{exercise}{}{}{Consider the relation $R=\{(0,0),(\sqrt{2}, 0),(0,
+			\sqrt{2}),(\sqrt{2}, \sqrt{2})\}$ on $\mathbb{R}$. Is $R$ reflexive?
+		Symmetric? Transitive? If a property does not hold, say why.}
+	\tcblower
+	\begin{alist}
+		\item Let $A=\set{\sqrt{2}, 0}$.
+		\item $R$ is reflective because $(x, x) \in R, \forall x \in A$.
+		\item $R$ is symmetric because $(x, y) \in R \implies (y, x) \in R, \forall x, y\in A$.
+		\item $R$ is transitive because $|R|=4, |A|=2, R=A\times A$, implying that all possible
+		pairs of a $A$ are in $R$, including all the ones to satisfy the transitive
+		property.
+	\end{alist}
+\end{exercise}{}{}
+
+\begin{exercise}{}{}{Consider the relation $R=\{(x, x): x \in \mathbb{Z}\}$ on
+		$\mathbb{Z}$. Is this $R$ reflexive? Symmetric? Transitive? If a property
+		does not hold, say why. What familiar relation is this?}
+	\tcblower
+	\begin{alist}
+		\item $R$ defines an equality relationship.  The equality relationship is
+		reflexive, symmetric, and transitive, therefore R is all of those things.
+	\end{alist}
+\end{exercise}{}{}
+
+\begin{exercise}{}{}{There are 16 possible different relations $R$ on the set
+		$A=\{a, b\}$. Describe all of them. (A picture for each one will suffice,
+		but don't forget to label the nodes.) Which ones are reflexive? Symmetric?
+		Transitive?}
+	\tcblower
+	\begin{alist}
+		\item Because $|A|=2$, there are 4 different pairs in $AxA$. The number of
+		relatinoships is the powerset of $AxA$, and its cardinality is $2^4=16$.
+		\item I'm not going to draw all of them.
+	\end{alist}
+\end{exercise}{}{}
+
+\begin{exercise}{}{}{Define a relation $R$ on $\mathbb{Z}$ as $x R y$ if
+		$|x-y|<1$. Is $R$ reflexive? Symmetric? Transitive? If a property does not
+		hold, say why. What familiar relation is this?}
+	\tcblower
+	\begin{alist}
+		\item The only way for two integers to be less
+		than one apart, is for the the integers to be the same. Therefore $R$
+		defines and equality relationship which is refesive, symmetric, and transitive.
+	\end{alist}
+\end{exercise}{}{}
+
+\begin{exercise}{}{}{Define a relation on $\mathbb{Z}$ by declaring $x R y$
+		if and only if $x$ and $y$ have the same parity. Is $R$ reflexive?
+		Symmetric? Transitive? If a property does not hold, say why. What familiar
+		relation is this?}
+	\tcblower
+	\begin{alist}
+		\item This relation is equivalent to a partition of $\mathbb{Z}$ into the evens
+		and the odds.  Each partition also defines an equivalence class, and an
+		equivalence class is by definition reflexive, symmetric, and transitive.
+	\end{alist}
+\end{exercise}{}{}
+
+\begin{exercise}{}{}{Suppose $A \neq \varnothing$. Since $\varnothing
+			\subseteq A \times A$, the set $R=\varnothing$ is a relation on $A$. Is $R$
+		reflexive? Symmetric? Transitive? If a property does not hold, say why.}
+	\tcblower
+	\begin{alist}
+		\item The relation $R$ has cardinality 0. Therefore all of the implications
+		necesarray to prove a relation is reflexive, symmetric, and transitive are
+		all trivially true. Therefore $R$ is reflexive, symmetric, and transitive.
+	\end{alist}
+\end{exercise}{}{}
+
+\begin{exercise}{}{}{Let $A=\{a, b, c, d\}$ and $R=\{(a, a),(b, b),(c,
+			c),(d, d)\}$. Is $R$ reflexive? Symmetric? Transitive? If a property does
+		not hold, say why.}
+	\tcblower
+	\begin{alist}
+		\item $R$ defines an equality relationship which is reflexive, symmetric, and transitive.
+	\end{alist}
+\end{exercise}{}{}
+
+\begin{exercise}{}{}{Prove that the relation $\mid$ (divides) on the set
+		$\mathbb{Z}$ is reflexive and transitive. (Use Example 11.8 as a guide if
+		you are unsure of how to proceed.)}
+	\tcblower
+	\begin{alist}
+		\item Let $R$ be the relation $\mid$ (divides).
+		\item $x \mid x \implies x \mid x$, therefore R is reflexive.
+		\item Let us prove that $x \mid y \land y \mid z \implies x \mid z: x,y,z \in\mathbb{Z}$.
+		\item Suppose $x\mid y$ and $y\mid z$. Therefore there exists some integers a
+		and b such that $xa=y$ and $yb=z$. Thus $x(ab)=z$, which shows that $x\mid
+			z$. Thusly we have shown that $R$ is transitive.
+	\end{alist}
+\end{exercise}{}{}
+
+\begin{exercise}{}{}{Consider the relation $R=\{(x, y) \in \mathbb{R} \times
+			\mathbb{R}: x-y \in \mathbb{Z}\}$ on $\mathbb{R}$. Prove that this relation
+		is reflexive, symmetric and transitive.}
+	\tcblower
+	\begin{alist}
+		\item Suppose $x - x \in \mathbb{Z}$.  By definition $x-x=0 \in \mathbb{Z}$,
+		therefore $R$ is reflexive.
+		\item Suppose $x - y \in \mathbb{Z}$. Therefore $x-y + y-x = 0$. Thus
+		$y-x\in\mathbb{Z}$. Thus $R$ is symmetric.
+		\item Suppose $x - y \in \mathbb{Z} \land y - z\in\mathbb{Z}$. Therefore $x-z =
+			(x-y) + (y-z)$. Since both $x-y$ and $y-z$ are integers, the difference of those
+		two quantities is also an integer, and therefore $x-z\in\mathbb{Z}$, and
+		thus $R$ is transitive.
+	\end{alist}
+\end{exercise}{}{}
+
+\begin{exercise}{}{}{Suppose $R$ is a symmetric and transitive relation on a
+		set $A$, and there is an element $a \in A$ for which $Rax$ for every $x
+			\in A$. Prove that $R$ is reflexive.}
+	\tcblower
+	\begin{alist}
+		\item Because $R$ is symmetric, then $Rxy \implies Ryx$.
+		\item Because $R$ is transitive, then $R x y \land Ryz \implies Rxz$.
+		\item Suppose some relation $Rxa\implies Rax$ because of symmetry.
+		\item $Rxa \land Rax \implies Rxx$ because of transitivity. Therefore we have
+		shown $R$ is also reflexive.
+	\end{alist}
+\end{exercise}{}{}
+
+\begin{exercise}{}{}{Prove or disprove: If a relation is symmetric and
+		transitive, then it is also reflexive.}
+	\tcblower
+	\begin{alist}
+		\item $Rxy \implies Ryx$, due to symmetry.
+		\item $Rxy \land Ryx \implies Rxx$, due to transitivity.
+		\item Therefore a relation being symmetric and transitive implies the relation
+		is also reflexive.
+	\end{alist}
+\end{exercise}{}{}
+
+\begin{exercise}{}{}{Define a relation $R$ on $\mathbb{Z}$ by declaring that
+		$x R y$ if and only if $x^2 \equiv y^2(\bmod 4)$. Prove that $R$ is
+		reflexive, symmetric and transitive.}
+	\tcblower
+	\begin{alist}
+		\item Let $(x, y) \in R\subseteq \mathbb{Z}\times\mathbb{Z}; x^2\equiv y^2\bmod 4$.
+		\item Suppose $(x, y)$ in $R$. Therefore $4 | x^2 - y^2$. If $x=y$, then $4\mid
+			0$, which is always true, therefore $R$ is reflexive.
+		\item Suppose $(x, y)$ in $R$. Therefore $4 | x^2 - y^2$. Hence, there exists
+		some integer $a$ such that $4a = x^2-y^2$. Multiplying both sides by $-1$
+		and we get $-4a = y^2-x^2$.  If a number is divisible by $n$, then it is also
+		divisble by $-n$.
+		\item Suppose $(x, y)\land (y, z)$ in $R$. Therefore $4 \mid x^2 - y^2 \land
+			4\mid y^2-z^2$. Hence, there exists integers $a$ and $b$ such that $4a =
+			x^2-y^2$ and $4b=y^2-z^2$. Adding the two equations together yields
+		$4(a+b) = x^2 -z^2$, which shows $4\mid x^2 - z^2$, and thus $R$ is
+		transitive.
+	\end{alist}
+\end{exercise}{}{}
+
+\begin{exercise}{}{}{Modifying Exercise 8 (above) slightly, define a relation
+		$\sim$ on $\mathbb{Z}$ as $x \sim y$ if and only if $|x-y| \leq 1$. Say
+		whether $\sim$ is reflexive. Is it symmetric? Transitive?}
+	\tcblower
+	\begin{alist}
+		\item For any integer $x$, $|x-x| \leq 1$, therefore $R$ is reflexive.
+		\item This relation holds for any integers which are either equal are
+		consecutive. Assume some integer $x$ and its consecutive integer $x+1$.
+		Therefore $|x-x-1|=1\leq 1 \implies |x+1-x|=1 \leq 1$.
+		For the case of $Rxx$, $|x-x|=0 < 1 \implies 0 < 1$, therefore $R$ is symmetric.
+		\item This relation is not transitive. For example $2R3 \land 3R4 \not\implies
+			2R4$.
+	\end{alist}
+\end{exercise}{}{}
+
+\begin{exercise}{}{}
+	The table on page 205 shows that relations on Z may obey
+	various combinations of the reflexive, symmetric and transitive
+	properties. In all, there are 23 = 8 possible combinations, and the
+	table shows 5 of them. (There is some redundancy, as $\neq$ and $\mid$
+	have the same type.) Complete the table by finding examples of relations
+	on Z for the three missing combinations.
+	\tcblower
+	\begin{tabular}{|c|c|c|c|}
+		\hline
+		\textbf{Reflexive}  & \textbf{Symmetric} & \textbf{Transitive} & \textbf{Example}              \\
+		\hline $\checkmark$ & $\checkmark$       & $\checkmark$        & $=$                           \\
+		\hline $\checkmark$ & $\checkmark$       &                     & $x-y\leq 1; x,y\in\mathbb{Z}$ \\
+		\hline $\checkmark$ &                    & $\checkmark$        & $\leq$                        \\
+		\hline              & $\checkmark$       & $\checkmark$        & none                          \\
+		\hline $\checkmark$ &                    &                     & none                          \\
+		\hline              & $\checkmark$       &                     & $\neq$                        \\
+		\hline              &                    & $\checkmark$        & $\set{(1,2), (2, 3), (1, 3)}$ \\
+		\hline              &                    &                     & $\set{1,3}$                   \\
+		\hline
+	\end{tabular}
+\end{exercise}{}{}
+
+\end{document}

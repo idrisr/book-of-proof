@@ -17,9 +17,9 @@
 \usepackage{makeidx}
 \usepackage[margin=0.8in]{geometry}
 \usepackage{mathrsfs}
-\usepackage{minted}
+\usepackage[outputdir=../build]{minted}
 \usepackage{multicol}
-\usepackage{standalone}
+\usepackage[mode=tex]{standalone}
 \usepackage[style=authortitle]{biblatex}
 \usepackage[T1]{fontenc}
 \usepackage[tableaux]{prooftrees}
@@ -51,6 +51,7 @@
 \setlength{\parindent}{0pt}
 
 \newcommand\setboxcounter[2]{\setcounter{tcb@cnt@#1}{#2}}
+\newcommand\qed[0]{\blacksquare}
 \setlength{\parindent}{10pt}
 \newcommand{\set}[1]{\{#1\}}
 \newcommand{\up}[1]{ \left\lceil#1\right\rceil }
@@ -108,6 +109,10 @@
 
 \newenvironment{alist}
 {\begin{enumerate}[label={*}, leftmargin=*, itemsep=0pt, parsep=0pt]}
+		{\end{enumerate}}
+
+\newenvironment{blist}
+{\begin{enumerate}[label={}, leftmargin=*, itemsep=0pt, parsep=0pt]}
 		{\end{enumerate}}
 
 \renewcommand{\thesection}{\arabic{section}}

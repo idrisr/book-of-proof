@@ -1,0 +1,178 @@
+\documentclass{article}
+\input{preamble}
+
+\begin{document}
+\section{The Integers Modulo $n$}
+
+\begin{exercise}{}{}
+	{1. Write the addition and multiplication tables for $\mathbb{Z}_2$.}
+	\begin{alist}
+		\item
+		\[
+			\begin{array}{c|cc}
+				\times & 0 & 1 \\
+				\hline
+				0      & 0 & 0 \\
+				1      & 0 & 1 \\
+			\end{array}
+		\]
+		\item
+		\[
+			\begin{array}{c|cc}
+				+ & 0 & 1 \\
+				\hline
+				0 & 0 & 1 \\
+				1 & 1 & 0 \\
+			\end{array}
+		\]
+	\end{alist}
+\end{exercise}
+
+\begin{exercise}{}{}
+	{2. Write the addition and multiplication tables for $\mathbb{Z}_3$.}
+	\begin{alist}
+		\item \[
+			\begin{array}{c|ccc}
+				\times & 0 & 1 & 2 \\
+				\hline
+				0      & 0 & 0 & 0 \\
+				1      & 0 & 1 & 2 \\
+				2      & 0 & 2 & 1 \\
+			\end{array}
+		\]
+		\item \[
+			\begin{array}{c|ccc}
+				+ & 0 & 1 & 2 \\
+				\hline
+				0 & 0 & 1 & 2 \\
+				1 & 1 & 2 & 0 \\
+				2 & 2 & 0 & 1 \\
+			\end{array}
+		\]
+	\end{alist}
+\end{exercise}{}{}
+
+\begin{exercise}{}{}
+	{3. Write the addition and multiplication tables for $\mathbb{Z}_4$.}
+	\begin{alist}
+		\item \[
+			\begin{array}{c|cccc}
+				\times & 0 & 1 & 2 & 3 \\
+				\hline
+				0      & 0 & 0 & 0 & 0 \\
+				1      & 0 & 1 & 2 & 3 \\
+				2      & 0 & 2 & 0 & 2 \\
+				3      & 0 & 3 & 2 & 1 \\
+			\end{array} \]
+		\item \[
+			\begin{array}{c|cccc}
+				+ & 0 & 1 & 2 & 3 \\
+				\hline
+				0 & 0 & 1 & 2 & 3 \\
+				1 & 1 & 2 & 3 & 0 \\
+				2 & 2 & 3 & 0 & 1 \\
+				3 & 3 & 0 & 1 & 2 \\
+			\end{array} \]
+	\end{alist}
+\end{exercise}{}{}
+
+\begin{exercise}{}{}
+	{4. Write the addition and multiplication tables for $\mathbb{Z}_6$.}
+	\begin{alist}
+		\item \[
+			\begin{array}{c|cccccc}
+				\times & 0 & 1 & 2 & 3 & 4 & 5 \\
+				\hline
+				0      & 0 & 0 & 0 & 0 & 0 & 0 \\
+				1      & 0 & 1 & 2 & 3 & 4 & 5 \\
+				2      & 0 & 2 & 4 & 0 & 2 & 4 \\
+				3      & 0 & 3 & 0 & 3 & 0 & 3 \\
+				4      & 0 & 4 & 2 & 0 & 4 & 2 \\
+				5      & 0 & 5 & 4 & 3 & 2 & 1 \\
+			\end{array}
+		\]
+		\item \[
+			\begin{array}{c|cccccc}
+				+ & 0 & 1 & 2 & 3 & 4 & 5 \\
+				\hline
+				0 & 0 & 1 & 2 & 3 & 4 & 5 \\
+				1 & 1 & 2 & 3 & 4 & 5 & 0 \\
+				2 & 2 & 3 & 4 & 5 & 0 & 1 \\
+				3 & 3 & 4 & 5 & 0 & 1 & 2 \\
+				4 & 4 & 5 & 0 & 1 & 2 & 3 \\
+				5 & 5 & 0 & 1 & 2 & 3 & 4 \\
+			\end{array}
+		\]
+	\end{alist}
+\end{exercise}{}{}
+
+\begin{exercise}{}{}
+	{5. Suppose $[a],[b] \in \mathbb{Z}_5$ and $[a] \cdot[b]=[0]$. Is it
+		necessarily true that either $[a]=[0]$ or $[b]=[0]$ ?}
+	\begin{alist}
+		\item Assume: $[a]\cdot[b]=[0]$ for some $[a],[b]\in\mathbb{Z}_5$.
+		\item Translate: This means $[a\cdot b]\equiv[0]$, so $a\cdot b\equiv 0\bmod 5$
+		\item Property of Modulo 5: This implies that 5 divides the product $a\cdot b$.
+		\item Prime Divisibility: Since 5 is a prime number, it must divide either a or b.
+		\item Back to Equivalence Classes: Therefore, $a \equiv 0 \pmod 5$ (meaning
+		$[a]=[0]$) or $b \equiv 0 \pmod 5$ (meaning $[b]=[0]$).
+		\item \[
+			\begin{array}{c|ccccc}
+				\times & 0 & 1 & 2 & 3 & 4 \\
+				\hline
+				0      & 0 & 0 & 0 & 0 & 0 \\
+				1      & 0 & 1 & 2 & 3 & 4 \\
+				2      & 0 & 2 & 4 & 1 & 3 \\
+				3      & 0 & 3 & 1 & 4 & 2 \\
+				4      & 0 & 4 & 3 & 2 & 1 \\
+			\end{array}
+		\]
+	\end{alist}
+\end{exercise}{}{}
+
+\begin{exercise}{}{}
+	{6. Suppose $[a],[b] \in \mathbb{Z}_6$ and $[a] \cdot[b]=[0]$. Is it
+		necessarily true that either $[a]=[0]$ or $[b]=[0]$ ? What if $[a],[b] \in
+			\mathbb{Z}_7$ ?}
+	\begin{alist}
+		\item Assume: $[a]\cdot[b]=[0]$ for some $[a],[b]\in\mathbb{Z}_6$.
+		\item Translate: This means $[a\cdot b]\equiv[0]$, so $a\cdot b\equiv 0\bmod 6$
+		\item Property of Modulo 6: This implies that 6 divides the product $a\cdot b$.
+		\item Prime Divisibility: Since the prime factors of 6 are 2 and 3, 2 must
+		factor a or b and 3 must factor a or b. Assume $3\mid a \land 2\mid b$. Let
+		$a=3$ and $b=2$, and then $a\cdot b \equiv 0 \mod 6$.
+		\item Back to Equivalence Classes: Therefore, it's not necessarily true that
+		either $[a] = [0] \lor [b] = [0]$ when $[a]\cdot[b]=[0]$ for $\mathbb{Z}_6$.
+		\item Assume: $[a]\cdot[b]=[0]$ for some $[a],[b]\in\mathbb{Z}_7$.
+		\item Translate: This means $[a\cdot b]\equiv[0]$, so $a\cdot b\equiv 0\bmod 6$
+		\item Property of Modulo 7: This implies that 7 divides the product $a\cdot b$.
+		\item Prime Divisibility: Since 7 is a prime number, it must divide either a or b.
+		\item Back to Equivalence Classes: Therefore, $a \equiv 0 \pmod 7$ (meaning
+		$[a]=[0]$) or $b \equiv 0 \pmod 7$ (meaning $[b]=[0]$).
+	\end{alist}
+\end{exercise}{}{}
+
+\begin{exercise}{}{}
+	{7. Do the following calculations in $\mathbb{Z}_9$, in each case expressing
+		your answer as $[a]$ with $0 \leq a \leq 8$.}
+	\begin{alist}
+		\item (a) $[8]+[8] = [7]$
+		\item (b) $[24]+[11] = [8]$
+		\item (c) $[21] \cdot[15] = [0]$
+		\item (d) $[8] \cdot [8] = [1]$
+	\end{alist}
+\end{exercise}{}{}
+
+\begin{exercise}{}{}
+	{8. Suppose $[a],[b] \in \mathbb{Z}_n$, and $[a]=\left[a^{\prime}\right]$
+		and $[b]=\left[b^{\prime}\right]$. Alice adds $[a]$ and $[b]$ as $[a]+[b]=$
+		$[a+b]$. Bob adds them as
+		$\left[a^{\prime}\right]+\left[b^{\prime}\right]=\left[a^{\prime}+b^{\prime}\right]$.
+		Show that their answers $[a+b]$ and $\left[a^{\prime}+b^{\prime}\right]$ are the
+		same.}
+	\begin{alist}
+		\item
+	\end{alist}
+\end{exercise}{}{}
+
+\end{document}
